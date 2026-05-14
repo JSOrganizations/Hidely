@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — Hidely</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ink: #0d1117;
+            --ink-light: #3d4451;
+            --ink-muted: #7a8394;
+            --surface: #ffffff;
+            --surface-2: #f6f8fb;
+            --surface-3: #eef2f7;
+            --accent: #1a6bff;
+            --accent-2: #00c9a7;
+            --accent-glow: rgba(26, 107, 255, 0.10);
+            --warn-bg: #fffbeb;
+            --border: #e2e8f0;
+            --border-strong: #c8d3e0;
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface-2);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body:not(.lang-en) .lang-en,
+        body:not(.lang-bn) .lang-bn,
+        body:not(.lang-hi) .lang-hi,
+        body:not(.lang-es) .lang-es,
+        body:not(.lang-ar) .lang-ar,
+        body:not(.lang-fr) .lang-fr,
+        body:not(.lang-ru) .lang-ru,
+        body:not(.lang-ur) .lang-ur,
+        body:not(.lang-fa) .lang-fa {
+            display: none !important;
+        }
+
+        body[dir="rtl"] { text-align: right; }
+        
+        .hero {
+            background: var(--ink);
+            position: relative;
+            overflow: hidden;
+            padding: clamp(48px,8vw,80px) clamp(16px,5vw,40px) clamp(40px,7vw,72px);
+            text-align: center;
+        }
+        .hero::before {
+            content:'';
+            position:absolute; inset:0;
+            background:
+                radial-gradient(ellipse 60% 80% at 20% 50%, rgba(26,107,255,.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 80% 30%, rgba(0,201,167,.12) 0%, transparent 70%);
+            pointer-events:none;
+        }
+        .hero-badge {
+            display:inline-flex; align-items:center; gap:8px;
+            background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+            border-radius:100px; padding:6px 16px;
+            font-size:clamp(10px,2.5vw,12px); font-weight:500;
+            letter-spacing:.08em; text-transform:uppercase;
+            color:rgba(255,255,255,.65); margin-bottom:22px; position:relative;
+        }
+        .hero-badge::before {
+            content:''; width:7px; height:7px; border-radius:50%;
+            background:var(--accent-2); box-shadow:0 0 8px var(--accent-2); flex-shrink:0;
+        }
+        select.hero-badge {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #fff;
+            background: rgba(26,107,255,.2);
+            border-color: rgba(26,107,255,.4);
+            appearance: none;
+            -webkit-appearance: none;
+            padding-inline-end: 32px;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 10px auto;
+        }
+        body[dir="rtl"] select.hero-badge {
+            background-position: left 12px center;
+            padding-inline-start: 32px;
+            padding-inline-end: 16px;
+        }
+        select.hero-badge option { background: var(--ink); color: #fff; }
+        select.hero-badge:hover { background-color: rgba(26,107,255,.3); transform: translateY(-2px); }
+        .hero h1 {
+            font-family:'Playfair Display',Georgia,serif;
+            font-size:clamp(2rem,7vw,4rem); font-weight:700; color:#fff;
+            letter-spacing:-.02em; line-height:1.15; position:relative; margin-bottom:12px;
+        }
+        .hero h1 span {
+            background:linear-gradient(135deg,#1a6bff,#00c9a7);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .hero-sub { color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px); position:relative; }
+        .hero-meta {
+            display:flex; justify-content:center; flex-wrap:wrap;
+            gap:clamp(10px,3vw,22px); position:relative; margin-top:26px;
+        }
+        .hero-meta-item {
+            display:flex; align-items:center; gap:8px;
+            font-size:clamp(11px,2.5vw,13px); color:rgba(255,255,255,.45);
+        }
+        .page-wrap {
+            max-width:880px; margin:0 auto;
+            padding:0 clamp(12px,4vw,24px) clamp(48px,8vw,80px);
+        }
+        .toc-card {
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:var(--radius); padding:clamp(18px,4vw,30px);
+            margin:clamp(20px,4vw,36px) 0;
+            box-shadow:0 2px 12px rgba(13,17,23,.06);
+            animation:fadeUp .4s ease both;
+        }
+        .toc-card h2 {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(10px,2.5vw,11px); font-weight:600;
+            text-transform:uppercase; letter-spacing:.12em;
+            color:var(--ink-muted); margin-bottom:14px;
+        }
+        .toc-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));
+            gap:6px;
+        }
+        .toc-link {
+            display:flex; align-items:center; gap:10px;
+            padding:9px 12px; border-radius:var(--radius-sm);
+            text-decoration:none; color:var(--ink-light);
+            font-size:clamp(12px,2.8vw,14px); font-weight:500;
+            transition:background .18s,color .18s; border:1px solid transparent;
+        }
+        .toc-link:hover,.toc-link:focus {
+            background:var(--accent-glow); color:var(--accent);
+            border-color:rgba(26,107,255,.15); outline:none;
+        }
+        .toc-num {
+            font-size:10px; font-weight:700; color:var(--accent);
+            background:var(--accent-glow); width:22px; height:22px;
+            border-radius:6px; display:flex; align-items:center;
+            justify-content:center; flex-shrink:0;
+        }
+        .section-card {
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:clamp(20px,5vw,38px) clamp(18px,5vw,40px);
+            margin-bottom:clamp(14px,3vw,22px);
+            box-shadow:0 2px 12px rgba(13,17,23,.05);
+            scroll-margin-top:20px;
+            animation:fadeUp .45s ease both;
+        }
+        .section-header {
+            display:flex; align-items:flex-start; gap:clamp(10px,3vw,16px);
+            margin-bottom:clamp(16px,4vw,22px);
+            padding-bottom:clamp(14px,3vw,18px);
+            border-bottom:1px solid var(--border);
+        }
+        .section-num {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(1.4rem,5vw,2.2rem); font-weight:700;
+            color:var(--border-strong); line-height:1; flex-shrink:0; margin-top:3px;
+        }
+        .section-title {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(1.05rem,3.5vw,1.45rem); font-weight:700;
+            color:var(--ink); line-height:1.3;
+        }
+        .section-subtitle { font-size:clamp(11px,2.5vw,13px); color:var(--ink-muted); margin-top:4px; }
+        .section-body p { color:var(--ink-light); margin-bottom:14px; font-size:clamp(13.5px,3vw,15px); }
+        .section-body p:last-child { margin-bottom:0; }
+        .section-body h3 {
+            font-size:clamp(10px,2.5vw,12px); font-weight:700;
+            text-transform:uppercase; letter-spacing:.08em;
+            color:var(--ink-muted); margin:22px 0 10px;
+        }
+        .policy-list { list-style:none; margin:12px 0; }
+        .policy-list li {
+            display:flex; align-items:flex-start; gap:12px;
+            padding:10px 0; border-bottom:1px solid var(--surface-3);
+            font-size:clamp(13px,3vw,15px); color:var(--ink-light);
+        }
+        .policy-list li:last-child { border-bottom:none; }
+        .policy-list li::before {
+            content:''; width:6px; height:6px; border-radius:50%;
+            background:var(--accent); flex-shrink:0; margin-top:9px;
+        }
+        .policy-list li strong { color:var(--ink); font-weight:600; }
+        .callout {
+            border-radius:var(--radius-sm);
+            padding:clamp(13px,3vw,18px) clamp(13px,3vw,20px);
+            margin:16px 0; display:flex; gap:12px;
+            align-items:flex-start; font-size:clamp(13px,3vw,14.5px);
+        }
+        .callout i { flex-shrink:0; font-size: 18px; margin-top:2px; }
+        .callout.info  { background:var(--accent-glow); border:1px solid rgba(26,107,255,.18); color:#1a4db5; }
+        .callout.safe  { background:rgba(0,201,167,.08); border:1px solid rgba(0,201,167,.22); color:#047d67; }
+        .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.4); color:#92640a; }
+        .callout strong {
+            display:block; font-weight:700; margin-bottom:3px;
+            font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+        }
+        .pill-grid { display:flex; flex-wrap:wrap; gap:8px; margin:14px 0; }
+        .pill {
+            display:inline-flex; align-items:center; gap:6px;
+            background:var(--surface-3); border:1px solid var(--border);
+            border-radius:100px; padding:5px 13px;
+            font-size:clamp(11px,2.5vw,13px); font-weight:500; color:var(--ink-light);
+        }
+        .pill.blocked { background:#fff1f1; border-color:#fecaca; color:#b91c1c; }
+        .pill.blocked::before { content:'\f00d'; font-family:"Font Awesome 6 Free"; font-weight:900; font-size:9px; }
+        .pill.allowed { background:#ecfdf5; border-color:#a7f3d0; color:#047857; }
+        .pill.allowed::before { content:'\f00c'; font-family:"Font Awesome 6 Free"; font-weight:900; font-size:9px; }
+        .contact-card {
+            background:linear-gradient(135deg,#0d1117 0%,#1a2033 100%);
+            border-radius:var(--radius);
+            padding:clamp(22px,5vw,40px); color:#fff;
+            margin-bottom:clamp(14px,3vw,22px);
+            animation:fadeUp .45s .44s ease both;
+        }
+        .contact-card .section-title { color:#fff; }
+        .contact-card .section-subtitle { color:rgba(255,255,255,.42); }
+        .contact-card .section-header { border-bottom-color:rgba(255,255,255,.10); }
+        .contact-card .section-num { color:rgba(255,255,255,.15); }
+        .contact-grid {
+            display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,185px),1fr));
+            gap:clamp(10px,2.5vw,14px); margin-top:clamp(16px,4vw,26px);
+        }
+        .contact-item {
+            background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10);
+            border-radius:12px; padding:clamp(12px,3vw,16px) clamp(13px,3vw,18px);
+            transition:background .18s,transform .18s; text-decoration:none; display:block;
+        }
+        a.contact-item:hover { background:rgba(255,255,255,.11); transform:translateY(-2px); }
+        .contact-label {
+            font-size:10px; font-weight:700; letter-spacing:.12em;
+            text-transform:uppercase; color:rgba(255,255,255,.36);
+            margin-bottom:6px; display:flex; align-items:center; gap:6px;
+        }
+        .contact-label i { opacity:.55; flex-shrink:0; font-size: 12px; }
+        .contact-value { font-size:clamp(12px,2.8vw,14px); font-weight:500; color:rgba(255,255,255,.82); word-break:break-word; }
+        .cv-green { color:var(--accent-2); }
+        .cv-blue  { color:#6ab3ff; }
+        .footer {
+            text-align:center; padding:clamp(20px,4vw,30px) 20px;
+            font-size:clamp(11px,2.5vw,13px); color:var(--ink-muted);
+            border-top:1px solid var(--border); max-width:880px; margin:0 auto;
+        }
+        .footer strong { color:var(--ink-light); }
+        
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(16px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        .section-card:nth-child(1)  { animation-delay:.04s; }
+        .section-card:nth-child(2)  { animation-delay:.08s; }
+        .section-card:nth-child(3)  { animation-delay:.12s; }
+        .section-card:nth-child(4)  { animation-delay:.16s; }
+        .section-card:nth-child(5)  { animation-delay:.20s; }
+        .section-card:nth-child(6)  { animation-delay:.24s; }
+        .section-card:nth-child(7)  { animation-delay:.28s; }
+        .section-card:nth-child(8)  { animation-delay:.32s; }
+        .section-card:nth-child(9)  { animation-delay:.36s; }
+        .section-card:nth-child(10) { animation-delay:.40s; }
+        .section-card:nth-child(11) { animation-delay:.44s; }
+        .section-card:nth-child(12) { animation-delay:.48s; }
+        .contact-card { animation-delay:.52s; }
+        
+        @media (max-width:480px) {
+            .toc-link { padding:11px 12px; }
+            .contact-item { padding:13px 14px; }
+        }
+    </style>
+</head>
+<body class="lang-en" dir="ltr">
+
+<div class="hero">
+    <div class="hero-badge lang-en">Hidely &middot; Secure Photo Vault</div>
+    <div class="hero-badge lang-bn">Hidely &middot; নিরাপদ ফটো ভল্ট</div>
+    <div class="hero-badge lang-hi">Hidely &middot; सुरक्षित फोटो तिजोरी</div>
+    <div class="hero-badge lang-es">Hidely &middot; Bóveda de Fotos Segura</div>
+    <div class="hero-badge lang-ar">Hidely &middot; قبو الصور الآمن</div>
+    <div class="hero-badge lang-fr">Hidely &middot; Coffre-fort Photo Sécurisé</div>
+    <div class="hero-badge lang-ru">Hidely &middot; Защищенное Фотохранилище</div>
+    <div class="hero-badge lang-ur">Hidely &middot; محفوظ تصویر والٹ</div>
+    <div class="hero-badge lang-fa">Hidely &middot; صندوق امن عکس</div>
+    
+    <h1 class="lang-en">Privacy <span>Policy</span></h1>
+    <h1 class="lang-bn">গোপনীয়তা <span>নীতি</span></h1>
+    <h1 class="lang-hi">गोपनीयता <span>नीति</span></h1>
+    <h1 class="lang-es">Política de <span>Privacidad</span></h1>
+    <h1 class="lang-ar">سياسة <span>الخصوصية</span></h1>
+    <h1 class="lang-fr">Politique de <span>Confidentialité</span></h1>
+    <h1 class="lang-ru">Политика <span>Конфиденциальности</span></h1>
+    <h1 class="lang-ur">رازداری <span>پالیسی</span></h1>
+    <h1 class="lang-fa">سیاست <span>حریم خصوصی</span></h1>
+
+    <p class="hero-sub lang-en">Hidely — Advanced Media Vault by JS Organization</p>
+    <p class="hero-sub lang-bn">Hidely — JS Organization এর একটি উন্নত মিডিয়া ভল্ট</p>
+    <p class="hero-sub lang-hi">Hidely — JS Organization द्वारा उन्नत मीडिया वॉल्ट</p>
+    <p class="hero-sub lang-es">Hidely — Bóveda multimedia avanzada de JS Organization</p>
+    <p class="hero-sub lang-ar">Hidely — قبو وسائط متقدم من JS Organization</p>
+    <p class="hero-sub lang-fr">Hidely — Coffre-fort multimédia par JS Organization</p>
+    <p class="hero-sub lang-ru">Hidely — Продвинутое медиа-хранилище от JS Organization</p>
+    <p class="hero-sub lang-ur">Hidely — جے ایس آرگنائزیشن کا ایڈوانسڈ میڈیا والٹ</p>
+    <p class="hero-sub lang-fa">Hidely — گاوصندوق رسانه پیشرفته توسط JS Organization</p>
+    
+    <div class="hero-meta">
+        <select id="langSelect" class="hero-badge" onchange="toggleLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="bn">বাংলা (Bangla)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="fr">Français (French)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="ur">اردو (Urdu)</option>
+            <option value="fa">فارسی (Persian)</option>
+        </select>
+    </div>
+
+    <div class="hero-meta">
+        <div class="hero-meta-item">
+            <i class="fa-regular fa-calendar-alt"></i>
+            <span class="lang-en">Effective: May 14, 2026</span>
+            <span class="lang-bn">কার্যকরী তারিখ: ১৪ মে, ২০২৬</span>
+            <span class="lang-hi">प्रभावी: 14 मई, 2026</span>
+            <span class="lang-es">Efectivo: 14 de mayo, 2026</span>
+            <span class="lang-ar">ساري المفعول: ١٤ مايو ٢٠٢٦</span>
+            <span class="lang-fr">En vigueur : 14 Mai 2026</span>
+            <span class="lang-ru">Действует с: 14 мая 2026</span>
+            <span class="lang-ur">مؤثر: 14 مئی 2026</span>
+            <span class="lang-fa">موثر: ۱۴ مه ۲۰۲۶</span>
+        </div>
+        <div class="hero-meta-item">
+            <i class="fa-solid fa-mobile-alt"></i>
+            <span class="lang-en">Local device data only</span>
+            <span class="lang-bn">শুধুমাত্র লোকাল ডিভাইস ডেটা</span>
+            <span class="lang-hi">केवल स्थानीय उपकरण डेटा</span>
+            <span class="lang-es">Solo datos del dispositivo local</span>
+            <span class="lang-ar">بيانات الجهاز المحلي فقط</span>
+            <span class="lang-fr">Données locales uniquement</span>
+            <span class="lang-ru">Только локальные данные</span>
+            <span class="lang-ur">صرف مقامی ڈیوائس کا ڈیٹا</span>
+            <span class="lang-fa">فقط داده های دستگاه محلی</span>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrap">
+    
+    <div class="toc-card">
+        <h2 class="lang-en">Table of Contents</h2>
+        <h2 class="lang-bn">সূচিপত্র</h2>
+        <h2 class="lang-hi">विषय सूची</h2>
+        <h2 class="lang-es">Tabla de Contenido</h2>
+        <h2 class="lang-ar">جدول المحتويات</h2>
+        <h2 class="lang-fr">Table des Matières</h2>
+        <h2 class="lang-ru">Оглавление</h2>
+        <h2 class="lang-ur">فہرست مضامین</h2>
+        <h2 class="lang-fa">فهرست مطالب</h2>
+        
+        <div class="toc-grid">
+            <a href="#s1" class="toc-link"><span class="toc-num">01</span>
+                <span class="lang-en">Introduction</span><span class="lang-bn">ভূমিকা</span><span class="lang-hi">परिचय</span><span class="lang-es">Introducción</span><span class="lang-ar">مقدمة</span><span class="lang-fr">Introduction</span><span class="lang-ru">Введение</span><span class="lang-ur">تعارف</span><span class="lang-fa">مقدمه</span>
+            </a>
+            <a href="#s2" class="toc-link"><span class="toc-num">02</span>
+                <span class="lang-en">Info We Collect</span><span class="lang-bn">সংগৃহীত তথ্য</span><span class="lang-hi">हम जो जानकारी एकत्र करते हैं</span><span class="lang-es">Información Recopilada</span><span class="lang-ar">المعلومات التي نجمعها</span><span class="lang-fr">Infos Collectées</span><span class="lang-ru">Сбор Информации</span><span class="lang-ur">ہماری جمع کردہ معلومات</span><span class="lang-fa">اطلاعات جمع آوری شده</span>
+            </a>
+            <a href="#s3" class="toc-link"><span class="toc-num">03</span>
+                <span class="lang-en">How We Use Info</span><span class="lang-bn">তথ্য ব্যবহার</span><span class="lang-hi">जानकारी का उपयोग</span><span class="lang-es">Uso de Información</span><span class="lang-ar">كيف نستخدم المعلومات</span><span class="lang-fr">Utilisation des Infos</span><span class="lang-ru">Использование Информации</span><span class="lang-ur">معلومات کا استعمال</span><span class="lang-fa">استفاده از اطلاعات</span>
+            </a>
+            <a href="#s4" class="toc-link"><span class="toc-num">04</span>
+                <span class="lang-en">Storage & Security</span><span class="lang-bn">স্টোরেজ এবং নিরাপত্তা</span><span class="lang-hi">भंडारण और सुरक्षा</span><span class="lang-es">Almacenamiento y Seguridad</span><span class="lang-ar">التخزين والأمان</span><span class="lang-fr">Stockage et Sécurité</span><span class="lang-ru">Хранение и Безопасность</span><span class="lang-ur">اسٹوریج اور سیکیورٹی</span><span class="lang-fa">ذخیره سازی و امنیت</span>
+            </a>
+            <a href="#s5" class="toc-link"><span class="toc-num">05</span>
+                <span class="lang-en">Permissions</span><span class="lang-bn">পারমিশন</span><span class="lang-hi">अनुमतियां</span><span class="lang-es">Permisos Requeridos</span><span class="lang-ar">الأذونات المطلوبة</span><span class="lang-fr">Autorisations Requises</span><span class="lang-ru">Разрешения</span><span class="lang-ur">اجازت نامے</span><span class="lang-fa">مجوزها</span>
+            </a>
+            <a href="#s6" class="toc-link"><span class="toc-num">06</span>
+                <span class="lang-en">Data Sharing</span><span class="lang-bn">ডেটা শেয়ারিং</span><span class="lang-hi">डेटा साझा करना</span><span class="lang-es">Intercambio de Datos</span><span class="lang-ar">مشاركة البيانات</span><span class="lang-fr">Partage de Données</span><span class="lang-ru">Обмен Данными</span><span class="lang-ur">ڈیٹا کا اشتراک</span><span class="lang-fa">اشتراک داده ها</span>
+            </a>
+            <a href="#s7" class="toc-link"><span class="toc-num">07</span>
+                <span class="lang-en">Data Retention</span><span class="lang-bn">ডেটা সংরক্ষণ</span><span class="lang-hi">डेटा प्रतिधारण</span><span class="lang-es">Retención de Datos</span><span class="lang-ar">الاحتفاظ بالبيانات</span><span class="lang-fr">Conservation des Données</span><span class="lang-ru">Хранение Данных</span><span class="lang-ur">ڈیٹا کی برقراری</span><span class="lang-fa">حفظ داده ها</span>
+            </a>
+            <a href="#s8" class="toc-link"><span class="toc-num">08</span>
+                <span class="lang-en">Children's Privacy</span><span class="lang-bn">শিশুদের গোপনীয়তা</span><span class="lang-hi">बच्चों की गोपनीयता</span><span class="lang-es">Privacidad Infantil</span><span class="lang-ar">خصوصية الأطفال</span><span class="lang-fr">Confidentialité des Enfants</span><span class="lang-ru">Детская Конфиденциальность</span><span class="lang-ur">بچوں کی رازداری</span><span class="lang-fa">حریم خصوصی کودکان</span>
+            </a>
+            <a href="#s9" class="toc-link"><span class="toc-num">09</span>
+                <span class="lang-en">Policy Changes</span><span class="lang-bn">নীতির পরিবর্তন</span><span class="lang-hi">नीति में परिवर्तन</span><span class="lang-es">Cambios en la Política</span><span class="lang-ar">تغييرات السياسة</span><span class="lang-fr">Changements de Politique</span><span class="lang-ru">Изменения Политики</span><span class="lang-ur">پالیسی میں تبدیلیاں</span><span class="lang-fa">تغییرات سیاست</span>
+            </a>
+            <a href="#s10" class="toc-link"><span class="toc-num">10</span>
+                <span class="lang-en">Your Rights</span><span class="lang-bn">আপনার অধিকার</span><span class="lang-hi">आपके अधिकार</span><span class="lang-es">Tus Derechos</span><span class="lang-ar">حقوقك</span><span class="lang-fr">Vos Droits</span><span class="lang-ru">Ваши Права</span><span class="lang-ur">آپ کے حقوق</span><span class="lang-fa">حقوق شما</span>
+            </a>
+            <a href="#s11" class="toc-link"><span class="toc-num">11</span>
+                <span class="lang-en">Contact Us</span><span class="lang-bn">যোগাযোগ</span><span class="lang-hi">संपर्क करें</span><span class="lang-es">Contáctanos</span><span class="lang-ar">اتصل بنا</span><span class="lang-fr">Nous Contacter</span><span class="lang-ru">Контакты</span><span class="lang-ur">رابطہ کریں</span><span class="lang-fa">تماس با ما</span>
+            </a>
+            <a href="#s12" class="toc-link"><span class="toc-num">12</span>
+                <span class="lang-en">Legal Compliance</span><span class="lang-bn">আইনি সম্মতি</span><span class="lang-hi">कानूनी अनुपालन</span><span class="lang-es">Cumplimiento Legal</span><span class="lang-ar">الامتثال القانوني</span><span class="lang-fr">Conformité Légale</span><span class="lang-ru">Юридическое Соответствие</span><span class="lang-ur">قانونی تعمیل</span><span class="lang-fa">انطباق قانونی</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section-card" id="s1">
+        <div class="section-header">
+            <div class="section-num">01</div>
+            <div>
+                <div class="section-title lang-en">Introduction</div>
+                <div class="section-title lang-bn">ভূমিকা</div>
+                <div class="section-title lang-hi">परिचय</div>
+                <div class="section-title lang-es">Introducción</div>
+                <div class="section-title lang-ar">مقدمة</div>
+                <div class="section-title lang-fr">Introduction</div>
+                <div class="section-title lang-ru">Введение</div>
+                <div class="section-title lang-ur">تعارف</div>
+                <div class="section-title lang-fa">مقدمه</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Hidely is a secure photo and video vault application designed to protect your private media with advanced security features. We are committed to protecting your privacy and ensuring the security of your personal data. This Privacy Policy explains how we handle your information.</p>
+            <p class="lang-bn">Hidely হলো একটি সুরক্ষিত ছবি এবং ভিডিও ভল্ট অ্যাপ্লিকেশান, যা উন্নত নিরাপত্তা বৈশিষ্ট্যের সাহায্যে আপনার ব্যক্তিগত মিডিয়া সুরক্ষিত রাখার জন্য ডিজাইন করা হয়েছে। আমরা আপনার গোপনীয়তা রক্ষা এবং ডেটার নিরাপত্তা নিশ্চিত করতে প্রতিশ্রুতিবদ্ধ। এই নীতিমালার মাধ্যমে আমরা কীভাবে আপনার তথ্য পরিচালনা করি তা ব্যাখ্যা করা হয়েছে।</p>
+            <p class="lang-hi">Hidely एक सुरक्षित फोटो और वीडियो तिजोरी एप्लिकेशन है जिसे उन्नत सुरक्षा सुविधाओं के साथ आपके निजी मीडिया की रक्षा के लिए डिज़ाइन किया गया है। यह नीति बताती है कि हम आपकी जानकारी को कैसे संभालते हैं।</p>
+            <p class="lang-es">Hidely es una aplicación de bóveda segura diseñada para proteger sus fotos y videos privados. Esta política explica cómo manejamos su información de manera segura.</p>
+            <p class="lang-ar">Hidely هو تطبيق قبو آمن للصور ومقاطع الفيديو مصمم لحماية وسائطك الخاصة. تشرح هذه السياسة كيف نتعامل مع معلوماتك.</p>
+            <p class="lang-fr">Hidely est une application de coffre-fort sécurisée conçue pour protéger vos photos et vidéos privées. Cette politique explique comment nous traitons vos informations.</p>
+            <p class="lang-ru">Hidely - это надежное приложение-хранилище, предназначенное для защиты ваших личных фото и видео. Эта политика объясняет, как мы обращаемся с вашей информацией.</p>
+            <p class="lang-ur">Hidely ایک محفوظ تصویر اور ویڈیو والٹ ایپ ہے جسے آپ کے نجی میڈیا کی حفاظت کے لیے ڈیزائن کیا گیا ہے۔ یہ پالیسی بتاتی ہے کہ ہم آپ کی معلومات کو کیسے ہینڈل کرتے ہیں۔</p>
+            <p class="lang-fa">Hidely یک برنامه امن گاوصندوق عکس و ویدیو است که برای محافظت از رسانه های خصوصی شما طراحی شده است. این سیاست نحوه مدیریت اطلاعات شما را توضیح می دهد.</p>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card" id="s2">
+        <div class="section-header">
+            <div class="section-num">02</div>
+            <div>
+                <div class="section-title lang-en">Information We Collect</div>
+                <div class="section-title lang-bn">সংগ্রহ করা তথ্য</div>
+                <div class="section-title lang-hi">हम जो जानकारी एकत्र करते हैं</div>
+                <div class="section-title lang-es">Información que Recopilamos</div>
+                <div class="section-title lang-ar">المعلومات التي نجمعها</div>
+                <div class="section-title lang-fr">Informations Collectées</div>
+                <div class="section-title lang-ru">Информацию Которую Мы Собираем</div>
+                <div class="section-title lang-ur">ہماری جمع کردہ معلومات</div>
+                <div class="section-title lang-fa">اطلاعاتی که جمع آوری می کنیم</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="callout safe">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="lang-en"><strong>Strictly Offline</strong>Hidely does NOT collect personal identity, location, or usage data. No data is transmitted to external servers.</div>
+                <div class="lang-bn"><strong>সম্পূর্ণ অফলাইন</strong>Hidely কোনো ব্যক্তিগত পরিচয়, লোকেশন বা ব্যবহারের ডেটা সংগ্রহ করে না। কোনো ডেটা এক্সটার্নাল সার্ভারে পাঠানো হয় না।</div>
+                <div class="lang-hi"><strong>पूरी तरह से ऑफ़लाइन</strong> कोई व्यक्तिगत डेटा एकत्र या बाहरी सर्वर पर प्रसारित नहीं किया जाता है।</div>
+                <div class="lang-es"><strong>Estrictamente Offline</strong> No se recopilan ni transmiten datos personales a servidores externos.</div>
+                <div class="lang-ar"><strong>غير متصل تمامًا</strong> لا يتم جمع بيانات شخصية أو نقلها إلى خوادم خارجية.</div>
+                <div class="lang-fr"><strong>Strictement Hors Ligne</strong> Aucune donnée personnelle n'est collectée ou transmise à des serveurs externes.</div>
+                <div class="lang-ru"><strong>Строго Офлайн</strong> Личные данные не собираются и не передаются на внешние серверы.</div>
+                <div class="lang-ur"><strong>سختی سے آف لائن</strong> کوئی ذاتی ڈیٹا اکٹھا یا بیرونی سرورز پر منتقل نہیں کیا جاتا ہے۔</div>
+                <div class="lang-fa"><strong>کاملا آفلاین</strong> هیچ داده شخصی جمع آوری یا به سرورهای خارجی منتقل نمی شود.</div>
+            </div>
+            
+            <h3 class="lang-en">Locally Stored Data</h3>
+            <h3 class="lang-bn">লোকাল স্টোরেজ ডেটা</h3>
+            <p class="lang-en">All your media and app data are stored <strong>locally on your device</strong> in a private storage area. This includes:</p>
+            <p class="lang-bn">আপনার সমস্ত মিডিয়া এবং অ্যাপ ডেটা <strong>শুধুমাত্র আপনার ডিভাইসের</strong> প্রাইভেট স্টোরেজে সংরক্ষিত থাকে। এর মধ্যে অন্তর্ভুক্ত:</p>
+            <ul class="policy-list lang-en">
+                <li>Imported photos and videos</li>
+                <li>Security settings (PIN, biometric preferences)</li>
+                <li>Recovery questions and answers</li>
+                <li>Intruder capture photos (if enabled)</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li>ইমপোর্ট করা ছবি এবং ভিডিও</li>
+                <li>নিরাপত্তা সেটিংস (পিন, বায়োমেট্রিক পছন্দ)</li>
+                <li>রিকভারি প্রশ্ন এবং উত্তর</li>
+                <li>অনুপ্রবেশকারীর ছবি (যদি চালু থাকে)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card" id="s3">
+        <div class="section-header">
+            <div class="section-num">03</div>
+            <div>
+                <div class="section-title lang-en">How We Use Your Information</div>
+                <div class="section-title lang-bn">কীভাবে আমরা আপনার তথ্য ব্যবহার করি</div>
+                <div class="section-title lang-hi">हम आपकी जानकारी का उपयोग कैसे करते हैं</div>
+                <div class="section-title lang-es">Cómo Usamos tu Información</div>
+                <div class="section-title lang-ar">كيف نستخدم معلوماتك</div>
+                <div class="section-title lang-fr">Comment Nous Utilisons Vos Informations</div>
+                <div class="section-title lang-ru">Как Мы Используем Вашу Информацию</div>
+                <div class="section-title lang-ur">ہم آپ کی معلومات کیسے استعمال کرتے ہیں</div>
+                <div class="section-title lang-fa">نحوه استفاده از اطلاعات شما</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Since we do not collect or transmit any data to external servers, we only use your information locally for:</p>
+            <p class="lang-bn">যেহেতু আমরা এক্সটার্নাল সার্ভারে কোনো ডেটা পাঠাই না, আমরা শুধুমাত্র লোকালি এই কাজের জন্য তথ্য ব্যবহার করি:</p>
+            
+            <ul class="policy-list lang-en">
+                <li><strong>Core Functionality:</strong> Storing and organizing your media on your device.</li>
+                <li><strong>Security Features:</strong> PIN/biometric authentication, decoy password, intruder capture.</li>
+                <li><strong>App Preferences:</strong> Managing your theme, language, and settings locally.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>মূল কাজ:</strong> আপনার ডিভাইসে মিডিয়া সংরক্ষণ ও সাজিয়ে রাখা।</li>
+                <li><strong>নিরাপত্তা ফিচার:</strong> পিন/বায়োমেট্রিক অথেন্টিকেশন, ডিকয় পাসওয়ার্ড, ইন্ট্রুডার ক্যাপচার।</li>
+                <li><strong>অ্যাপ সেটিংস:</strong> আপনার থিম, ভাষা এবং পছন্দসমূহ পরিচালনা করা।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card" id="s4">
+        <div class="section-header">
+            <div class="section-num">04</div>
+            <div>
+                <div class="section-title lang-en">Data Storage and Security</div>
+                <div class="section-title lang-bn">ডেটা স্টোরেজ এবং নিরাপত্তা</div>
+                <div class="section-title lang-hi">डेटा संग्रहण और सुरक्षा</div>
+                <div class="section-title lang-es">Almacenamiento y Seguridad de Datos</div>
+                <div class="section-title lang-ar">تخزين البيانات وأمنها</div>
+                <div class="section-title lang-fr">Stockage et Sécurité des Données</div>
+                <div class="section-title lang-ru">Хранение и Безопасность Данных</div>
+                <div class="section-title lang-ur">ڈیٹا اسٹوریج اور سیکیورٹی</div>
+                <div class="section-title lang-fa">ذخیره سازی و امنیت داده ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list lang-en">
+                <li><strong>Private Storage:</strong> Media files are kept in an isolated app directory (`SecureMedia`) inaccessible to other apps.</li>
+                <li><strong>Advanced Locking:</strong> Protected by 4-digit PIN, fingerprint, and Face-Down close detection.</li>
+                <li><strong>Decoy Vault:</strong> A secondary fake password creates plausible deniability.</li>
+                <li><strong>Screenshot Prevention:</strong> Secure flags prevent capturing the app screen (if enabled).</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>প্রাইভেট স্টোরেজ:</strong> মিডিয়া ফাইলগুলো অ্যাপের নিজস্ব ডিরেক্টরিতে (`SecureMedia`) থাকে যা অন্য অ্যাপ অ্যাক্সেস করতে পারে না।</li>
+                <li><strong>উন্নত লকিং:</strong> ৪-ডিজিট পিন, ফিঙ্গারপ্রিন্ট এবং ফেস-ডাউন (ফোন উল্টালে বন্ধ) ফিচার দ্বারা সুরক্ষিত।</li>
+                <li><strong>ডিকয় ভল্ট:</strong> একটি ভুয়া পাসওয়ার্ড ব্যবহার করে নকল ভল্ট দেখানোর সুবিধা।</li>
+                <li><strong>স্ক্রিনশট প্রতিরোধ:</strong> চালু থাকলে অ্যাপের ভেতরে স্ক্রিনশট নেওয়া ব্লক করা হয়।</li>
+            </ul>
+            <ul class="policy-list lang-hi">
+                <li>आपका सारा डेटा आपके डिवाइस पर निजी फ़ोल्डरों में स्थानीय रूप से सुरक्षित है।</li>
+                <li>हम पिन, फ़िंगरप्रिंट, डिकॉय पासवर्ड और घुसपैठियों की तस्वीर खींचने जैसी सुरक्षा परतें प्रदान करते हैं।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section-card" id="s5">
+        <div class="section-header">
+            <div class="section-num">05</div>
+            <div>
+                <div class="section-title lang-en">Permissions Required</div>
+                <div class="section-title lang-bn">প্রয়োজনীয় পারমিশনসমূহ</div>
+                <div class="section-title lang-hi">आवश्यक अनुमतियाँ</div>
+                <div class="section-title lang-es">Permisos Requeridos</div>
+                <div class="section-title lang-ar">الأذونات المطلوبة</div>
+                <div class="section-title lang-fr">Autorisations Requises</div>
+                <div class="section-title lang-ru">Требуемые Разрешения</div>
+                <div class="section-title lang-ur">درکار اجازتیں</div>
+                <div class="section-title lang-fa">مجوزهای مورد نیاز</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Hidely requests the following local permissions to function correctly:</p>
+            <p class="lang-bn">সঠিকভাবে কাজ করার জন্য Hidely নিচের লোকাল পারমিশনগুলো ব্যবহার করে:</p>
+            
+            <div class="pill-grid lang-en">
+                <span class="pill allowed">Storage Access</span>
+                <span class="pill allowed">Camera (Intruder Selfie)</span>
+                <span class="pill allowed">Biometric</span>
+                <span class="pill allowed">Vibrate</span>
+            </div>
+            <div class="pill-grid lang-bn">
+                <span class="pill allowed">স্টোরেজ অ্যাক্সেস</span>
+                <span class="pill allowed">ক্যামেরা (অনুপ্রবেশকারীর ছবি)</span>
+                <span class="pill allowed">বায়োমেট্রিক</span>
+                <span class="pill allowed">ভাইব্রেট</span>
+            </div>
+            
+            <ul class="policy-list lang-en">
+                <li><strong>Storage:</strong> To import media from your gallery. Files are moved securely to private storage.</li>
+                <li><strong>Camera:</strong> Strictly used only to silently capture a photo if someone enters the wrong PIN (Intruder feature).</li>
+                <li><strong>Biometric:</strong> Handled by Android OS to verify fingerprint. We do not access fingerprint data directly.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>স্টোরেজ:</strong> গ্যালারি থেকে মিডিয়া ইমপোর্ট করার জন্য। ফাইলগুলো নিরাপদে প্রাইভেট স্টোরেজে নেওয়া হয়।</li>
+                <li><strong>ক্যামেরা:</strong> ভুল পিন দিলে চুপিসারে ছবি তোলার জন্য (শুধুমাত্র Intruder ফিচারের জন্য)।</li>
+                <li><strong>বায়োমেট্রিক:</strong> ফিঙ্গারপ্রিন্ট ভেরিফাই করার জন্য। অ্যাপ সরাসরি আপনার ফিঙ্গারপ্রিন্ট ডেটা দেখতে বা নিতে পারে না।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section-card" id="s6">
+        <div class="section-header">
+            <div class="section-num">06</div>
+            <div>
+                <div class="section-title lang-en">Data Sharing</div>
+                <div class="section-title lang-bn">ডেটা শেয়ারিং</div>
+                <div class="section-title lang-hi">डेटा साझा करना</div>
+                <div class="section-title lang-es">Intercambio de Datos</div>
+                <div class="section-title lang-ar">مشاركة البيانات</div>
+                <div class="section-title lang-fr">Partage de Données</div>
+                <div class="section-title lang-ru">Обмен Данными</div>
+                <div class="section-title lang-ur">ڈیٹا شیئرنگ</div>
+                <div class="section-title lang-fa">اشتراک گذاری داده ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">We do <strong>NOT</strong> share your data with any third parties. Since all data remains completely offline on your device, there is zero opportunity for data sharing with advertisers, analytics providers, or data brokers.</p>
+            <p class="lang-bn">আমরা তৃতীয় পক্ষের সাথে আপনার কোনো ডেটা <strong>শেয়ার করি না</strong>। যেহেতু সমস্ত ডেটা সম্পূর্ণ অফলাইনে আপনার ডিভাইসেই থাকে, তাই বিজ্ঞাপনদাতা, অ্যানালিটিক্স প্রোভাইডার বা ডেটা ব্রোকারদের সাথে ডেটা শেয়ার করার কোনো সুযোগই নেই।</p>
+        </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section-card" id="s7">
+        <div class="section-header">
+            <div class="section-num">07</div>
+            <div>
+                <div class="section-title lang-en">Data Retention</div>
+                <div class="section-title lang-bn">ডেটা সংরক্ষণ</div>
+                <div class="section-title lang-hi">डेटा प्रतिधारण</div>
+                <div class="section-title lang-es">Retención de Datos</div>
+                <div class="section-title lang-ar">الاحتفاظ بالبيانات</div>
+                <div class="section-title lang-fr">Conservation des Données</div>
+                <div class="section-title lang-ru">Хранение Данных</div>
+                <div class="section-title lang-ur">ڈیٹا کی برقراری</div>
+                <div class="section-title lang-fa">نگهداری داده ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list lang-en">
+                <li><strong>Active Media:</strong> Retained indefinitely on your local device until you manually delete or export them.</li>
+                <li><strong>Recycle Bin:</strong> Deleted items stay in the trash for 30 days before permanent automatic deletion.</li>
+                <li><strong>Uninstallation:</strong> Uninstalling the app or clearing app data will permanently delete all hidden media. Please export your files before uninstalling.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>সক্রিয় মিডিয়া:</strong> যতক্ষণ না আপনি নিজে ডিলিট বা এক্সপোর্ট করছেন, ততক্ষণ ডিভাইসেই সংরক্ষিত থাকে।</li>
+                <li><strong>রিসাইকেল বিন:</strong> মুছে ফেলা মিডিয়া স্থায়ীভাবে ডিলিট হওয়ার আগে ৩০ দিন রিসাইকেল বিনে থাকে।</li>
+                <li><strong>আনইনস্টল:</strong> অ্যাপ আনইনস্টল বা ডেটা ক্লিয়ার করলে সমস্ত লুকানো মিডিয়া স্থায়ীভাবে মুছে যাবে। আনইনস্টল করার আগে অবশ্যই মিডিয়া গ্যালারিতে এক্সপোর্ট করুন।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section-card" id="s8">
+        <div class="section-header">
+            <div class="section-num">08</div>
+            <div>
+                <div class="section-title lang-en">Children's Privacy</div>
+                <div class="section-title lang-bn">শিশুদের গোপনীয়তা</div>
+                <div class="section-title lang-hi">बच्चों की गोपनीयता</div>
+                <div class="section-title lang-es">Privacidad Infantil</div>
+                <div class="section-title lang-ar">خصوصية الأطفال</div>
+                <div class="section-title lang-fr">Confidentialité des Enfants</div>
+                <div class="section-title lang-ru">Конфиденциальность Детей</div>
+                <div class="section-title lang-ur">بچوں کی رازداری</div>
+                <div class="section-title lang-fa">حریم خصوصی کودکان</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Hidely is not directed to children under 13. We do not knowingly collect personal information from children. Parents should supervise children's use of the app.</p>
+            <p class="lang-bn">Hidely অ্যাপটি ১৩ বছরের কম বয়সী শিশুদের জন্য নির্দেশিত নয়। আমরা জেনে-বুঝে শিশুদের থেকে কোনো ব্যক্তিগত তথ্য সংগ্রহ করি না।</p>
+        </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section-card" id="s9">
+        <div class="section-header">
+            <div class="section-num">09</div>
+            <div>
+                <div class="section-title lang-en">Changes to This Privacy Policy</div>
+                <div class="section-title lang-bn">নীতিমালায় পরিবর্তন</div>
+                <div class="section-title lang-hi">नीति में परिवर्तन</div>
+                <div class="section-title lang-es">Cambios a esta Política</div>
+                <div class="section-title lang-ar">تغييرات في هذه السياسة</div>
+                <div class="section-title lang-fr">Modifications de la Politique</div>
+                <div class="section-title lang-ru">Изменения в Политике</div>
+                <div class="section-title lang-ur">اس پالیسی میں تبدیلیاں</div>
+                <div class="section-title lang-fa">تغییرات این سیاست</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the "Last Updated" date and providing an in-app notification for material changes.</p>
+            <p class="lang-bn">আমরা সময়ে সময়ে এই গোপনীয়তা নীতি আপডেট করতে পারি। কোনো বড় পরিবর্তন হলে অ্যাপের ভেতর নোটিফিকেশন দিয়ে এবং 'সর্বশেষ আপডেট' তারিখ পরিবর্তন করে জানানো হবে।</p>
+        </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section-card" id="s10">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <div>
+                <div class="section-title lang-en">Your Rights</div>
+                <div class="section-title lang-bn">আপনার অধিকার</div>
+                <div class="section-title lang-hi">आपके अधिकार</div>
+                <div class="section-title lang-es">Tus Derechos</div>
+                <div class="section-title lang-ar">حقوقك</div>
+                <div class="section-title lang-fr">Vos Droits</div>
+                <div class="section-title lang-ru">Ваши Права</div>
+                <div class="section-title lang-ur">آپ کے حقوق</div>
+                <div class="section-title lang-fa">حقوق شما</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">You have absolute control over your local data. You have the right to:</p>
+            <p class="lang-bn">আপনার লোকাল ডেটার ওপর আপনার সম্পূর্ণ নিয়ন্ত্রণ রয়েছে। আপনার যেসব অধিকার রয়েছে:</p>
+            <ul class="policy-list lang-en">
+                <li><strong>Access:</strong> View all your stored media within the app.</li>
+                <li><strong>Delete:</strong> Remove any media, albums, or app data at any time.</li>
+                <li><strong>Export:</strong> Move media back to your device's public gallery.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>অ্যাক্সেস:</strong> অ্যাপের ভেতরে রাখা সব মিডিয়া দেখা।</li>
+                <li><strong>মুছে ফেলা:</strong> যেকোনো মিডিয়া, অ্যালবাম বা অ্যাপ ডেটা যেকোনো সময় ডিলিট করা।</li>
+                <li><strong>এক্সপোর্ট:</strong> লুকানো ছবি বা ভিডিও আবার পাবলিক গ্যালারিতে ফেরত নেওয়া।</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="contact-card" id="s11">
+        <div class="section-header">
+            <div class="section-num">11</div>
+            <div>
+                <div class="section-title lang-en">Contact Us</div>
+                <div class="section-title lang-bn">যোগাযোগ করুন</div>
+                <div class="section-title lang-hi">संपर्क करें</div>
+                <div class="section-title lang-es">Contáctanos</div>
+                <div class="section-title lang-ar">اتصل بنا</div>
+                <div class="section-title lang-fr">Nous Contacter</div>
+                <div class="section-title lang-ru">Свяжитесь с Нами</div>
+                <div class="section-title lang-ur">ہم سے رابطہ کریں</div>
+                <div class="section-title lang-fa">تماس با ما</div>
+                
+                <div class="section-subtitle lang-en">Questions about this privacy policy?</div>
+                <div class="section-subtitle lang-bn">এই নীতি সম্পর্কে কোনো প্রশ্ন আছে?</div>
+            </div>
+        </div>
+        
+        <p class="lang-en" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Reach out to Md Mobassher Ahmed Sowrov or JS Organization through any of the following channels:</p>
+        <p class="lang-bn" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">নিচের যেকোনো মাধ্যমে ডেভেলপার বা JS Organization-এর সাথে যোগাযোগ করতে পারেন:</p>
+        
+        <div class="contact-grid">
+            <a class="contact-item" href="mailto:jsorganization.official@gmail.com">
+                <div class="contact-label"><i class="fa-solid fa-envelope"></i> Email</div>
+                <div class="contact-value cv-green">jsorganization.official@gmail.com</div>
+            </a>
+
+            <a class="contact-item" href="https://t.me/swrov" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-telegram"></i> Developer</div>
+                <div class="contact-value cv-blue">@swrov</div>
+            </a>
+
+            <a class="contact-item" href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-solid fa-paper-plane"></i> TG Channel</div>
+                <div class="contact-value cv-blue">@JSOrganization</div>
+            </a>
+
+            <a class="contact-item" href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-github"></i> GitHub</div>
+                <div class="contact-value cv-green">JSOrganizations</div>
+            </a>
+
+            <a class="contact-item" href="https://youtube.com/channel/UCpMq9ITrRfIGK2dxVv5R_kw" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-youtube"></i> YouTube</div>
+                <div class="contact-value" style="color:rgba(255,255,255,.75);">JS Organization</div>
+            </a>
+
+            <div class="contact-item" style="cursor:default;">
+                <div class="contact-label"><i class="fa-solid fa-box"></i> App Package</div>
+                <div class="contact-value" style="color:rgba(255,255,255,.45); font-size:12px; font-family:monospace;">com.jsorg.hidely</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section-card" id="s12">
+        <div class="section-header">
+            <div class="section-num">12</div>
+            <div>
+                <div class="section-title lang-en">Legal Compliance</div>
+                <div class="section-title lang-bn">আইনি সম্মতি</div>
+                <div class="section-title lang-hi">कानूनी अनुपालन</div>
+                <div class="section-title lang-es">Cumplimiento Legal</div>
+                <div class="section-title lang-ar">الامتثال القانوني</div>
+                <div class="section-title lang-fr">Conformité Légale</div>
+                <div class="section-title lang-ru">Юридическое Соответствие</div>
+                <div class="section-title lang-ur">قانونی تعمیل</div>
+                <div class="section-title lang-fa">انطباق قانونی</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">This Privacy Policy is designed to comply with international privacy standards including the <strong>General Data Protection Regulation (GDPR)</strong> and the <strong>California Consumer Privacy Act (CCPA)</strong>. Since we do not collect, process, or transfer personal data to external servers, our data footprint is minimal and entirely localized to your device.</p>
+            <p class="lang-bn">এই গোপনীয়তা নীতি GDPR এবং CCPA-সহ আন্তর্জাতিক গোপনীয়তা মানদণ্ড মেনে চলার জন্য তৈরি করা হয়েছে। যেহেতু আমরা কোনো ব্যক্তিগত ডেটা সংগ্রহ বা এক্সটার্নাল সার্ভারে ট্রান্সফার করি না, তাই আমাদের ডেটা ফুটপ্রিন্ট অত্যন্ত ন্যূনতম এবং সম্পূর্ণ আপনার ডিভাইসের মধ্যেই সীমাবদ্ধ।</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p class="lang-en">This Privacy Policy was last updated on <strong>May 14, 2026</strong>.</p>
+    <p class="lang-bn">এই গোপনীয়তা নীতি সর্বশেষ <strong>১৪ মে, ২০২৬</strong> তারিখে আপডেট করা হয়েছে।</p>
+    <p style="margin-top:6px;">&copy; 2026 <strong>JS Organization</strong>. All rights reserved.</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('language') || 'en';
+        
+        const validLangs = ['en', 'bn', 'hi', 'es', 'ar', 'fr', 'ru', 'ur', 'fa'];
+        if (!validLangs.includes(lang)) { lang = 'en'; }
+
+        document.getElementById('langSelect').value = lang;
+        applyLanguage(lang);
+    });
+
+    function toggleLanguage(lang) {
+        applyLanguage(lang);
+        updateURL(lang);
+    }
+
+    function applyLanguage(lang) {
+        document.body.className = '';
+        document.body.classList.add('lang-' + lang);
+
+        if (['ar', 'ur', 'fa'].includes(lang)) {
+            document.body.setAttribute('dir', 'rtl');
+        } else {
+            document.body.setAttribute('dir', 'ltr');
+        }
+    }
+
+    function updateURL(lang) {
+        const url = new URL(window.location);
+        url.searchParams.set('language', lang);
+        window.history.pushState({}, '', url);
+    }
+</script>
+
+</body>
+</html>
