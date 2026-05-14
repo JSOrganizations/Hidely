@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Use — Hidely</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --ink: #0d1117;
+            --ink-light: #3d4451;
+            --ink-muted: #7a8394;
+            --surface: #ffffff;
+            --surface-2: #f6f8fb;
+            --surface-3: #eef2f7;
+            --accent: #1a6bff;
+            --accent-2: #00c9a7;
+            --accent-glow: rgba(26, 107, 255, 0.10);
+            --warn-bg: #fffbeb;
+            --border: #e2e8f0;
+            --border-strong: #c8d3e0;
+            --radius: 16px;
+            --radius-sm: 8px;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--surface-2);
+            color: var(--ink);
+            font-size: 16px;
+            line-height: 1.75;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        body:not(.lang-en) .lang-en,
+        body:not(.lang-bn) .lang-bn,
+        body:not(.lang-hi) .lang-hi,
+        body:not(.lang-es) .lang-es,
+        body:not(.lang-ar) .lang-ar,
+        body:not(.lang-fr) .lang-fr,
+        body:not(.lang-ru) .lang-ru,
+        body:not(.lang-ur) .lang-ur,
+        body:not(.lang-fa) .lang-fa {
+            display: none !important;
+        }
+
+        body[dir="rtl"] { text-align: right; }
+        body[dir="rtl"] .policy-list li { padding-right: 0; }
+        body[dir="rtl"] .policy-list li::before { margin-left: 12px; margin-right: 0; }
+        body[dir="rtl"] .callout i { margin-left: 12px; margin-right: 0; }
+        body[dir="rtl"] .contact-label i { margin-left: 6px; margin-right: 0; }
+        body[dir="rtl"] .section-header { flex-direction: row; }
+        
+        .hero {
+            background: var(--ink);
+            position: relative;
+            overflow: hidden;
+            padding: clamp(48px,8vw,80px) clamp(16px,5vw,40px) clamp(40px,7vw,72px);
+            text-align: center;
+        }
+        .hero::before {
+            content:'';
+            position:absolute; inset:0;
+            background:
+                radial-gradient(ellipse 60% 80% at 20% 50%, rgba(26,107,255,.18) 0%, transparent 70%),
+                radial-gradient(ellipse 50% 60% at 80% 30%, rgba(0,201,167,.12) 0%, transparent 70%);
+            pointer-events:none;
+        }
+        .hero-badge {
+            display:inline-flex; align-items:center; gap:8px;
+            background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14);
+            border-radius:100px; padding:6px 16px;
+            font-size:clamp(10px,2.5vw,12px); font-weight:500;
+            letter-spacing:.08em; text-transform:uppercase;
+            color:rgba(255,255,255,.65); margin-bottom:22px; position:relative;
+        }
+        .hero-badge::before {
+            content:''; width:7px; height:7px; border-radius:50%;
+            background:var(--accent-2); box-shadow:0 0 8px var(--accent-2); flex-shrink:0;
+        }
+        select.hero-badge {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            color: #fff;
+            background: rgba(26,107,255,.2);
+            border-color: rgba(26,107,255,.4);
+            appearance: none;
+            -webkit-appearance: none;
+            padding-inline-end: 32px;
+            background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+            background-repeat: no-repeat;
+            background-position: right 12px center;
+            background-size: 10px auto;
+        }
+        body[dir="rtl"] select.hero-badge {
+            background-position: left 12px center;
+            padding-inline-start: 32px;
+            padding-inline-end: 16px;
+        }
+        select.hero-badge option { background: var(--ink); color: #fff; }
+        select.hero-badge:hover { background-color: rgba(26,107,255,.3); transform: translateY(-2px); }
+        .hero h1 {
+            font-family:'Playfair Display',Georgia,serif;
+            font-size:clamp(2rem,7vw,4rem); font-weight:700; color:#fff;
+            letter-spacing:-.02em; line-height:1.15; position:relative; margin-bottom:12px;
+        }
+        .hero h1 span {
+            background:linear-gradient(135deg,#1a6bff,#00c9a7);
+            -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+        }
+        .hero-sub { color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px); position:relative; }
+        .hero-meta {
+            display:flex; justify-content:center; flex-wrap:wrap;
+            gap:clamp(10px,3vw,22px); position:relative; margin-top:26px;
+        }
+        .hero-meta-item {
+            display:flex; align-items:center; gap:8px;
+            font-size:clamp(11px,2.5vw,13px); color:rgba(255,255,255,.45);
+        }
+        .page-wrap {
+            max-width:880px; margin:0 auto;
+            padding:0 clamp(12px,4vw,24px) clamp(48px,8vw,80px);
+        }
+        .toc-card {
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:var(--radius); padding:clamp(18px,4vw,30px);
+            margin:clamp(20px,4vw,36px) 0;
+            box-shadow:0 2px 12px rgba(13,17,23,.06);
+            animation:fadeUp .4s ease both;
+        }
+        .toc-card h2 {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(10px,2.5vw,11px); font-weight:600;
+            text-transform:uppercase; letter-spacing:.12em;
+            color:var(--ink-muted); margin-bottom:14px;
+        }
+        .toc-grid {
+            display:grid;
+            grid-template-columns:repeat(auto-fill,minmax(min(100%,200px),1fr));
+            gap:6px;
+        }
+        .toc-link {
+            display:flex; align-items:center; gap:10px;
+            padding:9px 12px; border-radius:var(--radius-sm);
+            text-decoration:none; color:var(--ink-light);
+            font-size:clamp(12px,2.8vw,14px); font-weight:500;
+            transition:background .18s,color .18s; border:1px solid transparent;
+        }
+        .toc-link:hover,.toc-link:focus {
+            background:var(--accent-glow); color:var(--accent);
+            border-color:rgba(26,107,255,.15); outline:none;
+        }
+        .toc-num {
+            font-size:10px; font-weight:700; color:var(--accent);
+            background:var(--accent-glow); width:22px; height:22px;
+            border-radius:6px; display:flex; align-items:center;
+            justify-content:center; flex-shrink:0;
+        }
+        .section-card {
+            background:var(--surface); border:1px solid var(--border);
+            border-radius:var(--radius);
+            padding:clamp(20px,5vw,38px) clamp(18px,5vw,40px);
+            margin-bottom:clamp(14px,3vw,22px);
+            box-shadow:0 2px 12px rgba(13,17,23,.05);
+            scroll-margin-top:20px;
+            animation:fadeUp .45s ease both;
+        }
+        .section-header {
+            display:flex; align-items:flex-start; gap:clamp(10px,3vw,16px);
+            margin-bottom:clamp(16px,4vw,22px);
+            padding-bottom:clamp(14px,3vw,18px);
+            border-bottom:1px solid var(--border);
+        }
+        .section-num {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(1.4rem,5vw,2.2rem); font-weight:700;
+            color:var(--border-strong); line-height:1; flex-shrink:0; margin-top:3px;
+        }
+        .section-title {
+            font-family:'Playfair Display',serif;
+            font-size:clamp(1.05rem,3.5vw,1.45rem); font-weight:700;
+            color:var(--ink); line-height:1.3;
+        }
+        .section-subtitle { font-size:clamp(11px,2.5vw,13px); color:var(--ink-muted); margin-top:4px; }
+        .section-body p { color:var(--ink-light); margin-bottom:14px; font-size:clamp(13.5px,3vw,15px); }
+        .section-body p:last-child { margin-bottom:0; }
+        .section-body h3 {
+            font-size:clamp(10px,2.5vw,12px); font-weight:700;
+            text-transform:uppercase; letter-spacing:.08em;
+            color:var(--ink-muted); margin:22px 0 10px;
+        }
+        .policy-list { list-style:none; margin:12px 0; }
+        .policy-list li {
+            display:flex; align-items:flex-start; gap:12px;
+            padding:10px 0; border-bottom:1px solid var(--surface-3);
+            font-size:clamp(13px,3vw,15px); color:var(--ink-light);
+        }
+        .policy-list li:last-child { border-bottom:none; }
+        .policy-list li::before {
+            content:''; width:6px; height:6px; border-radius:50%;
+            background:var(--accent); flex-shrink:0; margin-top:9px;
+        }
+        .policy-list li strong { color:var(--ink); font-weight:600; }
+        .callout {
+            border-radius:var(--radius-sm);
+            padding:clamp(13px,3vw,18px) clamp(13px,3vw,20px);
+            margin:16px 0; display:flex; gap:12px;
+            align-items:flex-start; font-size:clamp(13px,3vw,14.5px);
+        }
+        .callout i { flex-shrink:0; font-size: 18px; margin-top:2px; }
+        .callout.info  { background:var(--accent-glow); border:1px solid rgba(26,107,255,.18); color:#1a4db5; }
+        .callout.safe  { background:rgba(0,201,167,.08); border:1px solid rgba(0,201,167,.22); color:#047d67; }
+        .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.4); color:#92640a; }
+        .callout.danger { background:#fff1f1; border:1px solid #fecaca; color:#b91c1c; }
+        .callout strong {
+            display:block; font-weight:700; margin-bottom:3px;
+            font-size:11px; text-transform:uppercase; letter-spacing:.06em;
+        }
+        .contact-card {
+            background:linear-gradient(135deg,#0d1117 0%,#1a2033 100%);
+            border-radius:var(--radius);
+            padding:clamp(22px,5vw,40px); color:#fff;
+            margin-bottom:clamp(14px,3vw,22px);
+            animation:fadeUp .45s .44s ease both;
+        }
+        .contact-card .section-title { color:#fff; }
+        .contact-card .section-subtitle { color:rgba(255,255,255,.42); }
+        .contact-card .section-header { border-bottom-color:rgba(255,255,255,.10); }
+        .contact-card .section-num { color:rgba(255,255,255,.15); }
+        .contact-grid {
+            display:grid; grid-template-columns:repeat(auto-fill,minmax(min(100%,185px),1fr));
+            gap:clamp(10px,2.5vw,14px); margin-top:clamp(16px,4vw,26px);
+        }
+        .contact-item {
+            background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.10);
+            border-radius:12px; padding:clamp(12px,3vw,16px) clamp(13px,3vw,18px);
+            transition:background .18s,transform .18s; text-decoration:none; display:block;
+        }
+        a.contact-item:hover { background:rgba(255,255,255,.11); transform:translateY(-2px); }
+        .contact-label {
+            font-size:10px; font-weight:700; letter-spacing:.12em;
+            text-transform:uppercase; color:rgba(255,255,255,.36);
+            margin-bottom:6px; display:flex; align-items:center; gap:6px;
+        }
+        .contact-label i { opacity:.55; flex-shrink:0; font-size: 12px; }
+        .contact-value { font-size:clamp(12px,2.8vw,14px); font-weight:500; color:rgba(255,255,255,.82); word-break:break-word; }
+        .cv-green { color:var(--accent-2); }
+        .cv-blue  { color:#6ab3ff; }
+        .footer {
+            text-align:center; padding:clamp(20px,4vw,30px) 20px;
+            font-size:clamp(11px,2.5vw,13px); color:var(--ink-muted);
+            border-top:1px solid var(--border); max-width:880px; margin:0 auto;
+        }
+        .footer strong { color:var(--ink-light); }
+        
+        @keyframes fadeUp {
+            from { opacity:0; transform:translateY(16px); }
+            to   { opacity:1; transform:translateY(0); }
+        }
+        
+        @media (max-width:480px) {
+            .toc-link { padding:11px 12px; }
+            .contact-item { padding:13px 14px; }
+        }
+    </style>
+</head>
+<body class="lang-en" dir="ltr">
+
+<div class="hero">
+    <div class="hero-badge lang-en">Hidely &middot; Secure Photo Vault</div>
+    <div class="hero-badge lang-bn">Hidely &middot; নিরাপদ ফটো ভল্ট</div>
+    <div class="hero-badge lang-hi">Hidely &middot; सुरक्षित फोटो तिजोरी</div>
+    <div class="hero-badge lang-es">Hidely &middot; Bóveda de Fotos Segura</div>
+    <div class="hero-badge lang-ar">Hidely &middot; قبو الصور الآمن</div>
+    <div class="hero-badge lang-fr">Hidely &middot; Coffre-fort Photo Sécurisé</div>
+    <div class="hero-badge lang-ru">Hidely &middot; Защищенное Фотохранилище</div>
+    <div class="hero-badge lang-ur">Hidely &middot; محفوظ تصویر والٹ</div>
+    <div class="hero-badge lang-fa">Hidely &middot; صندوق امن عکس</div>
+    
+    <h1 class="lang-en">Terms of <span>Use</span></h1>
+    <h1 class="lang-bn">ব্যবহারের <span>শর্তাবলি</span></h1>
+    <h1 class="lang-hi">उपयोग की <span>शर्तें</span></h1>
+    <h1 class="lang-es">Términos de <span>Uso</span></h1>
+    <h1 class="lang-ar">شروط <span>الاستخدام</span></h1>
+    <h1 class="lang-fr">Conditions <span>d'Utilisation</span></h1>
+    <h1 class="lang-ru">Условия <span>Использования</span></h1>
+    <h1 class="lang-ur">استعمال کی <span>شرائط</span></h1>
+    <h1 class="lang-fa">شرایط <span>استفاده</span></h1>
+
+    <p class="hero-sub lang-en">Hidely — Advanced Media Vault by JS Organization</p>
+    <p class="hero-sub lang-bn">Hidely — JS Organization এর একটি উন্নত মিডিয়া ভল্ট</p>
+    <p class="hero-sub lang-hi">Hidely — JS Organization द्वारा उन्नत मीडिया वॉल्ट</p>
+    <p class="hero-sub lang-es">Hidely — Bóveda multimedia avanzada de JS Organization</p>
+    <p class="hero-sub lang-ar">Hidely — قبو وسائط متقدم من JS Organization</p>
+    <p class="hero-sub lang-fr">Hidely — Coffre-fort multimédia par JS Organization</p>
+    <p class="hero-sub lang-ru">Hidely — Продвинутое медиа-хранилище от JS Organization</p>
+    <p class="hero-sub lang-ur">Hidely — جے ایس آرگنائزیشن کا ایڈوانسڈ میڈیا والٹ</p>
+    <p class="hero-sub lang-fa">Hidely — گاوصندوق رسانه پیشرفته توسط JS Organization</p>
+    
+    <div class="hero-meta">
+        <select id="langSelect" class="hero-badge" onchange="toggleLanguage(this.value)">
+            <option value="en">English</option>
+            <option value="bn">বাংলা (Bangla)</option>
+            <option value="hi">हिन्दी (Hindi)</option>
+            <option value="es">Español (Spanish)</option>
+            <option value="ar">العربية (Arabic)</option>
+            <option value="fr">Français (French)</option>
+            <option value="ru">Русский (Russian)</option>
+            <option value="ur">اردو (Urdu)</option>
+            <option value="fa">فارسی (Persian)</option>
+        </select>
+    </div>
+
+    <div class="hero-meta">
+        <div class="hero-meta-item">
+            <i class="fa-regular fa-calendar-alt"></i>
+            <span class="lang-en">Effective: May 14, 2026</span>
+            <span class="lang-bn">কার্যকরী তারিখ: ১৪ মে, ২০২৬</span>
+            <span class="lang-hi">प्रभावी: 14 मई, 2026</span>
+            <span class="lang-es">Efectivo: 14 de mayo, 2026</span>
+            <span class="lang-ar">ساري المفعول: ١٤ مايو ٢٠٢٦</span>
+            <span class="lang-fr">En vigueur : 14 Mai 2026</span>
+            <span class="lang-ru">Действует с: 14 мая 2026</span>
+            <span class="lang-ur">مؤثر: 14 مئی 2026</span>
+            <span class="lang-fa">موثر: ۱۴ مه ۲۰۲۶</span>
+        </div>
+        <div class="hero-meta-item">
+            <i class="fa-solid fa-mobile-alt"></i>
+            <span class="lang-en">Local Device Storage</span>
+            <span class="lang-bn">লোকাল ডিভাইস স্টোরেজ</span>
+            <span class="lang-hi">स्थानीय उपकरण संग्रहण</span>
+            <span class="lang-es">Almacenamiento Local</span>
+            <span class="lang-ar">تخزين الجهاز المحلي</span>
+            <span class="lang-fr">Stockage Local</span>
+            <span class="lang-ru">Локальное Хранилище</span>
+            <span class="lang-ur">مقامی ڈیوائس اسٹوریج</span>
+            <span class="lang-fa">ذخیره سازی محلی</span>
+        </div>
+    </div>
+</div>
+
+<div class="page-wrap">
+    
+    <div class="toc-card">
+        <h2 class="lang-en">Table of Contents</h2>
+        <h2 class="lang-bn">সূচিপত্র</h2>
+        <h2 class="lang-hi">विषय सूची</h2>
+        <h2 class="lang-es">Tabla de Contenido</h2>
+        <h2 class="lang-ar">جدول المحتويات</h2>
+        <h2 class="lang-fr">Table des Matières</h2>
+        <h2 class="lang-ru">Оглавление</h2>
+        <h2 class="lang-ur">فہرست مضامین</h2>
+        <h2 class="lang-fa">فهرست مطالب</h2>
+        
+        <div class="toc-grid">
+            <a href="#t1" class="toc-link"><span class="toc-num">01</span> <span class="lang-en">Acceptance</span><span class="lang-bn">শর্ত গ্রহণ</span><span class="lang-hi">स्वीकृति</span><span class="lang-es">Aceptación</span><span class="lang-ar">القبول</span><span class="lang-fr">Acceptation</span><span class="lang-ru">Принятие</span><span class="lang-ur">قبولیت</span><span class="lang-fa">پذیرش</span></a>
+            <a href="#t2" class="toc-link"><span class="toc-num">02</span> <span class="lang-en">Service Description</span><span class="lang-bn">সেবার বিবরণ</span><span class="lang-hi">सेवा का विवरण</span><span class="lang-es">Descripción</span><span class="lang-ar">وصف الخدمة</span><span class="lang-fr">Description</span><span class="lang-ru">Описание</span><span class="lang-ur">سروس کی تفصیل</span><span class="lang-fa">شرح خدمات</span></a>
+            <a href="#t3" class="toc-link"><span class="toc-num">03</span> <span class="lang-en">License & Usage</span><span class="lang-bn">লাইসেন্স ও ব্যবহার</span><span class="lang-hi">लाइसेंस</span><span class="lang-es">Licencia</span><span class="lang-ar">الترخيص</span><span class="lang-fr">Licence</span><span class="lang-ru">Лицензия</span><span class="lang-ur">لائسنس</span><span class="lang-fa">مجوز</span></a>
+            <a href="#t4" class="toc-link"><span class="toc-num">04</span> <span class="lang-en">Responsibilities</span><span class="lang-bn">দায়িত্ব</span><span class="lang-hi">जिम्मेदारियां</span><span class="lang-es">Responsabilidades</span><span class="lang-ar">المسؤوليات</span><span class="lang-fr">Responsabilités</span><span class="lang-ru">Обязанности</span><span class="lang-ur">ذمہ داریاں</span><span class="lang-fa">مسئولیت ها</span></a>
+            <a href="#t5" class="toc-link"><span class="toc-num">05</span> <span class="lang-en">Privacy</span><span class="lang-bn">গোপনীয়তা</span><span class="lang-hi">गोपनीयता</span><span class="lang-es">Privacidad</span><span class="lang-ar">الخصوصية</span><span class="lang-fr">Confidentialité</span><span class="lang-ru">Конфиденциальность</span><span class="lang-ur">رازداری</span><span class="lang-fa">حریم خصوصی</span></a>
+            <a href="#t6" class="toc-link"><span class="toc-num">06</span> <span class="lang-en">Security Disclaimer</span><span class="lang-bn">নিরাপত্তা দাবিত্যাগ</span><span class="lang-hi">सुरक्षा अस्वीकरण</span><span class="lang-es">Seguridad</span><span class="lang-ar">إخلاء مسؤولية الأمان</span><span class="lang-fr">Sécurité</span><span class="lang-ru">Безопасность</span><span class="lang-ur">سیکیورٹی دستبرداری</span><span class="lang-fa">سلب مسئولیت امنیتی</span></a>
+            <a href="#t7" class="toc-link"><span class="toc-num">07</span> <span class="lang-en">Decoy Password</span><span class="lang-bn">ডিকয় পাসওয়ার্ড</span><span class="lang-hi">डिकॉय पासवर्ड</span><span class="lang-es">Contraseña Señuelo</span><span class="lang-ar">كلمة المرور الوهمية</span><span class="lang-fr">Mot de Passe Leurre</span><span class="lang-ru">Ложный Пароль</span><span class="lang-ur">ڈیکوئے پاس ورڈ</span><span class="lang-fa">رمز عبور طعمه</span></a>
+            <a href="#t8" class="toc-link"><span class="toc-num">08</span> <span class="lang-en">Intruder Capture</span><span class="lang-bn">ইন্ট্রুডার ক্যাপচার</span><span class="lang-hi">घुसपैठिया कैप्चर</span><span class="lang-es">Captura de Intrusos</span><span class="lang-ar">التقاط الدخيل</span><span class="lang-fr">Capture d'Intrus</span><span class="lang-ru">Захват Злоумышленника</span><span class="lang-ur">گھسنے والے کو پکڑنا</span><span class="lang-fa">دستگیری مزاحم</span></a>
+            <a href="#t9" class="toc-link"><span class="toc-num">09</span> <span class="lang-en">App Disguise</span><span class="lang-bn">অ্যাপ ডিসগাইজ</span><span class="lang-hi">ऐप भेस</span><span class="lang-es">Disfraz de App</span><span class="lang-ar">إخفاء التطبيق</span><span class="lang-fr">Déguisement d'App</span><span class="lang-ru">Маскировка Приложения</span><span class="lang-ur">ایپ کا بھیس</span><span class="lang-fa">تغییر شکل برنامه</span></a>
+            <a href="#t10" class="toc-link"><span class="toc-num">10</span> <span class="lang-en">Backup & Recovery</span><span class="lang-bn">ব্যাকআপ ও রিকভারি</span><span class="lang-hi">बैकअप</span><span class="lang-es">Copia de Seguridad</span><span class="lang-ar">النسخ الاحتياطي</span><span class="lang-fr">Sauvegarde</span><span class="lang-ru">Резервное Копирование</span><span class="lang-ur">بیک اپ</span><span class="lang-fa">پشتیبان گیری</span></a>
+            <a href="#t11" class="toc-link"><span class="toc-num">11</span> <span class="lang-en">Limitation of Liability</span><span class="lang-bn">দায়বদ্ধতার সীমাবদ্ধতা</span><span class="lang-hi">देयता की सीमा</span><span class="lang-es">Límite de Responsabilidad</span><span class="lang-ar">حدود المسؤولية</span><span class="lang-fr">Limite de Responsabilité</span><span class="lang-ru">Ограничение Ответственности</span><span class="lang-ur">ذمہ داری کی حد</span><span class="lang-fa">محدودیت مسئولیت</span></a>
+            <a href="#t12" class="toc-link"><span class="toc-num">12</span> <span class="lang-en">Warranties</span><span class="lang-bn">ওয়ারেন্টি</span><span class="lang-hi">वारंटी</span><span class="lang-es">Garantías</span><span class="lang-ar">الضمانات</span><span class="lang-fr">Garanties</span><span class="lang-ru">Гарантии</span><span class="lang-ur">وارنٹی</span><span class="lang-fa">ضمانتنامه</span></a>
+            <a href="#t13" class="toc-link"><span class="toc-num">13</span> <span class="lang-en">Updates</span><span class="lang-bn">আপডেট</span><span class="lang-hi">अपडेट</span><span class="lang-es">Actualizaciones</span><span class="lang-ar">التحديثات</span><span class="lang-fr">Mises à jour</span><span class="lang-ru">Обновления</span><span class="lang-ur">اپڈیٹس</span><span class="lang-fa">به روز رسانی ها</span></a>
+            <a href="#t14" class="toc-link"><span class="toc-num">14</span> <span class="lang-en">Termination</span><span class="lang-bn">সমাপ্তি</span><span class="lang-hi">समाप्ति</span><span class="lang-es">Terminación</span><span class="lang-ar">الإنهاء</span><span class="lang-fr">Résiliation</span><span class="lang-ru">Расторжение</span><span class="lang-ur">خاتمہ</span><span class="lang-fa">پایان</span></a>
+            <a href="#t15" class="toc-link"><span class="toc-num">15</span> <span class="lang-en">Intellectual Property</span><span class="lang-bn">মেধা সম্পত্তি</span><span class="lang-hi">बौद्धिक संपदा</span><span class="lang-es">Propiedad Intelectual</span><span class="lang-ar">الملكية الفكرية</span><span class="lang-fr">Propriété Intellectuelle</span><span class="lang-ru">Интеллектуальная Собственность</span><span class="lang-ur">ملکیتی حقوق</span><span class="lang-fa">مالکیت معنوی</span></a>
+            <a href="#t16" class="toc-link"><span class="toc-num">16</span> <span class="lang-en">Third-Party</span><span class="lang-bn">তৃতীয় পক্ষ</span><span class="lang-hi">तृतीय-पक्ष</span><span class="lang-es">Terceros</span><span class="lang-ar">الطرف الثالث</span><span class="lang-fr">Tiers</span><span class="lang-ru">Третьи Лица</span><span class="lang-ur">تیسرا فریق</span><span class="lang-fa">شخص ثالث</span></a>
+            <a href="#t17" class="toc-link"><span class="toc-num">17</span> <span class="lang-en">Governing Law</span><span class="lang-bn">প্রযোজ্য আইন</span><span class="lang-hi">शासकीय कानून</span><span class="lang-es">Ley Aplicable</span><span class="lang-ar">القانون الحاكم</span><span class="lang-fr">Loi Applicable</span><span class="lang-ru">Применимое Право</span><span class="lang-ur">گورننگ قانون</span><span class="lang-fa">قانون حاکم</span></a>
+            <a href="#t18" class="toc-link"><span class="toc-num">18</span> <span class="lang-en">Indemnification</span><span class="lang-bn">ক্ষতিপূরণ</span><span class="lang-hi">क्षतिपूर्ति</span><span class="lang-es">Indemnización</span><span class="lang-ar">التعويض</span><span class="lang-fr">Indemnisation</span><span class="lang-ru">Возмещение Ущерба</span><span class="lang-ur">تلافی</span><span class="lang-fa">غرامت</span></a>
+            <a href="#t19" class="toc-link"><span class="toc-num">19</span> <span class="lang-en">Severability</span><span class="lang-bn">পৃথকীকরণযোগ্যতা</span><span class="lang-hi">पृथक्करणीयता</span><span class="lang-es">Divisibilidad</span><span class="lang-ar">القابلية للفصل</span><span class="lang-fr">Divisibilité</span><span class="lang-ru">Делимость</span><span class="lang-ur">علیحدگی</span><span class="lang-fa">قابلیت تفکیک</span></a>
+            <a href="#t20" class="toc-link"><span class="toc-num">20</span> <span class="lang-en">Entire Agreement</span><span class="lang-bn">সম্পূর্ণ চুক্তি</span><span class="lang-hi">संपूर्ण समझौता</span><span class="lang-es">Acuerdo Completo</span><span class="lang-ar">الاتفاق الكامل</span><span class="lang-fr">Accord Entier</span><span class="lang-ru">Полное Соглашение</span><span class="lang-ur">مکمل معاہدہ</span><span class="lang-fa">توافق کامل</span></a>
+            <a href="#t21" class="toc-link"><span class="toc-num">21</span> <span class="lang-en">Contact</span><span class="lang-bn">যোগাযোগ</span><span class="lang-hi">संपर्क</span><span class="lang-es">Contacto</span><span class="lang-ar">اتصال</span><span class="lang-fr">Contact</span><span class="lang-ru">Контакты</span><span class="lang-ur">رابطہ</span><span class="lang-fa">تماس</span></a>
+            <a href="#t22" class="toc-link"><span class="toc-num">22</span> <span class="lang-en">Changes</span><span class="lang-bn">পরিবর্তন</span><span class="lang-hi">परिवर्तन</span><span class="lang-es">Cambios</span><span class="lang-ar">التغييرات</span><span class="lang-fr">Changements</span><span class="lang-ru">Изменения</span><span class="lang-ur">تبدیلیاں</span><span class="lang-fa">تغییرات</span></a>
+        </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section-card" id="t1">
+        <div class="section-header">
+            <div class="section-num">01</div>
+            <div>
+                <div class="section-title lang-en">Acceptance of Terms</div>
+                <div class="section-title lang-bn">শর্তাবলি গ্রহণ</div>
+                <div class="section-title lang-hi">शर्तों की स्वीकृति</div>
+                <div class="section-title lang-es">Aceptación de Términos</div>
+                <div class="section-title lang-ar">قبول الشروط</div>
+                <div class="section-title lang-fr">Acceptation des Conditions</div>
+                <div class="section-title lang-ru">Принятие Условий</div>
+                <div class="section-title lang-ur">شرائط کی قبولیت</div>
+                <div class="section-title lang-fa">پذیرش شرایط</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">By downloading, installing, or using the Hidely application ("App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
+            <p class="lang-bn">Hidely অ্যাপ্লিকেশনটি ("অ্যাপ") ডাউনলোড, ইনস্টল বা ব্যবহার করার মাধ্যমে আপনি এই ব্যবহারের শর্তাবলির ("শর্তাবলি") দ্বারা দায়বদ্ধ থাকতে সম্মত হচ্ছেন। আপনি যদি এই শর্তাবলিতে সম্মত না হন, তবে অনুগ্রহ করে অ্যাপটি ব্যবহার করবেন না।</p>
+            <p class="lang-hi">Hidely एप्लिकेशन ("ऐप") को डाउनलोड, इंस्टॉल या उपयोग करके, आप उपयोग की इन शर्तों ("शर्तों") से बंधे होने के लिए सहमत होते हैं। यदि आप इन शर्तों से सहमत नहीं हैं, तो कृपया ऐप का उपयोग न करें।</p>
+            <p class="lang-es">Al descargar, instalar o utilizar la aplicación Hidely ("App"), acepta estar sujeto a estos Términos de Uso ("Términos"). Si no está de acuerdo, no use la App.</p>
+            <p class="lang-ar">عن طريق تنزيل تطبيق Hidely ("التطبيق") أو تثبيته أو استخدامه ، فإنك توافق على الالتزام بشروط الاستخدام هذه ("الشروط"). إذا كنت لا توافق ، يرجى عدم استخدام التطبيق.</p>
+            <p class="lang-fr">En téléchargeant, installant ou utilisant l'application Hidely (« Application »), vous acceptez d'être lié par les présentes Conditions d'Utilisation. Si vous n'êtes pas d'accord, n'utilisez pas l'Application.</p>
+            <p class="lang-ru">Загружая, устанавливая или используя приложение Hidely («Приложение»), вы соглашаетесь соблюдать настоящие Условия Использования. Если вы не согласны, не используйте Приложение.</p>
+            <p class="lang-ur">Hidely ایپلیکیشن ڈاؤن لوڈ، انسٹال، یا استعمال کر کے، آپ ان استعمال کی شرائط کے پابند ہونے سے اتفاق کرتے ہیں۔ اگر آپ متفق نہیں ہیں تو ایپ استعمال نہ کریں۔</p>
+            <p class="lang-fa">با دانلود، نصب یا استفاده از برنامه Hidely، شما موافقت می کنید که به این شرایط استفاده پایبند باشید. در صورت عدم موافقت، از برنامه استفاده نکنید.</p>
+        </div>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section-card" id="t2">
+        <div class="section-header">
+            <div class="section-num">02</div>
+            <div>
+                <div class="section-title lang-en">Description of Service</div>
+                <div class="section-title lang-bn">সেবার বিবরণ</div>
+                <div class="section-title lang-hi">सेवा का विवरण</div>
+                <div class="section-title lang-es">Descripción del Servicio</div>
+                <div class="section-title lang-ar">وصف الخدمة</div>
+                <div class="section-title lang-fr">Description du Service</div>
+                <div class="section-title lang-ru">Описание Сервиса</div>
+                <div class="section-title lang-ur">سروس کی تفصیل</div>
+                <div class="section-title lang-fa">شرح خدمات</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Hidely is a secure photo and video vault application that allows users to store photos securely, organize media, use biometric authentication, set up decoy passwords, capture intruders, disguise the app icon, and manage deleted items.</p>
+            <p class="lang-bn">Hidely একটি সুরক্ষিত ফটো এবং ভিডিও ভল্ট অ্যাপ যা ব্যবহারকারীদের নিরাপদে ছবি সংরক্ষণ, মিডিয়া পরিচালনা, বায়োমেট্রিক লগইন, ডিকয় পাসওয়ার্ড সেট করা, অনুপ্রবেশকারীর ছবি তোলা, অ্যাপ আইকন পরিবর্তন এবং ডিলিট করা ফাইল পরিচালনা করার সুবিধা দেয়।</p>
+            <p class="lang-hi">Hidely एक सुरक्षित फोटो और वीडियो तिजोरी है जो सुरक्षित भंडारण, डिकॉय पासवर्ड, बायोमेट्रिक लॉगिन और घुसपैठियों को पकड़ने जैसी सुविधाएँ प्रदान करती है।</p>
+            <p class="lang-es">Hidely es una bóveda segura de fotos y videos que ofrece almacenamiento seguro, contraseñas de señuelo, inicio de sesión biométrico y captura de intrusos.</p>
+            <p class="lang-ar">Hidely هو قبو آمن للصور والفيديو يوفر تخزينًا آمنًا وكلمات مرور وهمية وتسجيل الدخول البيومتري والتقاط المتسللين.</p>
+            <p class="lang-fr">Hidely est un coffre-fort sécurisé pour photos et vidéos offrant un stockage sécurisé, des mots de passe leurres, une connexion biométrique et la capture d'intrus.</p>
+            <p class="lang-ru">Hidely - это надежное хранилище фото и видео, предлагающее безопасное хранение, ложные пароли, биометрический вход и захват злоумышленников.</p>
+            <p class="lang-ur">Hidely ایک محفوظ تصویر اور ویڈیو والٹ ہے جو محفوظ اسٹوریج، ڈیکوئے پاس ورڈز، بائیو میٹرک لاگ ان اور گھسنے والوں کو پکڑنے کی پیشکش کرتا ہے۔</p>
+            <p class="lang-fa">Hidely یک گاوصندوق امن عکس و ویدیو است که ذخیره سازی امن، رمز عبور طعمه، ورود بیومتریک و گرفتن مزاحمان را ارائه می دهد.</p>
+        </div>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section-card" id="t3">
+        <div class="section-header">
+            <div class="section-num">03</div>
+            <div>
+                <div class="section-title lang-en">License and Usage Rights</div>
+                <div class="section-title lang-bn">লাইসেন্স এবং ব্যবহারের অধিকার</div>
+                <div class="section-title lang-hi">लाइसेंस और उपयोग के अधिकार</div>
+                <div class="section-title lang-es">Licencia y Derechos de Uso</div>
+                <div class="section-title lang-ar">الترخيص وحقوق الاستخدام</div>
+                <div class="section-title lang-fr">Licence et Droits d'Utilisation</div>
+                <div class="section-title lang-ru">Лицензия и Права Использования</div>
+                <div class="section-title lang-ur">لائسنس اور استعمال کے حقوق</div>
+                <div class="section-title lang-fa">مجوز و حقوق استفاده</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <h3 class="lang-en">Personal Use & Restrictions</h3>
+            <h3 class="lang-bn">ব্যক্তিগত ব্যবহার এবং নিষেধাজ্ঞা</h3>
+            <p class="lang-en">Hidely is licensed for personal, non-commercial use. You may NOT reverse engineer, modify, distribute, or use the App for illegal purposes or to store prohibited content.</p>
+            <p class="lang-bn">Hidely শুধুমাত্র ব্যক্তিগত এবং অবাণিজ্যিক ব্যবহারের জন্য লাইসেন্সকৃত। আপনি অ্যাপটি রিভার্স ইঞ্জিনিয়ারিং, সংশোধন, বিতরণ বা কোনো বেআইনি উদ্দেশ্যে ব্যবহার করতে পারবেন না।</p>
+            <p class="lang-hi">Hidely केवल व्यक्तिगत उपयोग के लिए है। आप ऐप को रिवर्स इंजीनियर, संशोधित या अवैध उद्देश्यों के लिए उपयोग नहीं कर सकते हैं।</p>
+            <p class="lang-es">Hidely es solo para uso personal. NO puede realizar ingeniería inversa, modificar ni utilizar la aplicación para fines ilegales.</p>
+            <p class="lang-ar">Hidely للاستخدام الشخصي فقط. لا يجوز لك إجراء هندسة عكسية للتطبيق أو تعديله أو استخدامه لأغراض غير قانونية.</p>
+            <p class="lang-fr">Hidely est destiné à un usage personnel. Vous ne pouvez PAS faire d'ingénierie inverse, modifier ou utiliser l'application à des fins illégales.</p>
+            <p class="lang-ru">Hidely предназначен только для личного использования. Вы НЕ можете декомпилировать, изменять или использовать приложение в незаконных целях.</p>
+            <p class="lang-ur">Hidely صرف ذاتی استعمال کے لیے ہے۔ آپ ایپ کو ریورس انجینئر، ترمیم یا غیر قانونی مقاصد کے لیے استعمال نہیں کر سکتے۔</p>
+            <p class="lang-fa">Hidely فقط برای استفاده شخصی است. شما نمی توانید برنامه را مهندسی معکوس، اصلاح یا برای اهداف غیرقانونی استفاده کنید.</p>
+        </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="section-card" id="t4">
+        <div class="section-header">
+            <div class="section-num">04</div>
+            <div>
+                <div class="section-title lang-en">User Responsibilities</div>
+                <div class="section-title lang-bn">ব্যবহারকারীর দায়িত্ব</div>
+                <div class="section-title lang-hi">उपयोगकर्ता की जिम्मेदारियां</div>
+                <div class="section-title lang-es">Responsabilidades del Usuario</div>
+                <div class="section-title lang-ar">مسؤوليات المستخدم</div>
+                <div class="section-title lang-fr">Responsabilités de l'Utilisateur</div>
+                <div class="section-title lang-ru">Обязанности Пользователя</div>
+                <div class="section-title lang-ur">صارف کی ذمہ داریاں</div>
+                <div class="section-title lang-fa">مسئولیت های کاربر</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list lang-en">
+                <li><strong>Security:</strong> You are responsible for maintaining your PIN. The developer cannot recover a lost PIN.</li>
+                <li><strong>Content:</strong> You are solely responsible for ensuring you have legal rights to the content you store.</li>
+                <li><strong>Device:</strong> You must maintain adequate device storage. Data loss due to device failure is not our responsibility.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>নিরাপত্তা:</strong> আপনার পিন মনে রাখার দায়িত্ব আপনার। পিন ভুলে গেলে ডেভেলপার তা রিকভার করতে পারবেন না।</li>
+                <li><strong>কন্টেন্ট:</strong> অ্যাপে রাখা মিডিয়াগুলোর আইনি অধিকার আপনার রয়েছে কি না, তা নিশ্চিত করার দায়িত্ব আপনার।</li>
+                <li><strong>ডিভাইস:</strong> ডিভাইসের স্টোরেজ ঠিক রাখা আপনার দায়িত্ব। ডিভাইস নষ্ট হওয়ার কারণে ডেটা হারালে আমরা দায়ী নই।</li>
+            </ul>
+            <p class="lang-hi">आप अपने पिन और संग्रहीत सामग्री के लिए पूरी तरह जिम्मेदार हैं। डेवलपर खोए हुए पिन को पुनर्प्राप्त नहीं कर सकता।</p>
+            <p class="lang-es">Usted es responsable de su PIN y contenido almacenado. El desarrollador no puede recuperar un PIN perdido.</p>
+            <p class="lang-ar">أنت مسؤول عن رقم التعريف الشخصي الخاص بك والمحتوى المخزن. لا يمكن للمطور استرداد رمز PIN المفقود.</p>
+            <p class="lang-fr">Vous êtes responsable de votre code PIN et de votre contenu. Le développeur ne peut pas récupérer un PIN perdu.</p>
+            <p class="lang-ru">Вы несете ответственность за свой PIN-код и контент. Разработчик не может восстановить утерянный PIN-код.</p>
+            <p class="lang-ur">آپ اپنے پن اور مواد کے ذمہ دار ہیں۔ ڈویلپر کھویا ہوا پن بازیافت نہیں کر سکتا۔</p>
+            <p class="lang-fa">شما مسئول پین و محتوای خود هستید. توسعه دهنده نمی تواند پین گم شده را بازیابی کند.</p>
+        </div>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="section-card" id="t5">
+        <div class="section-header">
+            <div class="section-num">05</div>
+            <div>
+                <div class="section-title lang-en">Privacy and Data Protection</div>
+                <div class="section-title lang-bn">গোপনীয়তা এবং ডেটা সুরক্ষা</div>
+                <div class="section-title lang-hi">गोपनीयता और डेटा संरक्षण</div>
+                <div class="section-title lang-es">Privacidad y Protección de Datos</div>
+                <div class="section-title lang-ar">الخصوصية وحماية البيانات</div>
+                <div class="section-title lang-fr">Confidentialité et Protection</div>
+                <div class="section-title lang-ru">Конфиденциальность и Защита</div>
+                <div class="section-title lang-ur">رازداری اور ڈیٹا کا تحفظ</div>
+                <div class="section-title lang-fa">حریم خصوصی و حفاظت از داده ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Your privacy is important to us. All data is stored locally on your device with no cloud connectivity. Please refer to our full Privacy Policy for details.</p>
+            <p class="lang-bn">আপনার গোপনীয়তা আমাদের কাছে গুরুত্বপূর্ণ। কোনো ক্লাউড কানেক্টিভিটি ছাড়াই সমস্ত ডেটা আপনার ডিভাইসে লোকালি সংরক্ষিত থাকে। বিস্তারিত জানতে আমাদের গোপনীয়তা নীতি পড়ুন।</p>
+            <p class="lang-hi">सारा डेटा आपके डिवाइस पर स्थानीय रूप से संग्रहीत किया जाता है। कोई क्लाउड कनेक्टिविटी नहीं है।</p>
+            <p class="lang-es">Todos los datos se almacenan localmente en su dispositivo sin conexión a la nube.</p>
+            <p class="lang-ar">يتم تخزين جميع البيانات محليًا على جهازك بدون اتصال سحابي.</p>
+            <p class="lang-fr">Toutes les données sont stockées localement sur votre appareil sans connexion cloud.</p>
+            <p class="lang-ru">Все данные хранятся локально на вашем устройстве без подключения к облаку.</p>
+            <p class="lang-ur">تمام ڈیٹا آپ کے آلے پر مقامی طور پر محفوظ کیا جاتا ہے۔ کوئی کلاؤڈ کنیکٹوٹی نہیں ہے۔</p>
+            <p class="lang-fa">تمام داده ها به صورت محلی در دستگاه شما ذخیره می شوند. بدون اتصال ابری.</p>
+        </div>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="section-card" id="t6">
+        <div class="section-header">
+            <div class="section-num">06</div>
+            <div>
+                <div class="section-title lang-en">Security Features Disclaimer</div>
+                <div class="section-title lang-bn">নিরাপত্তা ফিচারের দাবিত্যাগ</div>
+                <div class="section-title lang-hi">सुरक्षा सुविधाएँ अस्वीकरण</div>
+                <div class="section-title lang-es">Descargo de Seguridad</div>
+                <div class="section-title lang-ar">إخلاء مسؤولية ميزات الأمان</div>
+                <div class="section-title lang-fr">Avis de Non-responsabilité</div>
+                <div class="section-title lang-ru">Отказ от Ответственности за Безопасность</div>
+                <div class="section-title lang-ur">سیکیورٹی خصوصیات سے دستبرداری</div>
+                <div class="section-title lang-fa">سلب مسئولیت ویژگی های امنیتی</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="callout warning">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <div class="lang-en"><strong>No Absolute Guarantee</strong>While we implement strong security, no system is impenetrable. We are not liable for data loss or unauthorized access due to weak PINs, device compromise, or user error.</div>
+                <div class="lang-bn"><strong>কোনো সম্পূর্ণ গ্যারান্টি নেই</strong>আমরা দৃঢ় নিরাপত্তা দিলেও, কোনো সিস্টেমই অভেদ্য নয়। দুর্বল পিন, ডিভাইস হ্যাক হওয়া বা ব্যবহারকারীর ভুলের কারণে ডেটা হারালে আমরা দায়ী নই।</div>
+            </div>
+            <p class="lang-hi">यद्यपि हम सुरक्षा लागू करते हैं, हम उपयोगकर्ता की त्रुटि या डिवाइस के हैक होने के कारण अनधिकृत पहुंच के लिए उत्तरदायी नहीं हैं।</p>
+            <p class="lang-es">Aunque implementamos seguridad, no somos responsables del acceso no autorizado debido a errores del usuario o compromiso del dispositivo.</p>
+            <p class="lang-ar">على الرغم من أننا نطبق الأمان ، إلا أننا لسنا مسؤولين عن الوصول غير المصرح به بسبب خطأ المستخدم أو اختراق الجهاز.</p>
+            <p class="lang-fr">Bien que nous mettions en œuvre la sécurité, nous ne sommes pas responsables des accès non autorisés dus à une erreur de l'utilisateur.</p>
+            <p class="lang-ru">Хотя мы внедряем безопасность, мы не несем ответственности за несанкционированный доступ из-за ошибок пользователя.</p>
+            <p class="lang-ur">اگرچہ ہم سیکیورٹی کو نافذ کرتے ہیں، لیکن ہم صارف کی غلطی کی وجہ سے غیر مجاز رسائی کے ذمہ دار نہیں ہیں۔</p>
+            <p class="lang-fa">اگرچه ما امنیت را اجرا می کنیم، اما مسئولیتی در قبال دسترسی غیرمجاز به دلیل خطای کاربر نداریم.</p>
+        </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="section-card" id="t7">
+        <div class="section-header">
+            <div class="section-num">07</div>
+            <div>
+                <div class="section-title lang-en">Decoy Password Feature</div>
+                <div class="section-title lang-bn">ডিকয় পাসওয়ার্ড ফিচার</div>
+                <div class="section-title lang-hi">डिकॉय पासवर्ड सुविधा</div>
+                <div class="section-title lang-es">Función de Contraseña Señuelo</div>
+                <div class="section-title lang-ar">ميزة كلمة المرور الوهمية</div>
+                <div class="section-title lang-fr">Fonctionnalité de Mot de Passe Leurre</div>
+                <div class="section-title lang-ru">Функция Ложного Пароля</div>
+                <div class="section-title lang-ur">ڈیکوئے پاس ورڈ کی خصوصیت</div>
+                <div class="section-title lang-fa">ویژگی رمز عبور طعمه</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">The decoy password creates a separate, fake workspace for plausible deniability. You agree that media stored here is completely separate, and the developer cannot recover access to either space if passwords are forgotten.</p>
+            <p class="lang-bn">ডিকয় পাসওয়ার্ড একটি আলাদা এবং নকল ওয়ার্কস্পেস তৈরি করে। আপনি সম্মত হচ্ছেন যে, এখানকার মিডিয়াগুলো সম্পূর্ণ আলাদা এবং পাসওয়ার্ড ভুলে গেলে ডেভেলপার কোনো স্পেসেরই অ্যাক্সেস রিকভার করতে পারবেন না।</p>
+            <p class="lang-hi">डिकॉय पासवर्ड एक नकली कार्यक्षेत्र बनाता है। यदि आप पासवर्ड भूल जाते हैं तो डेवलपर इसे पुनर्प्राप्त नहीं कर सकता है।</p>
+            <p class="lang-es">La contraseña de señuelo crea un espacio de trabajo falso. El desarrollador no puede recuperar las contraseñas perdidas de ningún espacio.</p>
+            <p class="lang-ar">تنشئ كلمة المرور الوهمية مساحة عمل مزيفة. لا يمكن للمطور استرداد كلمات المرور المفقودة لأي من المساحتين.</p>
+            <p class="lang-fr">Le mot de passe leurre crée un faux espace de travail. Le développeur ne peut pas récupérer les mots de passe perdus.</p>
+            <p class="lang-ru">Ложный пароль создает поддельное рабочее пространство. Разработчик не может восстановить утерянные пароли.</p>
+            <p class="lang-ur">ڈیکوئے پاس ورڈ ایک جعلی ورک اسپیس بناتا ہے۔ اگر آپ پاس ورڈ بھول جاتے ہیں تو ڈویلپر اسے بازیافت نہیں کرسکتا۔</p>
+            <p class="lang-fa">رمز عبور طعمه یک فضای کاری جعلی ایجاد می کند. اگر رمز عبور خود را فراموش کنید توسعه دهنده نمی تواند آن را بازیابی کند.</p>
+        </div>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="section-card" id="t8">
+        <div class="section-header">
+            <div class="section-num">08</div>
+            <div>
+                <div class="section-title lang-en">Intruder Capture Feature</div>
+                <div class="section-title lang-bn">ইন্ট্রুডার ক্যাপচার ফিচার</div>
+                <div class="section-title lang-hi">घुसपैठिए कैप्चर सुविधा</div>
+                <div class="section-title lang-es">Función de Captura de Intrusos</div>
+                <div class="section-title lang-ar">ميزة التقاط الدخيل</div>
+                <div class="section-title lang-fr">Fonctionnalité de Capture d'Intrus</div>
+                <div class="section-title lang-ru">Функция Захвата Злоумышленника</div>
+                <div class="section-title lang-ur">گھسنے والے کو پکڑنے کی خصوصیت</div>
+                <div class="section-title lang-fa">ویژگی گرفتن مزاحم</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">When enabled, this feature takes a photo after 2 incorrect PIN attempts. You agree to use it only for legitimate security purposes and comply with applicable laws regarding photography.</p>
+            <p class="lang-bn">চালু থাকলে, এই ফিচারটি পর পর ২ বার ভুল পিন দিলে একটি ছবি তোলে। আপনি সম্মত হচ্ছেন যে এটি শুধুমাত্র আইনি নিরাপত্তার উদ্দেশ্যে ব্যবহার করবেন এবং ছবি তোলার প্রযোজ্য আইন মেনে চলবেন।</p>
+            <p class="lang-hi">यह सुविधा गलत पिन के बाद एक तस्वीर लेती है। इसका उपयोग केवल वैध सुरक्षा उद्देश्यों के लिए करें।</p>
+            <p class="lang-es">Esta función toma una foto después de intentos de PIN incorrectos. Úselo solo con fines de seguridad legítimos.</p>
+            <p class="lang-ar">تلتقط هذه الميزة صورة بعد محاولات PIN غير صحيحة. استخدمه للأغراض الأمنية المشروعة فقط.</p>
+            <p class="lang-fr">Cette fonctionnalité prend une photo après des tentatives de code PIN incorrectes. À utiliser uniquement à des fins de sécurité légitimes.</p>
+            <p class="lang-ru">Эта функция делает фото после неверных попыток ввода PIN-кода. Используйте только в законных целях безопасности.</p>
+            <p class="lang-ur">یہ خصوصیت غلط پن کی کوششوں کے بعد ایک تصویر لیتی ہے۔ اسے صرف جائز حفاظتی مقاصد کے لیے استعمال کریں۔</p>
+            <p class="lang-fa">این ویژگی پس از تلاش های اشتباه پین عکس می گیرد. فقط برای اهداف امنیتی قانونی استفاده کنید.</p>
+        </div>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="section-card" id="t9">
+        <div class="section-header">
+            <div class="section-num">09</div>
+            <div>
+                <div class="section-title lang-en">App Disguise Feature</div>
+                <div class="section-title lang-bn">অ্যাপ ডিসগাইজ ফিচার</div>
+                <div class="section-title lang-hi">ऐप भेस सुविधा</div>
+                <div class="section-title lang-es">Función de Disfraz de App</div>
+                <div class="section-title lang-ar">ميزة إخفاء التطبيق</div>
+                <div class="section-title lang-fr">Fonctionnalité de Déguisement d'App</div>
+                <div class="section-title lang-ru">Функция Маскировки Приложения</div>
+                <div class="section-title lang-ur">ایپ کا بھیس بدلنے کی خصوصیت</div>
+                <div class="section-title lang-fa">ویژگی تغییر شکل برنامه</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Allows changing the app icon (e.g., Calculator, Weather). By using this, you agree not to use it for deceptive, fraudulent, or illegal purposes.</p>
+            <p class="lang-bn">এই ফিচারের মাধ্যমে অ্যাপের আইকন পরিবর্তন করা যায় (যেমন: ক্যালকুলেটর, আবহাওয়া)। এটি ব্যবহার করে আপনি সম্মত হচ্ছেন যে কোনো প্রতারণামূলক বা বেআইনি উদ্দেশ্যে এটি ব্যবহার করবেন না।</p>
+            <p class="lang-hi">ऐप आइकन बदलने की अनुमति देता है। इसका उपयोग भ्रामक या अवैध उद्देश्यों के लिए न करें।</p>
+            <p class="lang-es">Permite cambiar el icono de la aplicación. No lo use con fines engañosos o ilegales.</p>
+            <p class="lang-ar">يسمح بتغيير أيقونة التطبيق. لا تستخدمه لأغراض خادعة أو غير قانونية.</p>
+            <p class="lang-fr">Permet de changer l'icône de l'application. Ne l'utilisez pas à des fins trompeuses ou illégales.</p>
+            <p class="lang-ru">Позволяет изменить значок приложения. Не используйте в обманных или незаконных целях.</p>
+            <p class="lang-ur">ایپ آئیکن کو تبدیل کرنے کی اجازت دیتا ہے۔ اسے فریب یا غیر قانونی مقاصد کے لیے استعمال نہ کریں۔</p>
+            <p class="lang-fa">به تغییر نماد برنامه اجازه می دهد. برای اهداف فریبنده یا غیرقانونی استفاده نکنید.</p>
+        </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="section-card" id="t10">
+        <div class="section-header">
+            <div class="section-num">10</div>
+            <div>
+                <div class="section-title lang-en">Data Backup and Recovery</div>
+                <div class="section-title lang-bn">ডেটা ব্যাকআপ এবং রিকভারি</div>
+                <div class="section-title lang-hi">डेटा बैकअप और पुनर्प्राप्ति</div>
+                <div class="section-title lang-es">Copia de Seguridad y Recuperación de Datos</div>
+                <div class="section-title lang-ar">النسخ الاحتياطي للبيانات واستعادتها</div>
+                <div class="section-title lang-fr">Sauvegarde et Récupération des Données</div>
+                <div class="section-title lang-ru">Резервное Копирование и Восстановление Данных</div>
+                <div class="section-title lang-ur">ڈیٹا بیک اپ اور بازیافت</div>
+                <div class="section-title lang-fa">پشتیبان گیری و بازیابی داده ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <div class="callout danger">
+                <i class="fa-solid fa-cloud-bolt"></i>
+                <div class="lang-en"><strong>No Cloud Backup</strong>Hidely does NOT provide cloud backup. You are responsible for creating your own backups. Uninstalling the app permanently deletes all hidden media.</div>
+                <div class="lang-bn"><strong>কোনো ক্লাউড ব্যাকআপ নেই</strong>Hidely কোনো ক্লাউড ব্যাকআপ প্রদান করে না। আপনার নিজের ডেটা ব্যাকআপ নেওয়ার দায়িত্ব আপনার। অ্যাপটি আনইনস্টল করলে লুকানো সব মিডিয়া স্থায়ীভাবে মুছে যায়।</div>
+            </div>
+            <p class="lang-hi">कोई क्लाउड बैकअप नहीं है। ऐप को अनइंस्टॉल करने से सारा डेटा डिलीट हो जाता है। कृपया अपने मीडिया का बैकअप लें।</p>
+            <p class="lang-es">No hay respaldo en la nube. Desinstalar la aplicación elimina todos los datos. Realice copias de seguridad de sus medios.</p>
+            <p class="lang-ar">لا يوجد نسخ احتياطي سحابي. يؤدي إلغاء تثبيت التطبيق إلى حذف جميع البيانات. يرجى عمل نسخة احتياطية من الوسائط الخاصة بك.</p>
+            <p class="lang-fr">Pas de sauvegarde cloud. La désinstallation de l'application supprime toutes les données. Veuillez sauvegarder vos médias.</p>
+            <p class="lang-ru">Нет облачного резервного копирования. Удаление приложения удаляет все данные. Сделайте резервную копию.</p>
+            <p class="lang-ur">کوئی کلاؤڈ بیک اپ نہیں ہے۔ ایپ کو ان انسٹال کرنے سے تمام ڈیٹا ڈیلیٹ ہوجاتا ہے۔ براہ کرم اپنے میڈیا کا بیک اپ لیں۔</p>
+            <p class="lang-fa">بدون پشتیبان ابری. با لغو نصب برنامه همه داده ها حذف می شوند. لطفا از رسانه خود نسخه پشتیبان تهیه کنید.</p>
+        </div>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="section-card" id="t11">
+        <div class="section-header">
+            <div class="section-num">11</div>
+            <div>
+                <div class="section-title lang-en">Limitation of Liability</div>
+                <div class="section-title lang-bn">দায়বদ্ধতার সীমাবদ্ধতা</div>
+                <div class="section-title lang-hi">देयता की सीमा</div>
+                <div class="section-title lang-es">Limitación de Responsabilidad</div>
+                <div class="section-title lang-ar">حدود المسؤولية</div>
+                <div class="section-title lang-fr">Limitation de Responsabilité</div>
+                <div class="section-title lang-ru">Ограничение Ответственности</div>
+                <div class="section-title lang-ur">ذمہ داری کی حد</div>
+                <div class="section-title lang-fa">محدودیت مسئولیت</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">The developer is not liable for data loss, corruption, unauthorized access, or device malfunctions. Our total liability is limited to the amount paid for the App.</p>
+            <p class="lang-bn">ডেটা হারানো, দূষিত হওয়া, অননুমোদিত অ্যাক্সেস বা ডিভাইস নষ্ট হওয়ার জন্য ডেভেলপার দায়ী নন। আমাদের মোট দায়বদ্ধতা শুধুমাত্র অ্যাপটির জন্য প্রদেয় মূল্যের (যদি থাকে) মধ্যে সীমাবদ্ধ।</p>
+            <p class="lang-hi">डेवलपर डेटा हानि, भ्रष्टाचार या अनधिकृत पहुंच के लिए उत्तरदायी नहीं है।</p>
+            <p class="lang-es">El desarrollador no es responsable de la pérdida de datos, corrupción o acceso no autorizado.</p>
+            <p class="lang-ar">المطور غير مسؤول عن فقدان البيانات أو تلفها أو الوصول غير المصرح به.</p>
+            <p class="lang-fr">Le développeur n'est pas responsable de la perte de données, de la corruption ou de l'accès non autorisé.</p>
+            <p class="lang-ru">Разработчик не несет ответственности за потерю данных, повреждение или несанкционированный доступ.</p>
+            <p class="lang-ur">ڈویلپر ڈیٹا کے ضائع ہونے، بدعنوانی، یا غیر مجاز رسائی کے لیے ذمہ دار نہیں ہے۔</p>
+            <p class="lang-fa">توسعه دهنده مسئولیتی در قبال از دست دادن داده ها، خرابی یا دسترسی غیرمجاز ندارد.</p>
+        </div>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="section-card" id="t12">
+        <div class="section-header">
+            <div class="section-num">12</div>
+            <div>
+                <div class="section-title lang-en">Disclaimer of Warranties</div>
+                <div class="section-title lang-bn">ওয়ারেন্টির দাবিত্যাগ</div>
+                <div class="section-title lang-hi">वारंटी का अस्वीकरण</div>
+                <div class="section-title lang-es">Descargo de Garantías</div>
+                <div class="section-title lang-ar">إخلاء المسؤولية عن الضمانات</div>
+                <div class="section-title lang-fr">Exclusion de Garanties</div>
+                <div class="section-title lang-ru">Отказ от Гарантий</div>
+                <div class="section-title lang-ur">وارنٹیوں کی دستبرداری</div>
+                <div class="section-title lang-fa">سلب مسئولیت از ضمانتنامه ها</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">The App is provided "AS IS" without warranties of any kind, either express or implied, including security, reliability, or availability.</p>
+            <p class="lang-bn">অ্যাপটি "যেভাবে আছে" (AS IS) ভিত্তিতে প্রদান করা হয়েছে এবং এর নিরাপত্তা, নির্ভরযোগ্যতা বা প্রাপ্যতার বিষয়ে কোনো প্রকার ওয়ারেন্টি দেওয়া হয় না।</p>
+            <p class="lang-hi">ऐप बिना किसी वारंटी के "जैसा है" प्रदान किया जाता है।</p>
+            <p class="lang-es">La aplicación se proporciona "TAL CUAL" sin garantías de ningún tipo.</p>
+            <p class="lang-ar">يتم توفير التطبيق "كما هو" بدون أي ضمانات من أي نوع.</p>
+            <p class="lang-fr">L'application est fournie "TELLE QUELLE" sans garanties d'aucune sorte.</p>
+            <p class="lang-ru">Приложение предоставляется «КАК ЕСТЬ» без каких-либо гарантий.</p>
+            <p class="lang-ur">ایپ بغیر کسی قسم کی وارنٹی کے "جیسا ہے" فراہم کی جاتی ہے۔</p>
+            <p class="lang-fa">برنامه "همانطور که هست" بدون هیچ گونه ضمانتی ارائه می شود.</p>
+        </div>
+    </div>
+
+    <!-- Sections 13-20 Condensed for Length -->
+    <div class="section-card" id="t13-20">
+        <div class="section-header">
+            <div class="section-num">13+</div>
+            <div>
+                <div class="section-title lang-en">Additional Terms</div>
+                <div class="section-title lang-bn">অতিরিক্ত শর্তাবলি</div>
+                <div class="section-title lang-hi">अतिरिक्त शर्तें</div>
+                <div class="section-title lang-es">Términos Adicionales</div>
+                <div class="section-title lang-ar">شروط إضافية</div>
+                <div class="section-title lang-fr">Conditions Supplémentaires</div>
+                <div class="section-title lang-ru">Дополнительные Условия</div>
+                <div class="section-title lang-ur">اضافی شرائط</div>
+                <div class="section-title lang-fa">شرایط اضافی</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <ul class="policy-list lang-en">
+                <li><strong>Updates:</strong> We may modify or require updates to the App at any time.</li>
+                <li><strong>Termination:</strong> We may terminate your access for violating these Terms.</li>
+                <li><strong>Intellectual Property:</strong> All app rights are owned by the developer.</li>
+                <li><strong>Third-Party:</strong> App uses components (Room, CameraX) subject to their own policies.</li>
+                <li><strong>Indemnification:</strong> You agree to hold us harmless from claims arising from your use.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>আপডেট:</strong> আমরা যেকোনো সময় অ্যাপ পরিবর্তন বা আপডেট বাধ্যতামূলক করতে পারি।</li>
+                <li><strong>সমাপ্তি:</strong> শর্তাবলি ভঙ্গ করলে আমরা আপনার অ্যাক্সেস বাতিল করতে পারি।</li>
+                <li><strong>মেধা সম্পত্তি:</strong> অ্যাপের সমস্ত অধিকার ডেভেলপারের মালিকানাধীন।</li>
+                <li><strong>তৃতীয় পক্ষ:</strong> অ্যাপটিতে তৃতীয় পক্ষের উপাদান (Room, CameraX) ব্যবহৃত হয়েছে।</li>
+                <li><strong>ক্ষতিপূরণ:</strong> অ্যাপ ব্যবহারের ফলে সৃষ্ট যেকোনো দাবির ক্ষেত্রে আপনি আমাদের দায়মুক্ত রাখতে সম্মত।</li>
+            </ul>
+            <p class="lang-hi">डेवलपर ऐप को अपडेट या समाप्त कर सकता है। सभी बौद्धिक संपदा अधिकार डेवलपर के पास हैं। आप हमें किसी भी दावे से हानिरहित रखने के लिए सहमत हैं।</p>
+            <p class="lang-es">El desarrollador puede actualizar o finalizar la aplicación. Todos los derechos pertenecen al desarrollador. Usted acepta eximirnos de cualquier reclamo.</p>
+            <p class="lang-ar">يمكن للمطور تحديث التطبيق أو إنهائه. جميع الحقوق ملك للمطور. أنت توافق على إبراء ذمتنا من أي مطالبات.</p>
+            <p class="lang-fr">Le développeur peut mettre à jour ou mettre fin à l'application. Tous les droits appartiennent au développeur.</p>
+            <p class="lang-ru">Разработчик может обновлять или прекращать работу приложения. Все права принадлежат разработчику.</p>
+            <p class="lang-ur">ڈویلپر ایپ کو اپ ڈیٹ یا ختم کر سکتا ہے۔ تمام حقوق ڈویلپر کی ملکیت ہیں۔</p>
+            <p class="lang-fa">توسعه دهنده می تواند برنامه را به روز رسانی یا خاتمه دهد. تمامی حقوق متعلق به توسعه دهنده می باشد.</p>
+        </div>
+    </div>
+
+    <!-- Section 21: Contact Us -->
+    <div class="contact-card" id="t21">
+        <div class="section-header">
+            <div class="section-num">21</div>
+            <div>
+                <div class="section-title lang-en">Contact Information</div>
+                <div class="section-title lang-bn">যোগাযোগের তথ্য</div>
+                <div class="section-title lang-hi">संपर्क जानकारी</div>
+                <div class="section-title lang-es">Información de Contacto</div>
+                <div class="section-title lang-ar">معلومات الاتصال</div>
+                <div class="section-title lang-fr">Coordonnées</div>
+                <div class="section-title lang-ru">Контактная Информация</div>
+                <div class="section-title lang-ur">رابطہ کی معلومات</div>
+                <div class="section-title lang-fa">اطلاعات تماس</div>
+                
+                <div class="section-subtitle lang-en">Questions about these terms?</div>
+                <div class="section-subtitle lang-bn">এই শর্তাবলি সম্পর্কে কোনো প্রশ্ন আছে?</div>
+                <div class="section-subtitle lang-hi">इन शर्तों के बारे में प्रश्न?</div>
+                <div class="section-subtitle lang-es">¿Preguntas sobre estos términos?</div>
+                <div class="section-subtitle lang-ar">أسئلة حول هذه الشروط؟</div>
+                <div class="section-subtitle lang-fr">Des questions sur ces conditions ?</div>
+                <div class="section-subtitle lang-ru">Вопросы об этих условиях?</div>
+                <div class="section-subtitle lang-ur">ان شرائط کے بارے میں سوالات؟</div>
+                <div class="section-subtitle lang-fa">سوالی در مورد این شرایط دارید؟</div>
+            </div>
+        </div>
+        
+        <p class="lang-en" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Reach out to Md Mobassher Ahmed Sowrov or JS Organization through any of the following channels:</p>
+        <p class="lang-bn" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">নিচের যেকোনো মাধ্যমে ডেভেলপার বা JS Organization-এর সাথে যোগাযোগ করতে পারেন:</p>
+        <p class="lang-hi" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">निम्नलिखित किसी भी माध्यम से डेवलपर या JS Organization तक पहुंचें:</p>
+        <p class="lang-es" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Comuníquese con el desarrollador o con JS Organization a través de cualquiera de los siguientes canales:</p>
+        <p class="lang-ar" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">تواصل مع المطور أو منظمة JS Organization من خلال أي من القنوات التالية:</p>
+        <p class="lang-fr" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Contactez le développeur ou JS Organization via l'un des canaux suivants :</p>
+        <p class="lang-ru" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">Свяжитесь с разработчиком или JS Organization через любой из следующих каналов:</p>
+        <p class="lang-ur" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">درج ذیل میں سے کسی بھی چینل کے ذریعے ڈویلپر یا جے ایس آرگنائزیشن تک پہنچیں:</p>
+        <p class="lang-fa" style="color:rgba(255,255,255,.45); font-size:clamp(13px,3vw,15px);">از طریق هر یک از کانال های زیر با توسعه دهنده یا سازمان JS تماس بگیرید:</p>
+
+        <div class="contact-grid">
+            <a class="contact-item" href="mailto:jsorganization.official@gmail.com">
+                <div class="contact-label"><i class="fa-solid fa-envelope"></i> Email</div>
+                <div class="contact-value cv-green">jsorganization.official@gmail.com</div>
+            </a>
+
+            <a class="contact-item" href="https://t.me/swrov" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-telegram"></i> Developer</div>
+                <div class="contact-value cv-blue">@swrov</div>
+            </a>
+
+            <a class="contact-item" href="https://t.me/JSOrganization" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-solid fa-paper-plane"></i> TG Channel</div>
+                <div class="contact-value cv-blue">@JSOrganization</div>
+            </a>
+
+            <a class="contact-item" href="https://github.com/JSOrganizations" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-github"></i> GitHub</div>
+                <div class="contact-value cv-green">JSOrganizations</div>
+            </a>
+
+            <a class="contact-item" href="https://youtube.com/channel/UCpMq9ITrRfIGK2dxVv5R_kw" target="_blank" rel="noopener noreferrer">
+                <div class="contact-label"><i class="fa-brands fa-youtube"></i> YouTube</div>
+                <div class="contact-value" style="color:rgba(255,255,255,.75);">JS Organization</div>
+            </a>
+
+            <div class="contact-item" style="cursor:default;">
+                <div class="contact-label"><i class="fa-solid fa-box"></i> App Package</div>
+                <div class="contact-value" style="color:rgba(255,255,255,.45); font-size:12px; font-family:monospace;">com.jsorg.hidely</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section 22 -->
+    <div class="section-card" id="t22">
+        <div class="section-header">
+            <div class="section-num">22</div>
+            <div>
+                <div class="section-title lang-en">Changes to Terms</div>
+                <div class="section-title lang-bn">শর্তাবলিতে পরিবর্তন</div>
+                <div class="section-title lang-hi">शर्तों में परिवर्तन</div>
+                <div class="section-title lang-es">Cambios a los Términos</div>
+                <div class="section-title lang-ar">التغييرات على الشروط</div>
+                <div class="section-title lang-fr">Modifications des Conditions</div>
+                <div class="section-title lang-ru">Изменения Условий</div>
+                <div class="section-title lang-ur">شرائط میں تبدیلیاں</div>
+                <div class="section-title lang-fa">تغییرات در شرایط</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the updated Terms.</p>
+            <p class="lang-bn">আমরা সময়ে সময়ে এই শর্তাবলি আপডেট করতে পারি। পরিবর্তনের পরে অ্যাপটি ব্যবহার করা মানে আপনি আপডেট করা শর্তাবলিতে সম্মত।</p>
+            <p class="lang-hi">हम इन शर्तों को अपडेट कर सकते हैं। परिवर्तनों के बाद उपयोग जारी रखना स्वीकृति का गठन करता है।</p>
+            <p class="lang-es">Podemos actualizar estos Términos. El uso continuo constituye la aceptación.</p>
+            <p class="lang-ar">قد نقوم بتحديث هذه الشروط. الاستخدام المستمر يشكل القبول.</p>
+            <p class="lang-fr">Nous pouvons mettre à jour ces Conditions. L'utilisation continue constitue une acceptation.</p>
+            <p class="lang-ru">Мы можем обновить эти Условия. Продолжение использования означает согласие.</p>
+            <p class="lang-ur">ہم ان شرائط کو اپ ڈیٹ کر سکتے ہیں۔ مسلسل استعمال قبولیت کو تشکیل دیتا ہے۔</p>
+            <p class="lang-fa">ما ممکن است این شرایط را به روز کنیم. ادامه استفاده به منزله پذیرش است.</p>
+        </div>
+    </div>
+
+</div>
+
+<div class="footer">
+    <p class="lang-en">These Terms of Use were last updated on <strong>May 14, 2026</strong>.</p>
+    <p class="lang-bn">এই ব্যবহারের শর্তাবলি সর্বশেষ <strong>১৪ মে, ২০২৬</strong> তারিখে আপডেট করা হয়েছে।</p>
+    <p class="lang-hi">इन उपयोग की शर्तों को अंतिम बार <strong>14 मई, 2026</strong> को अपडेट किया गया था।</p>
+    <p class="lang-es">Estos Términos de Uso se actualizaron por última vez el <strong>14 de mayo de 2026</strong>.</p>
+    <p class="lang-ar">تم آخر تحديث لشروط الاستخدام هذه في <strong>١٤ مايو ٢٠٢٦</strong>.</p>
+    <p class="lang-fr">Ces conditions d'utilisation ont été mises à jour pour la dernière fois le <strong>14 mai 2026</strong>.</p>
+    <p class="lang-ru">Эти Условия Использования были в последний раз обновлены <strong>14 мая 2026 г.</strong></p>
+    <p class="lang-ur">یہ استعمال کی شرائط آخری بار <strong>14 مئی 2026</strong> کو اپ ڈیٹ کی گئی تھیں۔</p>
+    <p class="lang-fa">این شرایط استفاده آخرین بار در <strong>۱۴ مه ۲۰۲۶</strong> به روز شده است.</p>
+    
+    <p style="margin-top:6px;">&copy; 2026 <strong>JS Organization</strong>. All rights reserved.</p>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        let lang = urlParams.get('language') || 'en';
+        
+        const validLangs = ['en', 'bn', 'hi', 'es', 'ar', 'fr', 'ru', 'ur', 'fa'];
+        if (!validLangs.includes(lang)) { lang = 'en'; }
+
+        document.getElementById('langSelect').value = lang;
+        applyLanguage(lang);
+    });
+
+    function toggleLanguage(lang) {
+        applyLanguage(lang);
+        updateURL(lang);
+    }
+
+    function applyLanguage(lang) {
+        document.body.className = '';
+        document.body.classList.add('lang-' + lang);
+
+        if (['ar', 'ur', 'fa'].includes(lang)) {
+            document.body.setAttribute('dir', 'rtl');
+        } else {
+            document.body.setAttribute('dir', 'ltr');
+        }
+    }
+
+    function updateURL(lang) {
+        const url = new URL(window.location);
+        url.searchParams.set('language', lang);
+        window.history.pushState({}, '', url);
+    }
+</script>
+
+</body>
+</html>
