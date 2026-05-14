@@ -212,6 +212,7 @@
         .callout.info  { background:var(--accent-glow); border:1px solid rgba(26,107,255,.18); color:#1a4db5; }
         .callout.safe  { background:rgba(0,201,167,.08); border:1px solid rgba(0,201,167,.22); color:#047d67; }
         .callout.warning { background:var(--warn-bg); border:1px solid rgba(245,158,11,.4); color:#92640a; }
+        .callout.danger { background:#fff1f1; border:1px solid #fecaca; color:#b91c1c; }
         .callout strong {
             display:block; font-weight:700; margin-bottom:3px;
             font-size:11px; text-transform:uppercase; letter-spacing:.06em;
@@ -627,76 +628,188 @@
         </div>
     </div>
 
-    <!-- Section 4 -->
+    <!-- Section 4: Storage & Security -->
     <div class="section-card" id="s4">
         <div class="section-header">
             <div class="section-num">04</div>
             <div>
-                <div class="section-title lang-en">Data Storage and Security</div>
-                <div class="section-title lang-bn">ডেটা স্টোরেজ এবং নিরাপত্তা</div>
+                <div class="section-title lang-en">Data Storage & Security</div>
+                <div class="section-title lang-bn">ডেটা স্টোরেজ ও নিরাপত্তা</div>
                 <div class="section-title lang-hi">डेटा संग्रहण और सुरक्षा</div>
-                <div class="section-title lang-es">Almacenamiento y Seguridad de Datos</div>
+                <div class="section-title lang-es">Almacenamiento de Datos y Seguridad</div>
                 <div class="section-title lang-ar">تخزين البيانات وأمنها</div>
-                <div class="section-title lang-fr">Stockage et Sécurité des Données</div>
-                <div class="section-title lang-ru">Хранение и Безопасность Данных</div>
+                <div class="section-title lang-fr">Stockage de Données et Sécurité</div>
+                <div class="section-title lang-ru">Хранение Данных и Безопасность</div>
                 <div class="section-title lang-ur">ڈیٹا اسٹوریج اور سیکیورٹی</div>
                 <div class="section-title lang-fa">ذخیره سازی و امنیت داده ها</div>
+                <div class="section-subtitle lang-en">Multi-layer protection for your vault</div>
+                <div class="section-subtitle lang-bn">আপনার ভল্টের জন্য মাল্টি-লেয়ার সুরক্ষা</div>
+                <div class="section-subtitle lang-hi">आपके वॉल्ट के लिए बहु-स्तरीय सुरक्षा</div>
+                <div class="section-subtitle lang-es">Protección multicapa para su bóveda</div>
+                <div class="section-subtitle lang-ar">حماية متعددة الطبقات لقبو الخاص بك</div>
+                <div class="section-subtitle lang-fr">Protection multicouche pour votre coffre</div>
+                <div class="section-subtitle lang-ru">Многоуровневая защита для вашего хранилища</div>
+                <div class="section-subtitle lang-ur">آپ کے والٹ کے لیے ملٹی لیئر تحفظ</div>
+                <div class="section-subtitle lang-fa">محافظت چند لایه برای گاوصندوق شما</div>
             </div>
         </div>
         <div class="section-body">
+            
+            <h3 class="lang-en">Local Storage</h3>
+            <h3 class="lang-bn">লোকাল স্টোরেজ</h3>
+            <h3 class="lang-hi">स्थानीय भंडारण</h3>
+            <h3 class="lang-es">Almacenamiento Local</h3>
+            <h3 class="lang-ar">التخزين المحلي</h3>
+            <h3 class="lang-fr">Stockage Local</h3>
+            <h3 class="lang-ru">Локальное Хранилище</h3>
+            <h3 class="lang-ur">مقامی اسٹوریج</h3>
+            <h3 class="lang-fa">ذخیره سازی محلی</h3>
+            
             <ul class="policy-list lang-en">
-                <li><strong>Private Storage:</strong> Media files are kept in an isolated app directory (`SecureMedia`) inaccessible to other apps.</li>
-                <li><strong>Advanced Locking:</strong> Protected by 4-digit PIN, fingerprint, and Face-Down close detection.</li>
-                <li><strong>Decoy Vault:</strong> A secondary fake password creates plausible deniability.</li>
-                <li><strong>Screenshot Prevention:</strong> Secure flags prevent capturing the app screen (if enabled).</li>
+                <li><strong>Private storage directory:</strong> Media files stored in SecureMedia app-private storage, inaccessible to other apps.</li>
+                <li><strong>Local Room database:</strong> Metadata stored in an on-device encrypted database.</li>
+                <li><strong>No cloud services:</strong> No data uploaded to cloud or external servers. Complete offline isolation.</li>
             </ul>
             <ul class="policy-list lang-bn">
-                <li><strong>প্রাইভেট স্টোরেজ:</strong> মিডিয়া ফাইলগুলো অ্যাপের নিজস্ব ডিরেক্টরিতে (`SecureMedia`) থাকে যা অন্য অ্যাপ অ্যাক্সেস করতে পারে না।</li>
-                <li><strong>উন্নত লকিং:</strong> ৪-ডিজিট পিন, ফিঙ্গারপ্রিন্ট এবং ফেস-ডাউন (ফোন উল্টালে বন্ধ) ফিচার দ্বারা সুরক্ষিত।</li>
-                <li><strong>ডিকয় ভল্ট:</strong> একটি ভুয়া পাসওয়ার্ড ব্যবহার করে নকল ভল্ট দেখানোর সুবিধা।</li>
-                <li><strong>স্ক্রিনশট প্রতিরোধ:</strong> চালু থাকলে অ্যাপের ভেতরে স্ক্রিনশট নেওয়া ব্লক করা হয়।</li>
+                <li><strong>প্রাইভেট স্টোরেজ ডিরেক্টরি:</strong> মিডিয়া ফাইলগুলো SecureMedia নামের প্রাইভেট স্টোরেজে সংরক্ষিত থাকে, যা অন্য অ্যাপ দেখতে পারে না।</li>
+                <li><strong>লোকাল রুম ডেটাবেস:</strong> মেটাডেটা ডিভাইসের নিজস্ব এনক্রিপ্টেড ডেটাবেসে সংরক্ষিত থাকে।</li>
+                <li><strong>কোনো ক্লাউড পরিষেবা নেই:</strong> কোনো ডেটা ক্লাউড বা এক্সটার্নাল সার্ভারে আপলোড করা হয় না। সম্পূর্ণ অফলাইন।</li>
             </ul>
             <ul class="policy-list lang-hi">
-                <li><strong>निजी संग्रहण:</strong> मीडिया फ़ाइलों को एक अलग ऐप निर्देशिका (`SecureMedia`) में रखा जाता है जो अन्य ऐप्स के लिए दुर्गम है।</li>
-                <li><strong>उन्नत लॉकिंग:</strong> 4-अंकीय पिन, फिंगरप्रिंट और फेस-डाउन क्लोज डिटेक्शन द्वारा सुरक्षित।</li>
-                <li><strong>डिकॉय वॉल्ट:</strong> एक द्वितीयक नकली पासवर्ड प्रशंसनीय इनकार पैदा करता है।</li>
-                <li><strong>स्क्रीनशॉट रोकथाम:</strong> सुरक्षित झंडे ऐप स्क्रीन को कैप्चर करने से रोकते हैं (यदि सक्षम हो)।</li>
+                <li><strong>निजी भंडारण निर्देशिका:</strong> अन्य ऐप्स के लिए दुर्गम SecureMedia ऐप-निजी भंडारण में संग्रहीत मीडिया फ़ाइलें।</li>
+                <li><strong>स्थानीय कक्ष डेटाबेस:</strong> मेटाडेटा ऑन-डिवाइस एन्क्रिप्टेड डेटाबेस में संग्रहीत किया जाता है।</li>
+                <li><strong>कोई क्लाउड सेवा नहीं:</strong> क्लाउड या बाहरी सर्वर पर कोई डेटा अपलोड नहीं किया गया। पूर्ण ऑफ़लाइन अलगाव।</li>
             </ul>
             <ul class="policy-list lang-es">
-                <li><strong>Almacenamiento Privado:</strong> Los archivos multimedia se guardan en un directorio de aplicación aislado (`SecureMedia`) inaccesible para otras aplicaciones.</li>
-                <li><strong>Bloqueo Avanzado:</strong> Protegido por PIN de 4 dígitos, huella digital y detección de cierre boca abajo.</li>
-                <li><strong>Bóveda de Señuelo:</strong> Una contraseña falsa secundaria crea una negación plausible.</li>
-                <li><strong>Prevención de Capturas de Pantalla:</strong> Banderas seguras evitan capturar la pantalla de la aplicación (si está habilitado).</li>
+                <li><strong>Directorio de almacenamiento privado:</strong> Archivos multimedia almacenados en el almacenamiento privado de la aplicación SecureMedia, inaccesible para otras aplicaciones.</li>
+                <li><strong>Base de datos local Room:</strong> Metadatos almacenados en una base de datos cifrada en el dispositivo.</li>
+                <li><strong>Sin servicios en la nube:</strong> Ningún dato subido a la nube o servidores externos. Aislamiento fuera de línea completo.</li>
             </ul>
             <ul class="policy-list lang-ar">
-                <li><strong>التخزين الخاص:</strong> يتم الاحتفاظ بملفات الوسائط في دليل تطبيق معزول (`SecureMedia`) يتعذر الوصول إليه للتطبيقات الأخرى.</li>
-                <li><strong>القفل المتقدم:</strong> محمي برمز PIN المكون من 4 أرقام وبصمة الإصبع واكتشاف الإغلاق وجهًا لأسفل.</li>
-                <li><strong>قبو الشرك:</strong> تنشئ كلمة مرور مزيفة ثانوية إنكارًا معقولاً.</li>
-                <li><strong>منع لقطة الشاشة:</strong> تمنع العلامات الآمنة التقاط شاشة التطبيق (في حالة التمكين).</li>
+                <li><strong>دليل التخزين الخاص:</strong> يتم تخزين ملفات الوسائط في التخزين الخاص لتطبيق SecureMedia ، ولا يمكن للتطبيقات الأخرى الوصول إليها.</li>
+                <li><strong>قاعدة بيانات الغرفة المحلية:</strong> البيانات الوصفية المخزنة في قاعدة بيانات مشفرة على الجهاز.</li>
+                <li><strong>لا توجد خدمات سحابية:</strong> لم يتم تحميل أي بيانات إلى السحابة أو الخوادم الخارجية. العزلة الكاملة دون اتصال بالإنترنت.</li>
             </ul>
             <ul class="policy-list lang-fr">
-                <li><strong>Stockage Privé :</strong> Les fichiers multimédias sont conservés dans un répertoire d'application isolé (`SecureMedia`) inaccessible aux autres applications.</li>
-                <li><strong>Verrouillage Avancé :</strong> Protégé par un code PIN à 4 chiffres, une empreinte digitale et une détection de fermeture face vers le bas.</li>
-                <li><strong>Coffre-fort Leurre :</strong> Un faux mot de passe secondaire crée un déni plausible.</li>
-                <li><strong>Prévention des Captures d'Écran :</strong> Des drapeaux sécurisés empêchent la capture de l'écran de l'application (si activé).</li>
+                <li><strong>Répertoire de stockage privé :</strong> Fichiers multimédias stockés dans le stockage privé de l'application SecureMedia, inaccessibles aux autres applications.</li>
+                <li><strong>Base de données Room locale :</strong> Métadonnées stockées dans une base de données chiffrée sur l'appareil.</li>
+                <li><strong>Aucun service cloud :</strong> Aucune donnée téléchargée sur le cloud ou des serveurs externes. Isolation hors ligne complète.</li>
             </ul>
             <ul class="policy-list lang-ru">
-                <li><strong>Частное Хранилище:</strong> Медиафайлы хранятся в изолированном каталоге приложения (`SecureMedia`), недоступном для других приложений.</li>
-                <li><strong>Расширенная Блокировка:</strong> Защищено 4-значным PIN-кодом, отпечатком пальца и обнаружением закрытия лицом вниз.</li>
-                <li><strong>Ложное Хранилище:</strong> Вторичный фальшивый пароль создает правдоподобное отрицание.</li>
-                <li><strong>Предотвращение Скриншотов:</strong> Безопасные флаги предотвращают захват экрана приложения (если включено).</li>
+                <li><strong>Каталог частного хранилища:</strong> Медиафайлы, хранящиеся в частном хранилище приложения SecureMedia, недоступном для других приложений.</li>
+                <li><strong>Локальная база данных Room:</strong> Метаданные хранятся в зашифрованной базе данных на устройстве.</li>
+                <li><strong>Нет облачных сервисов:</strong> Данные не загружаются в облако или на внешние серверы. Полная автономная изоляция.</li>
             </ul>
             <ul class="policy-list lang-ur">
-                <li><strong>نجی اسٹوریج:</strong> میڈیا فائلوں کو الگ تھلگ ایپ ڈائرکٹری (`SecureMedia`) میں رکھا جاتا ہے جو دیگر ایپس کے لیے ناقابل رسائی ہے۔</li>
-                <li><strong>ایڈوانسڈ لاکنگ:</strong> 4 ہندسوں کے پن، فنگر پرنٹ، اور چہرہ نیچے بند کرنے کی شناخت کے ذریعے محفوظ ہے۔</li>
-                <li><strong>ڈیکوئے والٹ:</strong> ایک ثانوی جعلی پاس ورڈ قابل فہم انکار پیدا کرتا ہے۔</li>
-                <li><strong>اسکرین شاٹ کی روک تھام:</strong> محفوظ جھنڈے ایپ کی اسکرین کو کیپچر کرنے سے روکتے ہیں (اگر فعال ہو)۔</li>
+                <li><strong>نجی اسٹوریج ڈائرکٹری:</strong> دیگر ایپس کے لیے ناقابل رسائی SecureMedia ایپ کے پرائیویٹ اسٹوریج میں محفوظ کردہ میڈیا فائلیں۔</li>
+                <li><strong>مقامی روم ڈیٹا بیس:</strong> میٹا ڈیٹا آن ڈیوائس انکرپٹڈ ڈیٹا بیس میں محفوظ ہے۔</li>
+                <li><strong>کوئی کلاؤڈ سروسز نہیں:</strong> کلاؤڈ یا بیرونی سرورز پر کوئی ڈیٹا اپ لوڈ نہیں کیا گیا۔ مکمل آف لائن تنہائی۔</li>
             </ul>
             <ul class="policy-list lang-fa">
-                <li><strong>ذخیره سازی خصوصی:</strong> فایل های رسانه ای در یک فهرست برنامه ایزوله (`SecureMedia`) غیرقابل دسترسی برای برنامه های دیگر نگهداری می شوند.</li>
-                <li><strong>قفل پیشرفته:</strong> با پین 4 رقمی، اثر انگشت و تشخیص بسته شدن رو به پایین محافظت می شود.</li>
-                <li><strong>گاوصندوق طعمه:</strong> یک رمز عبور جعلی ثانویه انکار قابل قبولی ایجاد می کند.</li>
-                <li><strong>جلوگیری از اسکرین شات:</strong> پرچم‌های امن از ضبط صفحه برنامه جلوگیری می‌کنند (در صورت فعال بودن).</li>
+                <li><strong>فهرست ذخیره سازی خصوصی:</strong> فایل های رسانه ای در حافظه خصوصی برنامه SecureMedia ذخیره می شوند و برای سایر برنامه ها غیرقابل دسترسی هستند.</li>
+                <li><strong>پایگاه داده محلی اتاق:</strong> ابرداده ذخیره شده در پایگاه داده رمزگذاری شده در دستگاه.</li>
+                <li><strong>بدون خدمات ابری:</strong> هیچ داده ای در ابر یا سرورهای خارجی آپلود نشده است. انزوای کامل آفلاین.</li>
+            </ul>
+
+            <h3 class="lang-en">Security Layers</h3>
+            <h3 class="lang-bn">নিরাপত্তা স্তরসমূহ</h3>
+            <h3 class="lang-hi">सुरक्षा परतें</h3>
+            <h3 class="lang-es">Capas de Seguridad</h3>
+            <h3 class="lang-ar">طبقات الأمان</h3>
+            <h3 class="lang-fr">Couches de Sécurité</h3>
+            <h3 class="lang-ru">Уровни Безопасности</h3>
+            <h3 class="lang-ur">سیکیورٹی کی پرتیں۔</h3>
+            <h3 class="lang-fa">لایه های امنیتی</h3>
+
+            <ul class="policy-list lang-en">
+                <li><strong>PIN Protection:</strong> 4-digit PIN required for vault access.</li>
+                <li><strong>Biometric Authentication:</strong> Fingerprint unlock support via Android system.</li>
+                <li><strong>Decoy Password:</strong> Secondary fake password for plausible deniability.</li>
+                <li><strong>Intruder Capture:</strong> Optional front-camera photo on failed PIN attempts.</li>
+                <li><strong>Auto-Lock:</strong> App locks automatically when minimized or sent to background.</li>
+                <li><strong>Face-Down Detection:</strong> App closes immediately when the device is flipped face down.</li>
+                <li><strong>Screenshot Prevention:</strong> Secure flags option to disable screenshots within the vault.</li>
+                <li><strong>PIN Lockout:</strong> Temporary lockout penalty after multiple failed attempts.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>পিন সুরক্ষা:</strong> ভল্টে অ্যাক্সেস করার জন্য ৪-ডিজিটের পিন প্রয়োজন।</li>
+                <li><strong>বায়োমেট্রিক অথেনটিকেশন:</strong> অ্যান্ড্রয়েড সিস্টেমের মাধ্যমে ফিঙ্গারপ্রিন্ট আনলক সমর্থন।</li>
+                <li><strong>ডিকয় পাসওয়ার্ড:</strong> ভুয়া ভল্ট দেখানোর জন্য দ্বিতীয় একটি নকল পাসওয়ার্ড।</li>
+                <li><strong>ইন্ট্রুডার ক্যাপচার:</strong> ভুল পিন দিলে ফ্রন্ট ক্যামেরা দিয়ে ছবি তোলার ঐচ্ছিক সুবিধা।</li>
+                <li><strong>অটো-লক:</strong> অ্যাপ মিনিমাইজ বা ব্যাকগ্রাউন্ডে গেলে স্বয়ংক্রিয়ভাবে লক হয়ে যায়।</li>
+                <li><strong>ফেস-ডাউন ডিটেকশন:</strong> ডিভাইসের স্ক্রিন নিচের দিকে উল্টে রাখলে অ্যাপ সাথে সাথে বন্ধ হয়ে যায়।</li>
+                <li><strong>স্ক্রিনশট প্রতিরোধ:</strong> ভল্টের ভেতরে স্ক্রিনশট নেওয়া বন্ধ করার সিকিউর ফ্ল্যাগ অপশন।</li>
+                <li><strong>পিন লকআউট:</strong> বারবার ভুল পিন দিলে সাময়িকভাবে অ্যাপ লক হয়ে যাওয়ার ব্যবস্থা।</li>
+            </ul>
+            <ul class="policy-list lang-hi">
+                <li><strong>पिन सुरक्षा:</strong> वॉल्ट एक्सेस के लिए 4-अंकीय पिन आवश्यक है।</li>
+                <li><strong>बायोमेट्रिक प्रमाणीकरण:</strong> Android सिस्टम के माध्यम से फ़िंगरप्रिंट अनलॉक समर्थन।</li>
+                <li><strong>डिकॉय पासवर्ड:</strong> प्रशंसनीय इनकार के लिए द्वितीयक नकली पासवर्ड।</li>
+                <li><strong>घुसपैठिया कैप्चर:</strong> विफल पिन प्रयासों पर वैकल्पिक फ्रंट-कैमरा फोटो।</li>
+                <li><strong>ऑटो-लॉक:</strong> कम या पृष्ठभूमि में भेजे जाने पर ऐप स्वचालित रूप से लॉक हो जाता है।</li>
+                <li><strong>फेस-डाउन डिटेक्शन:</strong> डिवाइस के चेहरे को नीचे की ओर फ़्लिप करने पर ऐप तुरंत बंद हो जाता है।</li>
+                <li><strong>स्क्रीनशॉट रोकथाम:</strong> वॉल्ट के भीतर स्क्रीनशॉट को अक्षम करने का सुरक्षित विकल्प।</li>
+                <li><strong>पिन लॉकआउट:</strong> कई विफल प्रयासों के बाद अस्थायी लॉकआउट जुर्माना।</li>
+            </ul>
+            <ul class="policy-list lang-es">
+                <li><strong>Protección de PIN:</strong> Se requiere un PIN de 4 dígitos para acceder a la bóveda.</li>
+                <li><strong>Autenticación Biométrica:</strong> Soporte de desbloqueo de huellas dactilares.</li>
+                <li><strong>Contraseña de Señuelo:</strong> Contraseña falsa secundaria para negación plausible.</li>
+                <li><strong>Captura de Intrusos:</strong> Foto de cámara frontal opcional en intentos fallidos de PIN.</li>
+                <li><strong>Bloqueo Automático:</strong> La aplicación se bloquea automáticamente en segundo plano.</li>
+                <li><strong>Detección Boca Abajo:</strong> La aplicación se cierra cuando el dispositivo se voltea.</li>
+                <li><strong>Prevención de Capturas de Pantalla:</strong> Opción para deshabilitar capturas de pantalla.</li>
+                <li><strong>Bloqueo de PIN:</strong> Bloqueo temporal después de múltiples intentos fallidos.</li>
+            </ul>
+            <ul class="policy-list lang-ar">
+                <li><strong>حماية PIN:</strong> مطلوب رمز PIN مكون من 4 أرقام للوصول إلى القبو.</li>
+                <li><strong>المصادقة البيومترية:</strong> دعم فتح بصمة الإصبع.</li>
+                <li><strong>كلمة مرور الشرك:</strong> كلمة مرور مزيفة ثانوية للإنكار المعقول.</li>
+                <li><strong>التقاط الدخيل:</strong> صورة اختيارية للكاميرا الأمامية عند فشل محاولات PIN.</li>
+                <li><strong>القفل التلقائي:</strong> يتم قفل التطبيق تلقائيًا في الخلفية.</li>
+                <li><strong>الكشف وجهًا لأسفل:</strong> يُغلق التطبيق عند قلب الجهاز.</li>
+                <li><strong>منع لقطة الشاشة:</strong> خيار لتعطيل لقطات الشاشة.</li>
+                <li><strong>قفل PIN:</strong> إغلاق مؤقت بعد عدة محاولات فاشلة.</li>
+            </ul>
+            <ul class="policy-list lang-fr">
+                <li><strong>Protection par PIN :</strong> Code PIN à 4 chiffres requis pour l'accès au coffre-fort.</li>
+                <li><strong>Authentification Biométrique :</strong> Prise en charge du déverrouillage par empreinte digitale.</li>
+                <li><strong>Mot de passe Leurre :</strong> Faux mot de passe secondaire pour un déni plausible.</li>
+                <li><strong>Capture d'Intrus :</strong> Photo de la caméra frontale sur les tentatives de code PIN échouées.</li>
+                <li><strong>Verrouillage Auto :</strong> L'application se verrouille en arrière-plan.</li>
+                <li><strong>Détection Face vers le Bas :</strong> L'application se ferme lorsque l'appareil est retourné.</li>
+                <li><strong>Prévention des Captures d'Écran :</strong> Option pour désactiver les captures d'écran.</li>
+                <li><strong>Verrouillage du PIN :</strong> Verrouillage temporaire après plusieurs tentatives infructueuses.</li>
+            </ul>
+            <ul class="policy-list lang-ru">
+                <li><strong>Защита PIN-кодом:</strong> Для доступа в хранилище требуется 4-значный PIN-код.</li>
+                <li><strong>Биометрическая Аутентификация:</strong> Поддержка разблокировки по отпечатку пальца.</li>
+                <li><strong>Ложный Пароль:</strong> Вторичный фальшивый пароль для правдоподобного отрицания.</li>
+                <li><strong>Захват Злоумышленника:</strong> Фото с фронтальной камеры при неудачных попытках ввода PIN-кода.</li>
+                <li><strong>Автоблокировка:</strong> Приложение автоматически блокируется в фоновом режиме.</li>
+                <li><strong>Обнаружение Лицом Вниз:</strong> Приложение закрывается при переворачивании устройства.</li>
+                <li><strong>Предотвращение Скриншотов:</strong> Опция отключения скриншотов.</li>
+                <li><strong>Блокировка PIN-кода:</strong> Временная блокировка после неудачных попыток.</li>
+            </ul>
+            <ul class="policy-list lang-ur">
+                <li><strong>پن پروٹیکشن:</strong> والٹ تک رسائی کے لیے 4 ہندسوں کا پن درکار ہے۔</li>
+                <li><strong>بائیو میٹرک توثیق:</strong> فنگر پرنٹ انلاک سپورٹ۔</li>
+                <li><strong>ڈیکوئے پاس ورڈ:</strong> قابل فہم انکار کے لیے ثانوی جعلی پاس ورڈ۔</li>
+                <li><strong>انٹروڈر کیپچر:</strong> ناکام پن کی کوششوں پر فرنٹ کیمرہ تصویر۔</li>
+                <li><strong>آٹو لاک:</strong> پس منظر میں ایپ خود بخود لاک ہوجاتی ہے۔</li>
+                <li><strong>فیس ڈاون کا پتہ لگانا:</strong> ڈیوائس پلٹ جانے پر ایپ بند ہو جاتی ہے۔</li>
+                <li><strong>اسکرین شاٹ کی روک تھام:</strong> اسکرین شاٹس کو غیر فعال کرنے کا اختیار۔</li>
+                <li><strong>پن لاک آؤٹ:</strong> متعدد ناکام کوششوں کے بعد عارضی لاک آؤٹ۔</li>
+            </ul>
+            <ul class="policy-list lang-fa">
+                <li><strong>حفاظت از پین:</strong> برای دسترسی به گاوصندوق به پین ​​4 رقمی نیاز است.</li>
+                <li><strong>احراز هویت بیومتریک:</strong> پشتیبانی از باز کردن قفل اثر انگشت.</li>
+                <li><strong>رمز عبور طعمه:</strong> رمز عبور جعلی ثانویه برای انکار قابل قبول.</li>
+                <li><strong>گرفتن مزاحم:</strong> عکس دوربین جلو در صورت تلاش ناموفق پین.</li>
+                <li><strong>قفل خودکار:</strong> برنامه به طور خودکار در پس زمینه قفل می شود.</li>
+                <li><strong>تشخیص رو به پایین:</strong> با چرخاندن دستگاه، برنامه بسته می شود.</li>
+                <li><strong>جلوگیری از اسکرین شات:</strong> گزینه ای برای غیرفعال کردن اسکرین شات ها.</li>
+                <li><strong>قفل کردن پین:</strong> قفل موقت پس از تلاش های ناموفق.</li>
             </ul>
         </div>
     </div>
@@ -791,7 +904,7 @@
             <ul class="policy-list lang-bn">
                 <li><strong>স্টোরেজ:</strong> গ্যালারি থেকে মিডিয়া ইমপোর্ট করার জন্য। ফাইলগুলো নিরাপদে প্রাইভেট স্টোরেজে নেওয়া হয়।</li>
                 <li><strong>ক্যামেরা:</strong> ভুল পিন দিলে চুপিসারে ছবি তোলার জন্য (শুধুমাত্র Intruder ফিচারের জন্য)।</li>
-                <li><strong>বায়োমেট্রিক:</strong> ফিঙ্গারপ্রিন্ট ভেরিফাই করার জন্য। অ্যাপ সরাসরি আপনার ফিঙ্গারপ্রিন্ট ডেটা দেখতে বা নিতে পারে না।</li>
+                <li><strong>বায়োমেট্রিক:</strong> ফিঙ্গারপ্রিন্ট ভেরিফাই করার জন্য। অ্যাপ সরাসরি আপনার ফিঙ্গারপ্রিন্ট ডেটা দেখতে বা নিতে পারে মোহতে পারে না।</li>
             </ul>
             <ul class="policy-list lang-hi">
                 <li><strong>भंडारण:</strong> आपकी गैलरी से मीडिया आयात करने के लिए। फ़ाइलें सुरक्षित रूप से निजी संग्रहण में ले जाई जाती हैं।</li>
