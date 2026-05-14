@@ -1,0 +1,44 @@
+{
+  "latest_version_code": 2,
+  "latest_version_name": "1.1",
+  "is_force_update": false,
+  "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
+  "whats_new": {
+    "en": [
+      "Performance improvements and minor bug fixes.",
+      "Enhanced biometric authentication speed for faster unlock."
+    ],
+    "bn": [
+      "পারফরম্যান্স উন্নত করা হয়েছে এবং ছোটখাটো বাগ ফিক্স করা হয়েছে।",
+      "দ্রুত আনলক করার জন্য বায়োমেট্রিক ভেরিফিকেশনের গতি বাড়ানো হয়েছে।"
+    ],
+    "hi": [
+      "प्रदर्शन में सुधार और छोटे बग फिक्स।",
+      "तेजी से अनलॉक करने के लिए बायोमेट्रिक प्रमाणीकरण की गति बढ़ाई गई।"
+    ],
+    "es": [
+      "Mejoras de rendimiento y correcciones de errores menores.",
+      "Velocidad de autenticación biométrica mejorada para un desbloqueo más rápido."
+    ],
+    "ar": [
+      "تحسينات في الأداء وإصلاحات طفيفة للأخطاء.",
+      "تعزيز سرعة المصادقة البيومترية لإلغاء القفل بشكل أسرع."
+    ],
+    "fr": [
+      "Améliorations des performances et corrections de bugs mineurs.",
+      "Vitesse d'authentification biométrique améliorée pour un déverrouillage plus rapide."
+    ],
+    "ru": [
+      "Улучшения производительности и мелкие исправления ошибок.",
+      "Увеличена скорость биометрической аутентификации для более быстрой разблокировки."
+    ],
+    "ur": [
+      "کارکردگی میں بہتری اور معمولی بگ کی اصلاحات۔",
+      "تیزی سے انلاک کرنے کے لیے بائیو میٹرک تصدیق کی رفتار میں اضافہ۔"
+    ],
+    "fa": [
+      "بهبود عملکرد و رفع اشکالات جزئی.",
+      "افزایش سرعت احراز هویت بیومتریک برای باز کردن سریعتر قفل."
+    ]
+  }
+}
