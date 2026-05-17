@@ -1,44 +1,71 @@
 {
-  "latest_version_code": 1,
-  "latest_version_name": "1.0",
-  "is_force_update": true,
+  "latest_version_code": 2,
+  "latest_version_name": "2.0",
+  "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Performance improvements and minor bug fixes.",
-      "Enhanced biometric authentication speed for faster unlock."
+      "Added option to change or remove Decoy Password and Recovery Question.",
+      "Added Date & Time watermark to Intruder Capture photos.",
+      "Improved Folder Management: Protected system folders and prevented duplicate folder names.",
+      "Enhanced Privacy: Sensitive settings are now completely hidden while in Decoy Mode.",
+      "Fixed 'Face Down to Exit' sensitivity and Auto-Lock bugs. Improved overall UI."
     ],
     "bn": [
-      "পারফরম্যান্স উন্নত করা হয়েছে এবং ছোটখাটো বাগ ফিক্স করা হয়েছে।",
-      "দ্রুত আনলক করার জন্য বায়োমেট্রিক ভেরিফিকেশনের গতি বাড়ানো হয়েছে।"
+      "ডিকয় পাসওয়ার্ড এবং রিকভারি প্রশ্ন পরিবর্তন বা মুছে ফেলার সুবিধা যুক্ত করা হয়েছে।",
+      "ইন্ট্রুডার ক্যাপচার (অনুপ্রবেশকারীর ছবি) -এ সময় এবং তারিখের ওয়াটারমার্ক যুক্ত করা হয়েছে।",
+      "ফোল্ডার ম্যানেজমেন্ট উন্নত করা হয়েছে: সিস্টেম ফোল্ডার সুরক্ষিত করা হয়েছে এবং একই নামের ফোল্ডার তৈরি বন্ধ করা হয়েছে।",
+      "গোপনীয়তা বৃদ্ধি: ডিকয় মোডে থাকাকালীন সংবেদনশীল সেটিংসগুলো সম্পূর্ণ হাইড করা হয়েছে।",
+      "'ফেস ডাউন টু এক্সিট' ফিচারের সেন্সিটিভিটি এবং অটো-লকের বাগ ফিক্স করা হয়েছে। সাথে UI-তে উন্নতি আনা হয়েছে।"
     ],
     "hi": [
-      "प्रदर्शन में सुधार और छोटे बग फिक्स।",
-      "तेजी से अनलॉक करने के लिए बायोमेट्रिक प्रमाणीकरण की गति बढ़ाई गई।"
+      "डिकॉय पासवर्ड और रिकवरी प्रश्न को बदलने या हटाने का विकल्प जोड़ा गया।",
+      "घुसपैठिए की तस्वीरों में समय और तारीख का वॉटरमार्क जोड़ा गया।",
+      "फ़ोल्डर प्रबंधन में सुधार: सिस्टम फ़ोल्डर्स को सुरक्षित किया गया और डुप्लिकेट नामों को रोका गया।",
+      "बढ़ी हुई गोपनीयता: डिकॉय मोड में होने पर संवेदनशील सेटिंग्स अब पूरी तरह से छिपी हुई हैं।",
+      "'फेस डाउन टू एग्जिट' संवेदनशीलता और ऑटो-लॉक बग को ठीक किया गया। यूआई में सुधार।"
     ],
     "es": [
-      "Mejoras de rendimiento y correcciones de errores menores.",
-      "Velocidad de autenticación biométrica mejorada para un desbloqueo más rápido."
+      "Se agregó la opción para cambiar o eliminar la Contraseña de Señuelo y la Pregunta de Recuperación.",
+      "Se agregó una marca de agua de Fecha y Hora a las fotos de Captura de Intrusos.",
+      "Gestión de carpetas mejorada: carpetas del sistema protegidas y nombres duplicados evitados.",
+      "Privacidad mejorada: las configuraciones confidenciales ahora están ocultas en el Modo Señuelo.",
+      "Se corrigieron errores de sensibilidad al voltear el teléfono y bloqueo automático. Interfaz de usuario mejorada."
     ],
     "ar": [
-      "تحسينات في الأداء وإصلاحات طفيفة للأخطاء.",
-      "تعزيز سرعة المصادقة البيومترية لإلغاء القفل بشكل أسرع."
+      "تمت إضافة خيار لتغيير أو إزالة كلمة مرور الشرك وسؤال الاسترداد.",
+      "تمت إضافة علامة مائية للتاريخ والوقت إلى صور التقاط الدخيل.",
+      "تحسين إدارة المجلدات: حماية مجلدات النظام ومنع الأسماء المكررة.",
+      "تعزيز الخصوصية: الإعدادات الحساسة مخفية الآن تمامًا في الوضع الوهمي.",
+      "تم إصلاح أخطاء حساسية 'القلب للأسفل للخروج' والقفل التلقائي. تحسين واجهة المستخدم."
     ],
     "fr": [
-      "Améliorations des performances et corrections de bugs mineurs.",
-      "Vitesse d'authentification biométrique améliorée pour un déverrouillage plus rapide."
+      "Ajout de la possibilité de modifier ou de supprimer le mot de passe leurre et la question de récupération.",
+      "Ajout d'un filigrane de date et d'heure aux photos de capture d'intrus.",
+      "Gestion des dossiers améliorée : dossiers système protégés et noms en double empêchés.",
+      "Confidentialité renforcée : les paramètres sensibles sont désormais cachés en mode Leurre.",
+      "Correction des bugs de sensibilité de la fonction face vers le bas et du verrouillage automatique."
     ],
     "ru": [
-      "Улучшения производительности и мелкие исправления ошибок.",
-      "Увеличена скорость биометрической аутентификации для более быстрой разблокировки."
+      "Добавлена возможность изменять или удалять ложный пароль и контрольный вопрос.",
+      "Добавлен водяной знак с датой и временем на фото злоумышленников.",
+      "Улучшено управление папками: защита системных папок и предотвращение дублирования имен.",
+      "Повышенная конфиденциальность: чувствительные настройки теперь скрыты в режиме ложного пароля.",
+      "Исправлены ошибки чувствительности функции 'Лицом вниз для выхода' и автоблокировки."
     ],
     "ur": [
-      "کارکردگی میں بہتری اور معمولی بگ کی اصلاحات۔",
-      "تیزی سے انلاک کرنے کے لیے بائیو میٹرک تصدیق کی رفتار میں اضافہ۔"
+      "ڈیکوئے پاس ورڈ اور ریکوری سوال کو تبدیل کرنے یا ہٹانے کا آپشن شامل کیا گیا۔",
+      "انٹروڈر کی تصویروں میں وقت اور تاریخ کا واٹر مارک شامل کیا گیا۔",
+      "فولڈر مینجمنٹ میں بہتری: سسٹم فولڈرز کو محفوظ کیا گیا اور ایک جیسے ناموں کو روکا گیا۔",
+      "بہتر رازداری: ڈیکوئے موڈ میں اب حساس ترتیبات مکمل طور پر چھپی ہوئی ہیں۔",
+      "چہرہ نیچے کرنے پر باہر نکلنے کی حساسیت اور آٹو لاک کے بگز کو ٹھیک کر دیا گیا۔"
     ],
     "fa": [
-      "بهبود عملکرد و رفع اشکالات جزئی.",
-      "افزایش سرعت احراز هویت بیومتریک برای باز کردن سریعتر قفل."
+      "گزینه ای برای تغییر یا حذف رمز عبور طعمه و سوال بازیابی اضافه شد.",
+      "واتر مارک تاریخ و زمان به عکس های گرفته شده از مزاحم اضافه شد.",
+      "مدیریت پوشه بهبود یافته: از پوشه های سیستم محافظت می شود و از نام های تکراری جلوگیری می شود.",
+      "حریم خصوصی پیشرفته: تنظیمات حساس اکنون در حالت طعمه کاملاً پنهان هستند.",
+      "رفع اشکالات مربوط به حساسیت چرخاندن گوشی برای خروج و قفل خودکار. رابط کاربری بهبود یافته است."
     ]
   }
 }
