@@ -1,71 +1,62 @@
 {
-  "latest_version_code": 2,
-  "latest_version_name": "2.0",
+  "latest_version_code": 3,
+  "latest_version_name": "2.1",
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Added option to change or remove Decoy Password and Recovery Question.",
-      "Added Date & Time watermark to Intruder Capture photos.",
-      "Improved Folder Management: Protected system folders and prevented duplicate folder names.",
-      "Enhanced Privacy: Sensitive settings are now completely hidden while in Decoy Mode.",
-      "Fixed 'Face Down to Exit' sensitivity and Auto-Lock bugs. Improved overall UI."
+      "Added a real-time progress bar with a cancel option for importing, moving, and exporting files.",
+      "Upgraded Intruder Selfie: Now instantly captures a photo on every wrong PIN attempt.",
+      "Intruder photos now display the exact wrong PIN that was entered, along with the date and time.",
+      "Enhanced background performance and stability for large file transfers."
     ],
     "bn": [
-      "ডিকয় পাসওয়ার্ড এবং রিকভারি প্রশ্ন পরিবর্তন বা মুছে ফেলার সুবিধা যুক্ত করা হয়েছে।",
-      "ইন্ট্রুডার ক্যাপচার (অনুপ্রবেশকারীর ছবি) -এ সময় এবং তারিখের ওয়াটারমার্ক যুক্ত করা হয়েছে।",
-      "ফোল্ডার ম্যানেজমেন্ট উন্নত করা হয়েছে: সিস্টেম ফোল্ডার সুরক্ষিত করা হয়েছে এবং একই নামের ফোল্ডার তৈরি বন্ধ করা হয়েছে।",
-      "গোপনীয়তা বৃদ্ধি: ডিকয় মোডে থাকাকালীন সংবেদনশীল সেটিংসগুলো সম্পূর্ণ হাইড করা হয়েছে।",
-      "'ফেস ডাউন টু এক্সিট' ফিচারের সেন্সিটিভিটি এবং অটো-লকের বাগ ফিক্স করা হয়েছে। সাথে UI-তে উন্নতি আনা হয়েছে।"
+      "ফাইল ইমপোর্ট, মুভ এবং এক্সপোর্ট করার জন্য রিয়েল-টাইম প্রগ্রেস বার এবং ক্যানসেল অপশন যুক্ত করা হয়েছে।",
+      "ইন্ট্রুডার সেলফি আপগ্রেড: এখন প্রতিবার ভুল পিন দিলেই ছবি উঠে যাবে।",
+      "ইন্ট্রুডার ছবিতে এখন তারিখ এবং সময়ের সাথে সাথে কোন ভুল পিনটি দেওয়া হয়েছিল, সেটিও দেখা যাবে।",
+      "বড় ফাইল ট্রান্সফারের ক্ষেত্রে ব্যাকগ্রাউন্ড পারফরম্যান্স এবং স্ট্যাবিলিটি বাড়ানো হয়েছে।"
     ],
     "hi": [
-      "डिकॉय पासवर्ड और रिकवरी प्रश्न को बदलने या हटाने का विकल्प जोड़ा गया।",
-      "घुसपैठिए की तस्वीरों में समय और तारीख का वॉटरमार्क जोड़ा गया।",
-      "फ़ोल्डर प्रबंधन में सुधार: सिस्टम फ़ोल्डर्स को सुरक्षित किया गया और डुप्लिकेट नामों को रोका गया।",
-      "बढ़ी हुई गोपनीयता: डिकॉय मोड में होने पर संवेदनशील सेटिंग्स अब पूरी तरह से छिपी हुई हैं।",
-      "'फेस डाउन टू एग्जिट' संवेदनशीलता और ऑटो-लॉक बग को ठीक किया गया। यूआई में सुधार।"
+      "फ़ाइलें आयात (import), स्थानांतरित (move) और निर्यात (export) करने के लिए रीयल-टाइम प्रगति बार (progress bar) और रद्द (cancel) करने का विकल्प जोड़ा गया।",
+      "घुसपैठिए की सेल्फी अपग्रेड: अब हर बार गलत पिन डालने पर फोटो खींच ली जाएगी।",
+      "घुसपैठिए की तस्वीरों में अब तारीख और समय के साथ-साथ यह भी दिखाई देगा कि कौन सा गलत पिन डाला गया था।",
+      "बड़ी फ़ाइलों के ट्रांसफर के लिए बैकग्राउंड परफॉर्मेंस और स्थिरता बढ़ाई गई।"
     ],
     "es": [
-      "Se agregó la opción para cambiar o eliminar la Contraseña de Señuelo y la Pregunta de Recuperación.",
-      "Se agregó una marca de agua de Fecha y Hora a las fotos de Captura de Intrusos.",
-      "Gestión de carpetas mejorada: carpetas del sistema protegidas y nombres duplicados evitados.",
-      "Privacidad mejorada: las configuraciones confidenciales ahora están ocultas en el Modo Señuelo.",
-      "Se corrigieron errores de sensibilidad al voltear el teléfono y bloqueo automático. Interfaz de usuario mejorada."
+      "Barra de progreso en tiempo real y opción de cancelar al importar, mover y exportar archivos.",
+      "Selfie de Intruso: captura una foto en cada intento de PIN incorrecto.",
+      "Las fotos de intrusos ahora muestran el PIN incorrecto ingresado, fecha y hora.",
+      "Rendimiento y estabilidad mejorados para transferir archivos grandes."
     ],
     "ar": [
-      "تمت إضافة خيار لتغيير أو إزالة كلمة مرور الشرك وسؤال الاسترداد.",
-      "تمت إضافة علامة مائية للتاريخ والوقت إلى صور التقاط الدخيل.",
-      "تحسين إدارة المجلدات: حماية مجلدات النظام ومنع الأسماء المكررة.",
-      "تعزيز الخصوصية: الإعدادات الحساسة مخفية الآن تمامًا في الوضع الوهمي.",
-      "تم إصلاح أخطاء حساسية 'القلب للأسفل للخروج' والقفل التلقائي. تحسين واجهة المستخدم."
+      "تمت إضافة شريط تقدم في الوقت الفعلي مع خيار الإلغاء لاستيراد الملفات ونقلها وتصديرها.",
+      "ترقية صورة الدخيل: تلتقط الآن صورة عند كل محاولة خاطئة لإدخال رمز PIN.",
+      "تُظهر صور الدخيل الآن رمز PIN الخاطئ الذي تم إدخاله بالضبط، بالإضافة إلى التاريخ والوقت.",
+      "تحسين أداء الخلفية والاستقرار عند نقل الملفات الكبيرة."
     ],
     "fr": [
-      "Ajout de la possibilité de modifier ou de supprimer le mot de passe leurre et la question de récupération.",
-      "Ajout d'un filigrane de date et d'heure aux photos de capture d'intrus.",
-      "Gestion des dossiers améliorée : dossiers système protégés et noms en double empêchés.",
-      "Confidentialité renforcée : les paramètres sensibles sont désormais cachés en mode Leurre.",
-      "Correction des bugs de sensibilité de la fonction face vers le bas et du verrouillage automatique."
+      "Ajout d'une barre de progression en temps réel avec option d'annulation pour l'importation, le déplacement et l'exportation de fichiers.",
+      "Selfie Intrus amélioré : capture désormais une photo à chaque tentative de code PIN erroné.",
+      "Les photos d'intrus affichent désormais exactement quel code PIN erroné a été saisi, avec la date et l'heure.",
+      "Amélioration des performances en arrière-plan et de la stabilité pour les transferts de fichiers volumineux."
     ],
     "ru": [
-      "Добавлена возможность изменять или удалять ложный пароль и контрольный вопрос.",
-      "Добавлен водяной знак с датой и временем на фото злоумышленников.",
-      "Улучшено управление папками: защита системных папок и предотвращение дублирования имен.",
-      "Повышенная конфиденциальность: чувствительные настройки теперь скрыты в режиме ложного пароля.",
-      "Исправлены ошибки чувствительности функции 'Лицом вниз для выхода' и автоблокировки."
+      "Добавлен индикатор выполнения в реальном времени с возможностью отмены при импорте, перемещении и экспорте файлов.",
+      "Улучшенное селфи злоумышленника: теперь делает фото при каждой попытке ввода неверного PIN-кода.",
+      "На фотографиях злоумышленников теперь отображается точный неверный PIN-код, а также дата и время.",
+      "Повышена производительность и стабильность в фоновом режиме при передаче больших файлов."
     ],
     "ur": [
-      "ڈیکوئے پاس ورڈ اور ریکوری سوال کو تبدیل کرنے یا ہٹانے کا آپشن شامل کیا گیا۔",
-      "انٹروڈر کی تصویروں میں وقت اور تاریخ کا واٹر مارک شامل کیا گیا۔",
-      "فولڈر مینجمنٹ میں بہتری: سسٹم فولڈرز کو محفوظ کیا گیا اور ایک جیسے ناموں کو روکا گیا۔",
-      "بہتر رازداری: ڈیکوئے موڈ میں اب حساس ترتیبات مکمل طور پر چھپی ہوئی ہیں۔",
-      "چہرہ نیچے کرنے پر باہر نکلنے کی حساسیت اور آٹو لاک کے بگز کو ٹھیک کر دیا گیا۔"
+      "فائلیں امپورٹ، منتقل اور ایکسپورٹ کرنے کے لیے کینسل آپشن کے ساتھ ریئل ٹائم پروگریس بار شامل کی گئی۔",
+      "انٹروڈر سیلفی اپ گریڈ: اب ہر بار غلط پن داخل کرنے پر تصویر کھینچ لی جائے گی۔",
+      "انٹروڈر کی تصویروں میں اب تاریخ اور وقت کے ساتھ یہ بھی نظر آئے گا کہ کون سا غلط پن ڈالا گیا تھا۔",
+      "بڑی فائلوں کی منتقلی کے لیے پس منظر کی کارکردگی اور استحکام میں اضافہ کیا گیا۔"
     ],
     "fa": [
-      "گزینه ای برای تغییر یا حذف رمز عبور طعمه و سوال بازیابی اضافه شد.",
-      "واتر مارک تاریخ و زمان به عکس های گرفته شده از مزاحم اضافه شد.",
-      "مدیریت پوشه بهبود یافته: از پوشه های سیستم محافظت می شود و از نام های تکراری جلوگیری می شود.",
-      "حریم خصوصی پیشرفته: تنظیمات حساس اکنون در حالت طعمه کاملاً پنهان هستند.",
-      "رفع اشکالات مربوط به حساسیت چرخاندن گوشی برای خروج و قفل خودکار. رابط کاربری بهبود یافته است."
+      "نوار پیشرفت در زمان واقعی با گزینه لغو برای وارد کردن، انتقال و صادر کردن فایل‌ها اضافه شد.",
+      "ارتقای سلفی مزاحم: اکنون با هر بار تلاش اشتباه برای وارد کردن پین، عکس می‌گیرد.",
+      "عکس‌های مزاحم اکنون علاوه بر تاریخ و زمان، دقیقاً نشان می‌دهند که چه پین اشتباهی وارد شده است.",
+      "عملکرد و پایداری پس‌زمینه برای انتقال فایل‌های بزرگ افزایش یافته است."
     ]
   }
 }
