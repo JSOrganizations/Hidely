@@ -1,63 +1,81 @@
 {
-  "latest_version_code": 3,
-  "latest_version_name": "2.1",
-  "min_supported_version_code": 3,
+  "latest_version_code": 4,
+  "latest_version_name": "3.0",
+  "min_supported_version_code": 4,
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Added a real-time progress bar with a cancel option for importing, moving, and exporting files.",
-      "Upgraded Intruder Selfie: Now instantly captures a photo on every wrong PIN attempt.",
-      "Intruder photos now display the exact wrong PIN that was entered, along with the date and time.",
-      "Enhanced background performance and stability for large file transfers."
+      "New Language screen with native country flags for 9 languages.",
+      "UI Redesign: Improved Lock Screen/Dashboard; moved Settings to bottom nav.",
+      "Added '.hidely' encrypted extension for secure local backups.",
+      "New Update Logic to deprecate older app versions.",
+      "Calendar Disguise icon now dynamically changes based on the date (1-31).",
+      "System performance optimizations and bug fixes."
     ],
     "bn": [
-      "ফাইল ইমপোর্ট, মুভ এবং এক্সপোর্ট করার জন্য রিয়েল-টাইম প্রগ্রেস বার এবং ক্যানসেল অপশন যুক্ত করা হয়েছে।",
-      "ইন্ট্রুডার সেলফি আপগ্রেড: এখন প্রতিবার ভুল পিন দিলেই ছবি উঠে যাবে।",
-      "ইন্ট্রুডার ছবিতে এখন তারিখ এবং সময়ের সাথে সাথে কোন ভুল পিনটি দেওয়া হয়েছিল, সেটিও দেখা যাবে।",
-      "বড় ফাইল ট্রান্সফারের ক্ষেত্রে ব্যাকগ্রাউন্ড পারফরম্যান্স এবং স্ট্যাবিলিটি বাড়ানো হয়েছে।"
+      "৯টি ভাষার জন্য জাতীয় পতাকাসহ নতুন ল্যাঙ্গুয়েজ স্ক্রিন।",
+      "UI পরিবর্তন: উন্নত লক স্ক্রিন/ড্যাশবোর্ড; সেটিংস নিচে আনা হয়েছে।",
+      "নিরাপদ অফলাইন ব্যাকআপের জন্য কাস্টম '.hidely' এক্সটেনশন।",
+      "পুরোনো অ্যাপ ভার্সন নিষ্ক্রিয় করার জন্য নতুন আপডেট লজিক।",
+      "ক্যালেন্ডার আইকন এখন চলতি তারিখ (১-৩১) অনুযায়ী পরিবর্তিত হবে।",
+      "সিস্টেম পারফরম্যান্স অপ্টিমাইজেশন এবং বাগ ফিক্স।"
     ],
     "hi": [
-      "फ़ाइलें आयात (import), स्थानांतरित (move) और निर्यात (export) करने के लिए रीयल-टाइम प्रगति बार (progress bar) और रद्द (cancel) करने का विकल्प जोड़ा गया।",
-      "घुसपैठिए की सेल्फी अपग्रेड: अब हर बार गलत पिन डालने पर फोटो खींच ली जाएगी।",
-      "घुसपैठिए की तस्वीरों में अब तारीख और समय के साथ-साथ यह भी दिखाई देगा कि कौन सा गलत पिन डाला गया था।",
-      "बड़ी फ़ाइलों के ट्रांसफर के लिए बैकग्राउंड परफॉर्मेंस और स्थिरता बढ़ाई गई।"
+      "सभी 9 भाषाओं के लिए देश के झंडे के साथ नया भाषा सेटिंग पेज जोड़ा गया।",
+      "यूआई बदलाव: लॉक स्क्रीन और डैशबोर्ड को अपग्रेड किया गया; सेटिंग्स बटन को नीचे नेविगेशन बार में बदला गया।",
+      "सुरक्षित ऑफलाइन डेटा रिकवरी के लिए कस्टम '.hidely' एन्क्रिप्टेड बैकअप एक्सटेंशन जोड़ा गया।",
+      "पुराने ऐप वर्शन्स को अक्षम करने के लिए अपडेट लॉजिक में नया फीचर जोड़ा गया।",
+      "कैलेंडर डिस्गाइस: कैलेंडर आइकन अब चालू तारीख के अनुसार (1-31 दिन) अपने आप बदलेगा।",
+      "सिस्टम प्रदर्शन in सुधार और छोटे बग फिक्स।"
     ],
     "es": [
-      "Barra de progreso en tiempo real y opción de cancelar al importar, mover y exportar archivos.",
-      "Selfie de Intruso: captura una foto en cada intento de PIN incorrecto.",
-      "Las fotos de intrusos ahora muestran el PIN incorrecto ingresado, fecha y hora.",
-      "Rendimiento y estabilidad mejorados para transferir archivos grandes."
+      "Nueva pantalla de idioma con banderas nacionales para los 9 idiomas.",
+      "Rediseño de interfaz: bloqueo y panel mejorados; botón de ajustes movido abajo.",
+      "Copia de seguridad local cifrada con la nueva extensión '.hidely'.",
+      "Nueva lógica de actualización para deshabilitar versiones obsoletas.",
+      "Camuflaje mejorado: el icono de calendario cambia según el día actual (1-31).",
+      "Rendimiento optimizado y correcciones de errores menores."
     ],
     "ar": [
-      "تمت إضافة شريط تقدم في الوقت الفعلي مع خيار الإلغاء لاستيراد الملفات ونقلها وتصديرها.",
-      "ترقية صورة الدخيل: تلتقط الآن صورة عند كل محاولة خاطئة لإدخال رمز PIN.",
-      "تُظهر صور الدخيل الآن رمز PIN الخاطئ الذي تم إدخاله بالضبط، بالإضافة إلى التاريخ والوقت.",
-      "تحسين أداء الخلفية والاستقرار عند نقل الملفات الكبيرة."
+      "شاشة لغة جديدة تتميز بأعلام الدول لجميع اللغات الـ 9 المدعومة.",
+      "إعادة تصميم الواجهة: ترقية شاشة القفل ولوحة التحكم، ونقل الإعدادات إلى شريط التنقل السفلي.",
+      "إضافة امتداد '.hidely' المشفر المخصص للنسخ الاحتياطي المحلي الآمن.",
+      "ترقية منطق التحديث لإيقاف إصدارات التطبيق القديمة وغير المدعومة.",
+      "تمويه المحسن: أيقونة التقويم تتحدث الآن ديناميكياً لتعرض اليوم الحالي (1-31).",
+      "تحسين أداء النظام وإصلاح الأخطاء الطفيفة."
     ],
     "fr": [
-      "Ajout d'une barre de progression en temps réel avec option d'annulation pour l'importation, le déplacement et l'exportation de fichiers.",
-      "Selfie Intrus amélioré : capture désormais une photo à chaque tentative de code PIN erroné.",
-      "Les photos d'intrus affichent désormais exactement quel code PIN erroné a été saisi, avec la date et l'heure.",
-      "Amélioration des performances en arrière-plan et de la stabilité pour les transferts de fichiers volumineux."
+      "Écran de paramètres de langue avec drapeaux nationaux pour les 9 langues.",
+      "Refonte de l'interface : écran de verrouillage/tableau de bord améliorés ; paramètres déplacés en bas.",
+      "Extension '.hidely' cryptée ajoutée pour des sauvegardes locales sécurisées.",
+      "Nouvelle logique de mise à jour permettant de désactiver les anciennes versions.",
+      "Camouflage amélioré : l'icône du calendrier change dynamiquement selon le jour (1-31).",
+      "Performances optimisées et corrections de bugs mineurs."
     ],
     "ru": [
-      "Добавлен индикатор выполнения в реальном времени с возможностью отмены при импорте, перемещении и экспорте файлов.",
-      "Улучшенное селфи злоумышленника: теперь делает фото при каждой попытке ввода неверного PIN-кода.",
-      "На фотографиях злоумышленников теперь отображается точный неверный PIN-код, а также дата и время.",
-      "Повышена производительность и стабильность в фоновом режиме при передаче больших файлов."
+      "Новый экран выбора языка с национальными флагами для всех 9 языков.",
+      "Редизайн интерфейса: обновлены экран блокировки/панель; настройки перенесены вниз.",
+      "Внедрено зашифрованное расширение '.hidely' для безопасного локального бэкапа.",
+      "Логика обновления улучшена для отключения устаревших версий приложения.",
+      "Маскировка приложения: иконка календаря теперь меняется динамически по датам (1–31).",
+      "Оптимизирована производительность системы и исправлены мелкие ошибки."
     ],
     "ur": [
-      "فائلیں امپورٹ، منتقل اور ایکسپورٹ کرنے کے لیے کینسل آپشن کے ساتھ ریئل ٹائم پروگریس بار شامل کی گئی۔",
-      "انٹروڈر سیلفی اپ گریڈ: اب ہر بار غلط پن داخل کرنے پر تصویر کھینچ لی جائے گی۔",
-      "انٹروڈر کی تصویروں میں اب تاریخ اور وقت کے ساتھ یہ بھی نظر آئے گا کہ کون سا غلط پن ڈالا گیا تھا۔",
-      "بڑی فائلوں کی منتقلی کے لیے پس منظر کی کارکردگی اور استحکام میں اضافہ کیا گیا۔"
+      "تمام 9 زبانوں کے لیے ملکی جھنڈوں کے ساتھ نیا لینگویج سیٹنگز پیج شامل کیا گیا ہے۔",
+      "واجهة ریڈیزائن: لاک اسکرین اور ڈیش بورڈ کو اپ گریڈ کیا گیا؛ سیٹنگز بٹن نیچے منتقل ہوا۔",
+      "محفوظ آف لائن ڈیٹا بیک اپ کے لیے کسٹڈ '.hidely' انکرپٹڈ ایکسٹینشن شامل کی گئی۔",
+      "پرانے ایپ ورژنز کو غیر فعال کرنے کے لیے اپ ڈیٹ لاجک کو بہتر بنایا گیا ہے۔",
+      "بہتر ایپ ڈسگائز: کیلڈر کا آئیکن اب تاریخ کے مطابق (1-31 دن) تبدیل ہوگا۔",
+      "مجموعی کارکردگی کو بہتر بنایا گیا ہے اور معمولی بگز کو فکس کیا گیا ہے۔"
     ],
     "fa": [
-      "نوار پیشرفت در زمان واقعی با گزینه لغو برای وارد کردن، انتقال و صادر کردن فایل‌ها اضافه شد.",
-      "ارتقای سلفی مزاحم: اکنون با هر بار تلاش اشتباه برای وارد کردن پین، عکس می‌گیرد.",
-      "عکس‌های مزاحم اکنون علاوه بر تاریخ و زمان، دقیقاً نشان می‌دهند که چه پین اشتباهی وارد شده است.",
-      "عملکرد و پایداری پس‌زمینه برای انتقال فایل‌های بزرگ افزایش یافته است."
+      "صفحه جدید تنظیمات زبان با پرچم کشورها برای هر 9 زبان پشتیبانی شده.",
+      "بازطراحی رابط کاربری: ارتقای صفحه قفل/داشبورد؛ انتقال دکمه تنظیمات به نوار پایین.",
+      "معرفی پسوند رمزگذاری شده '.hidely' برای پشتیبان‌گیری محلی و امن داده‌ها.",
+      "ارتقای منطق به‌روزرسانی برای غیرقابل‌استفاده کردن نسخه‌های قدیمی برنامه.",
+      "استتار پیشرفته: آیکون تقویم به صورت پویا روز فعلی ماه (1-31) را نشان می‌دهد.",
+      "بهینه‌سازی عملکرد سیستم و رفع اشکالات جزئی."
     ]
   }
 }
