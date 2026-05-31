@@ -2,7 +2,7 @@
   "latest_version_code": 4,
   "latest_version_name": "3.0",
   "min_supported_version_code": 4,
-  "is_force_update": false,
+  "is_force_update": true,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
