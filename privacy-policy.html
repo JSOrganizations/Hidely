@@ -47,8 +47,6 @@
         }
 
         body[dir="rtl"] { text-align: right; }
-        body[dir="rtl"] .policy-list li { padding-right: 0; }
-        body[dir="rtl"] .policy-list li::before { margin-left: 12px; margin-right: 0; }
         body[dir="rtl"] .callout i { margin-left: 12px; margin-right: 0; }
         body[dir="rtl"] .contact-label i { margin-left: 6px; margin-right: 0; }
 
@@ -192,14 +190,25 @@
         }
         .policy-list { list-style:none; margin:12px 0; }
         .policy-list li {
-            display:flex; align-items:flex-start; gap:12px;
-            padding:10px 0; border-bottom:1px solid var(--surface-3);
-            font-size:clamp(13px,3vw,15px); color:var(--ink-light);
+            position: relative;
+            padding: 10px 0 10px 22px;
+            border-bottom: 1px solid var(--surface-3);
+            font-size: clamp(13px,3vw,15px); 
+            color: var(--ink-light);
+            line-height: 1.6;
         }
-        .policy-list li:last-child { border-bottom:none; }
+        .policy-list li:last-child { border-bottom: none; }
         .policy-list li::before {
-            content:''; width:6px; height:6px; border-radius:50%;
-            background:var(--accent); flex-shrink:0; margin-top:9px;
+            content: ''; position: absolute;
+            left: 0; top: 19px;
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent);
+        }
+        body[dir="rtl"] .policy-list li {
+            padding: 10px 22px 10px 0;
+        }
+        body[dir="rtl"] .policy-list li::before {
+            left: auto; right: 0;
         }
         .policy-list li strong { color:var(--ink); font-weight:600; }
         .callout {
@@ -280,8 +289,8 @@
         .section-card:nth-child(9)  { animation-delay:.36s; }
         .section-card:nth-child(10) { animation-delay:.40s; }
         .section-card:nth-child(11) { animation-delay:.44s; }
-        .section-card:nth-child(12) { animation-delay:.48s; }
-        .contact-card { animation-delay:.52s; }
+        .contact-card { animation-delay:.48s; }
+        .section-card:nth-child(13) { animation-delay:.52s; }
 
         @media (max-width:480px) {
             .toc-link { padding:11px 12px; }
@@ -339,15 +348,15 @@
     <div class="hero-meta">
         <div class="hero-meta-item">
             <i class="fa-regular fa-calendar-alt"></i>
-            <span class="lang-en">Effective: May 14, 2026</span>
-            <span class="lang-bn">কার্যকরী তারিখ: ১৪ মে, ২০২৬</span>
-            <span class="lang-hi">प्रभावी: 14 मई, 2026</span>
-            <span class="lang-es">Efectivo: 14 de mayo, 2026</span>
-            <span class="lang-ar">ساري المفعول: ١٤ مايو ٢٠٢٦</span>
-            <span class="lang-fr">En vigueur : 14 Mai 2026</span>
-            <span class="lang-ru">Действует с: 14 мая 2026</span>
-            <span class="lang-ur">مؤثر: 14 مئی 2026</span>
-            <span class="lang-fa">موثر: ۱۴ مه ۲۰۲۶</span>
+            <span class="lang-en">Effective: June 2, 2026</span>
+            <span class="lang-bn">কার্যকরী তারিখ: ২ জুন, ২০২৬</span>
+            <span class="lang-hi">प्रभावी: 2 जून, 2026</span>
+            <span class="lang-es">Efectivo: 2 de junio de 2026</span>
+            <span class="lang-ar">ساري المفعول: ٢ يونيو ٢٠٢٦</span>
+            <span class="lang-fr">En vigueur : 2 Juin 2026</span>
+            <span class="lang-ru">Действует с: 2 июня 2026 г.</span>
+            <span class="lang-ur">مؤثر: 2 جون 2026</span>
+            <span class="lang-fa">موثر: ۲ ژوئن ۲۰۲۶</span>
         </div>
         <div class="hero-meta-item">
             <i class="fa-solid fa-mobile-alt"></i>
@@ -400,18 +409,21 @@
                 <span class="lang-en">Data Retention</span><span class="lang-bn">ডেটা সংরক্ষণ</span><span class="lang-hi">डेटा प्रतिधारण</span><span class="lang-es">Retención de Datos</span><span class="lang-ar">الاحتفاظ بالبيانات</span><span class="lang-fr">Conservation des Données</span><span class="lang-ru">Хранение Данных</span><span class="lang-ur">ڈیٹا کی برقراری</span><span class="lang-fa">حفظ داده ها</span>
             </a>
             <a href="#s8" class="toc-link"><span class="toc-num">08</span>
-                <span class="lang-en">Children's Privacy</span><span class="lang-bn">শিশুদের গোপনীয়তা</span><span class="lang-hi">बच्चों की गोपनीयता</span><span class="lang-es">Privacidad Infantil</span><span class="lang-ar">خصوصية الأطفال</span><span class="lang-fr">Confidentialité des Enfants</span><span class="lang-ru">Детская Конфиденциальность</span><span class="lang-ur">بچوں کی رازداری</span><span class="lang-fa">حریم خصوصی کودکان</span>
+                <span class="lang-en">Data Backup & Recovery</span><span class="lang-bn">ডেটা ব্যাকআপ এবং পুনরুদ্ধার</span><span class="lang-hi">डेटा बैकअप और पुनरुद्धार</span><span class="lang-es">Copia de Seguridad y Recuperación</span><span class="lang-ar">النسخ الاحتياطي واسترجاع البيانات</span><span class="lang-fr">Sauvegarde et Récupération de Données</span><span class="lang-ru">Резервная копия и восстановление данных</span><span class="lang-ur">ڈیٹا بیک اپ اور بحالی</span><span class="lang-fa">پشتیبان گیری و بازیابی اطلاعات</span>
             </a>
             <a href="#s9" class="toc-link"><span class="toc-num">09</span>
-                <span class="lang-en">Policy Changes</span><span class="lang-bn">নীতির পরিবর্তন</span><span class="lang-hi">नीति में परिवर्तन</span><span class="lang-es">Cambios en la Política</span><span class="lang-ar">تغييرات السياسة</span><span class="lang-fr">Changements de Politique</span><span class="lang-ru">Изменения Политики</span><span class="lang-ur">پالیسی میں تبدیلیاں</span><span class="lang-fa">تغییرات سیاست</span>
+                <span class="lang-en">Children's Privacy</span><span class="lang-bn">শিশুদের গোপনীয়তা</span><span class="lang-hi">बच्चों की गोपनीयता</span><span class="lang-es">Privacidad Infantil</span><span class="lang-ar">خصوصية الأطفال</span><span class="lang-fr">Confidentialité des Enfants</span><span class="lang-ru">Детская Конфиденциальность</span><span class="lang-ur">بچوں کی رازداری</span><span class="lang-fa">حریم خصوصی کودکان</span>
             </a>
             <a href="#s10" class="toc-link"><span class="toc-num">10</span>
-                <span class="lang-en">Your Rights</span><span class="lang-bn">আপনার অধিকার</span><span class="lang-hi">आपके अधिकार</span><span class="lang-es">Tus Derechos</span><span class="lang-ar">حقوقك</span><span class="lang-fr">Vos Droits</span><span class="lang-ru">Ваши Права</span><span class="lang-ur">آپ کے حقوق</span><span class="lang-fa">حقوق شما</span>
+                <span class="lang-en">Policy Changes</span><span class="lang-bn">নীতির পরিবর্তন</span><span class="lang-hi">नीति में परिवर्तन</span><span class="lang-es">Cambios en la Política</span><span class="lang-ar">تغييرات السياسة</span><span class="lang-fr">Changements de Politique</span><span class="lang-ru">Изменения Политики</span><span class="lang-ur">پالیسی میں تبدیلیاں</span><span class="lang-fa">تغییرات سیاست</span>
             </a>
             <a href="#s11" class="toc-link"><span class="toc-num">11</span>
-                <span class="lang-en">Contact Us</span><span class="lang-bn">যোগাযোগ</span><span class="lang-hi">संपर्क करें</span><span class="lang-es">Contáctanos</span><span class="lang-ar">اتصل بنا</span><span class="lang-fr">Nous Contacter</span><span class="lang-ru">Контакты</span><span class="lang-ur">رابطہ کریں</span><span class="lang-fa">تماس با ما</span>
+                <span class="lang-en">Your Rights</span><span class="lang-bn">আপনার অধিকার</span><span class="lang-hi">आपके अधिकार</span><span class="lang-es">Tus Derechos</span><span class="lang-ar">حقوقك</span><span class="lang-fr">Vos Droits</span><span class="lang-ru">Ваши Права</span><span class="lang-ur">آپ کے حقوق</span><span class="lang-fa">حقوق شما</span>
             </a>
             <a href="#s12" class="toc-link"><span class="toc-num">12</span>
+                <span class="lang-en">Contact Us</span><span class="lang-bn">যোগাযোগ</span><span class="lang-hi">संपर्क करें</span><span class="lang-es">Contáctanos</span><span class="lang-ar">اتصل بنا</span><span class="lang-fr">Nous Contacter</span><span class="lang-ru">Контакты</span><span class="lang-ur">رابطہ کریں</span><span class="lang-fa">تماس با ما</span>
+            </a>
+            <a href="#s13" class="toc-link"><span class="toc-num">13</span>
                 <span class="lang-en">Legal Compliance</span><span class="lang-bn">আইনি সম্মতি</span><span class="lang-hi">कानूनी अनुपालन</span><span class="lang-es">Cumplimiento Legal</span><span class="lang-ar">الامتثال القانوني</span><span class="lang-fr">Conformité Légale</span><span class="lang-ru">Юридическое Соответствие</span><span class="lang-ur">قانونی تعمیل</span><span class="lang-fa">انطباق قانونی</span>
             </a>
         </div>
@@ -664,47 +676,47 @@
             <ul class="policy-list lang-en">
                 <li><strong>Private storage directory:</strong> Media files stored in SecureMedia app-private storage, inaccessible to other apps.</li>
                 <li><strong>Local Room database:</strong> Metadata stored in an on-device encrypted database.</li>
-                <li><strong>Optional Cloud Backup:</strong> No data is uploaded to external servers without your explicit permission. You can optionally use Google Drive for backup.</li>
+                <li><strong>Optional Cloud Backup:</strong> No data is uploaded to external servers without your explicit permission.</li>
             </ul>
             <ul class="policy-list lang-bn">
                 <li><strong>প্রাইভেট স্টোরেজ ডিরেক্টরি:</strong> মিডিয়া ফাইলগুলো SecureMedia নামের প্রাইভেট স্টোরেজে সংরক্ষিত থাকে, যা অন্য অ্যাপ দেখতে পারে না।</li>
                 <li><strong>লোকাল রুম ডেটাবেস:</strong> মেটাডেটা ডিভাইসের নিজস্ব এনক্রিপ্টেড ডেটাবেসে সংরক্ষিত থাকে।</li>
-                <li><strong>ঐচ্ছিক ক্লাউড ব্যাকআপ:</strong> আপনার সুস্পষ্ট অনুমতি ছাড়া এক্সটার্নাল সার্ভারে কোনো ডেটা আপলোড করা হয় না। আপনি চাইলে ব্যাকআপের জন্য গুগল ড্রাইভ ব্যবহার করতে পারেন।</li>
+                <li><strong>ঐচ্ছিক ক্লাউড ব্যাকআপ:</strong> আপনার সুস্পষ্ট অনুমতি ছাড়া এক্সটার্নাল সার্ভারে কোনো ডেটা আপলোড করা হয় না।</li>
             </ul>
             <ul class="policy-list lang-hi">
                 <li><strong>निजी भंडारण निर्देशिका:</strong> अन्य ऐप्स के लिए दुर्गम SecureMedia ऐप-निजी भंडारण में संग्रहीत मीडिया फ़ाइलें।</li>
                 <li><strong>स्थानीय कक्ष डेटाबेस:</strong> मेटाडेटा ऑन-डिवाइस एन्क्रिप्टेड डेटाबेस में संग्रहीत किया जाता है।</li>
-                <li><strong>वैकल्पिक क्लाउड बैकअप:</strong> आपकी स्पष्ट अनुमति के बिना बाहरी सर्वर पर कोई डेटा अपलोड नहीं किया जाता है। आप बैकअप के लिए Google ड्राइव का उपयोग कर सकते हैं।</li>
+                <li><strong>वैकल्पिक क्लाउड बैकअप:</strong> आपकी स्पष्ट अनुमति के बिना बाहरी सर्वर पर कोई डेटा अपलोड नहीं किया जाता है।</li>
             </ul>
             <ul class="policy-list lang-es">
                 <li><strong>Directorio de almacenamiento privado:</strong> Archivos multimedia almacenados en el almacenamiento privado de la aplicación SecureMedia, inaccesible para otras aplicaciones.</li>
                 <li><strong>Base de datos local Room:</strong> Metadatos almacenados en una base de datos cifrada en el dispositivo.</li>
-                <li><strong>Copia de seguridad opcional en la nube:</strong> No se suben datos a servidores externos sin su permiso explícito. Puede usar opcionalmente Google Drive para realizar copias de seguridad.</li>
+                <li><strong>Copia de seguridad opcional en la nube:</strong> No se suben datos a servidores externos sin su permiso explícito.</li>
             </ul>
             <ul class="policy-list lang-ar">
                 <li><strong>دليل التخزين الخاص:</strong> يتم تخزين ملفات الوسائط في التخزين الخاص لتطبيق SecureMedia ، ولا يمكن للتطبيقات الأخرى الوصول إليها.</li>
                 <li><strong>قاعدة بيانات الغرفة المحلية:</strong> البيانات الوصفية المخزنة في قاعدة بيانات مشفرة على الجهاز.</li>
-                <li><strong>نسخ احتياطي سحابي اختياري:</strong> لا يتم تحميل أي بيانات إلى خوادم خارجية دون إذنك الصريح. يمكنك اختياريًا استخدام Google Drive للنسخ الاحتياطي.</li>
+                <li><strong>نسخ احتياطي سحابي اختياري:</strong> لا يتم تحميل أي بيانات إلى خوادم خارجية دون إذنك الصريح.</li>
             </ul>
             <ul class="policy-list lang-fr">
                 <li><strong>Répertoire de stockage privé :</strong> Fichiers multimédias stockés dans le stockage privé de l'application SecureMedia, inaccessibles aux autres applications.</li>
                 <li><strong>Base de données Room locale :</strong> Métadonnées stockées dans une base de données chiffrée sur l'appareil.</li>
-                <li><strong>Sauvegarde cloud optionnelle :</strong> Aucune donnée n'est téléchargée sur des serveurs externes sans votre permission explicite. Vous pouvez utiliser Google Drive pour la sauvegarde.</li>
+                <li><strong>Sauvegarde cloud optionnelle :</strong> Aucune donnée n'est téléchargée sur des serveurs externes sans votre permission explicite.</li>
             </ul>
             <ul class="policy-list lang-ru">
                 <li><strong>Каталог частного хранилища:</strong> Медиафайлы, хранящиеся в частном хранилище приложения SecureMedia, недоступном для других приложений.</li>
                 <li><strong>Локальная база данных Room:</strong> Метаданные хранятся в зашифрованной базе данных на устройстве.</li>
-                <li><strong>Опциональное облачное резервное копирование:</strong> Данные не загружаются на внешние серверы без вашего явного разрешения. Вы можете использовать Google Диск для резервного копирования.</li>
+                <li><strong>Опциональное облачное резервное копирование:</strong> Данные не загружаются на внешние серверы без вашего явного разрешения.</li>
             </ul>
             <ul class="policy-list lang-ur">
                 <li><strong>نجی اسٹوریج ڈائرکٹری:</strong> دیگر ایپس کے لیے ناقابل رسائی SecureMedia ایپ کے پرائیویٹ اسٹوریج میں محفوظ کردہ میڈیا فائلیں۔</li>
                 <li><strong>مقامی روم ڈیٹا بیس:</strong> میٹا ڈیٹا آن ڈیوائس انکرپٹڈ ڈیٹا بیس میں محفوظ ہے۔</li>
-                <li><strong>اختیاری کلاؤڈ بیک اپ:</strong> آپ کی واضح اجازت کے بغیر بیرونی سرورز پر کوئی ڈیٹا اپ لوڈ نہیں کیا جاتا ہے۔ آپ بیک اپ کے لیے گوگل ڈرائیو کا استعمال کر سکتے ہیں۔</li>
+                <li><strong>اختیاری کلاؤڈ بیک اپ:</strong> آپ کی واضح اجازت کے بغیر بیرونی سرورز پر کوئی ڈیٹا اپ لوڈ نہیں کیا جاتا ہے۔</li>
             </ul>
             <ul class="policy-list lang-fa">
                 <li><strong>فهرست ذخیره سازی خصوصی:</strong> فایل های رسانه ای در حافظه خصوصی برنامه SecureMedia ذخیره می شوند و برای سایر برنامه ها غیرقابل دسترسی هستند.</li>
                 <li><strong>پایگاه داده محلی اتاق:</strong> ابرداده ذخیره شده در پایگاه داده رمزگذاری شده در دستگاه.</li>
-                <li><strong>پشتیبان گیری ابری اختیاری:</strong> هیچ داده ای بدون اجازه صریح شما در سرورهای خارجی آپلود نمی شود. شما می توانید به صورت اختیاری از Google Drive برای پشتیبان گیری استفاده کنید.</li>
+                <li><strong>پشتیبان گیری ابری اختیاری:</strong> هیچ داده ای بدون اجازه صریح شما در سرورهای خارجی آپلود نمی شود.</li>
             </ul>
 
             <h3 class="lang-en">Google User Data & Cloud Backup</h3>
@@ -719,48 +731,48 @@
 
             <ul class="policy-list lang-en">
                 <li><strong>Access:</strong> Our app accesses the user's Google Drive 'appdata' folder solely for the purpose of securely backing up the app's hidden media files in an encrypted format.</li>
-                <li><strong>Use:</strong> This data is used exclusively to allow the user to backup and restore their hidden files in case they change their device or reinstall the app.</li>
-                <li><strong>Sharing:</strong> We do not collect, store, or share this data on any of our own servers or with any third parties. All backup data is stored securely and privately in the user's own Google Drive account.</li>
+                <li><strong>Use:</strong> This data is used exclusively to allow the user to backup and restore their hidden files.</li>
+                <li><strong>Sharing:</strong> We do not collect, store, or share this data on any of our own servers or with any third parties.</li>
             </ul>
             <ul class="policy-list lang-bn">
                 <li><strong>অ্যাক্সেস:</strong> অ্যাপটি শুধুমাত্র এনক্রিপ্টেড ফরম্যাটে ব্যাকআপের জন্য ইউজারের গুগল ড্রাইভের 'appdata' ফোল্ডারে অ্যাক্সেস নেয়।</li>
                 <li><strong>ব্যবহার:</strong> এটি শুধুমাত্র ইউজারের ডেটা ব্যাকআপ ও পরবর্তীতে রিস্টোর করার কাজে ব্যবহৃত হয়।</li>
-                <li><strong>শেয়ারিং:</strong> এই ডেটা সম্পূর্ণভাবে ইউজারের নিজস্ব গুগল ড্রাইভে সেভ থাকে। আমরা এটি নিজেদের কোনো সার্ভারে বা থার্ড-পার্টির সাথে শেয়ার করি না।</li>
+                <li><strong>শেয়ারিং:</strong> আমরা এই ডেটা নিজেদের কোনো সার্ভারে বা থার্ড-পার্টির সাথে শেয়ার করি না।</li>
             </ul>
             <ul class="policy-list lang-hi">
                 <li><strong>पहुंच:</strong> हमारा ऐप केवल ऐप की छिपी हुई मीडिया फ़ाइलों को एन्क्रिप्टेड प्रारूप में सुरक्षित रूप से बैकअप करने के उद्देश्य से उपयोगकर्ता के Google ड्राइव 'appdata' फ़ोल्डर तक पहुंचता है।</li>
-                <li><strong>उपयोग:</strong> इस डेटा का उपयोग विशेष रूप से उपयोगकर्ता को उनके डिवाइस को बदलने या ऐप को फिर से इंस्टॉल करने की स्थिति में उनकी छिपी हुई फ़ाइलों का बैकअप लेने और पुनर्स्थापित करने की अनुमति देने के लिए किया जाता है।</li>
-                <li><strong>साझाकरण:</strong> हम इस डेटा को अपने किसी भी सर्वर पर या किसी तीसरे पक्ष के साथ एकत्र, संग्रहीत या साझा नहीं करते हैं।</li>
+                <li><strong>उपयोग:</strong> इस डेटा का उपयोग विशेष रूप से उपयोगकर्ता को अपनी छिपी हुई फ़ाइलों का बैकअप लेने और पुनर्स्थापित करने की अनुमति देने के लिए किया जाता है।</li>
+                <li><strong>साझाकरण:</strong> हम इस डेटा को अपने किसी भी सर्वर पर या किसी तीसरे पक्ष के साथ साझा नहीं करते हैं।</li>
             </ul>
             <ul class="policy-list lang-es">
                 <li><strong>Acceso:</strong> Nuestra aplicación accede a la carpeta 'appdata' de Google Drive del usuario con el único propósito de realizar copias de seguridad de forma segura en un formato encriptado.</li>
                 <li><strong>Uso:</strong> Estos datos se utilizan exclusivamente para permitir al usuario realizar copias de seguridad y restaurar sus archivos ocultos.</li>
-                <li><strong>Intercambio:</strong> No recopilamos, almacenamos ni compartimos estos datos en ninguno de nuestros propios servidores ni con terceros.</li>
+                <li><strong>Intercambio:</strong> No compartimos estos datos en ninguno de nuestros propios servidores ni con terceros.</li>
             </ul>
             <ul class="policy-list lang-ar">
                 <li><strong>الوصول:</strong> يصل تطبيقنا إلى مجلد "appdata" في Google Drive الخاص بالمستخدم لغرض وحيد هو النسخ الاحتياطي بأمان بتنسيق مشفر.</li>
                 <li><strong>الاستخدام:</strong> يتم استخدام هذه البيانات حصريًا للسماح للمستخدم بالنسخ الاحتياطي واستعادة ملفاته المخفية.</li>
-                <li><strong>المشاركة:</strong> نحن لا نجمع أو نخزن أو نشارك هذه البيانات على أي من خوادمنا الخاصة أو مع أي أطراف ثالثة.</li>
+                <li><strong>المشاركة:</strong> نحن لا نجمع أو نشارك هذه البيانات على أي من خوادمنا الخاصة أو مع أي أطراف ثالثة.</li>
             </ul>
             <ul class="policy-list lang-fr">
-                <li><strong>Accès :</strong> Notre application accède au dossier 'appdata' Google Drive de l'utilisateur dans le seul but de sauvegarder en toute sécurité dans un format crypté.</li>
+                <li><strong>Accès :</strong> Notre application accède au dossier 'appdata' Google Drive dans le seul but de sauvegarder en toute sécurité dans un format crypté.</li>
                 <li><strong>Utilisation :</strong> Ces données sont utilisées exclusivement pour permettre à l'utilisateur de sauvegarder et de restaurer ses fichiers cachés.</li>
-                <li><strong>Partage :</strong> Nous ne collectons, ne stockons ni ne partageons ces données sur nos propres serveurs ou avec des tiers.</li>
+                <li><strong>Partage :</strong> Nous ne partageons ces données sur nos propres serveurs ou avec des tiers.</li>
             </ul>
             <ul class="policy-list lang-ru">
                 <li><strong>Доступ:</strong> Наше приложение получает доступ к папке «appdata» на Google Диске пользователя исключительно с целью безопасного резервного копирования в зашифрованном формате.</li>
-                <li><strong>Использование:</strong> Эти данные используются исключительно для того, чтобы позволить пользователю создавать резервные копии и восстанавливать свои скрытые файлы.</li>
-                <li><strong>Обмен:</strong> Мы не собираем, не храним и не передаем эти данные ни на каких наших собственных серверах или третьим лицам.</li>
+                <li><strong>Использование:</strong> Эти данные используются исключительно для создания резервных копий и восстановления скрытых файлов.</li>
+                <li><strong>Обмен:</strong> Мы не храним и не передаем эти данные ни на каких наших собственных серверах или третьим лицам.</li>
             </ul>
             <ul class="policy-list lang-ur">
-                <li><strong>رسائی:</strong> ہماری ایپ صارف کے گوگل ڈرائیو 'appdata' فولڈر تک رسائی حاصل کرتی ہے جس کا واحد مقصد محفوظ طریقے سے ایک انکرپٹڈ فارمیٹ میں بیک اپ لینا ہے۔</li>
+                <li><strong>رسائی:</strong> ہماری ایپ صارف کے گوگل ڈرائیو 'appdata' فولڈر تک رسائی حاصل کرتی ہے جس کا واحد مقصد ایک انکرپٹڈ فارمیٹ میں بیک اپ لینا ہے۔</li>
                 <li><strong>استعمال کریں:</strong> یہ ڈیٹا خصوصی طور پر صارف کو بیک اپ لینے اور اپنی چھپی ہوئی فائلوں کو بحال کرنے کی اجازت دینے کے لیے استعمال کیا جاتا ہے۔</li>
-                <li><strong>اشتراک:</strong> ہم اپنے کسی سرور یا کسی تیسرے فریق کے ساتھ اس ڈیٹا کو جمع، ذخیرہ یا اشتراک نہیں کرتے ہیں۔</li>
+                <li><strong>اشتراک:</strong> ہم اپنے کسی سرور یا کسی تیسرے فریق کے ساتھ اس ڈیٹا کا اشتراک نہیں کرتے ہیں۔</li>
             </ul>
             <ul class="policy-list lang-fa">
-                <li><strong>دسترسی:</strong> برنامه ما فقط با هدف پشتیبان گیری ایمن در یک فرمت رمزگذاری شده به پوشه "appdata" Google Drive کاربر دسترسی پیدا می کند.</li>
+                <li><strong>دسترسی:</strong> برنامه ما فقط با هدف پشتیبان گیری ایمن در یک فرمت رمزگذاری شده به پوشه "appdata" Google Drive دسترسی پیدا می کند.</li>
                 <li><strong>استفاده:</strong> این داده ها منحصراً برای اینکه کاربر بتواند از فایل های مخفی خود نسخه پشتیبان تهیه و بازیابی کند استفاده می شود.</li>
-                <li><strong>اشتراک گذاری:</strong> ما این داده ها را در هیچ یک از سرورهای خود یا با شخص ثالث جمع آوری، ذخیره یا به اشتراک نمی گذاریم.</li>
+                <li><strong>اشتراک گذاری:</strong> ما این داده ها را در هیچ یک از سرورهای خود یا با شخص ثالث به اشتراک نمی گذاریم.</li>
             </ul>
 
             <h3 class="lang-en">Security Layers</h3>
@@ -955,7 +967,7 @@
             <ul class="policy-list lang-bn">
                 <li><strong>স্টোরেজ:</strong> গ্যালারি থেকে মিডিয়া ইমপোর্ট করার জন্য। ফাইলগুলো নিরাপদে প্রাইভেট স্টোরেজে নেওয়া হয়।</li>
                 <li><strong>ক্যামেরা:</strong> ভুল পিন দিলে চুপিসারে ছবি তোলার জন্য (শুধুমাত্র Intruder ফিচারের জন্য)।</li>
-                <li><strong>বায়োমেট্রিক:</strong> ফিঙ্গারপ্রিন্ট ভেরিফাই করার জন্য। অ্যাপ সরাসরি আপনার ফিঙ্গারপ্রিন্ট ডেটা দেখতে বা নিতে পারে মোহতে পারে না।</li>
+                <li><strong>বায়োমেট্রিক:</strong> ফিঙ্গারপ্রিন্ট ভেরিফাই করার জন্য। অ্যাপ সরাসরি আপনার ফিঙ্গারপ্রিন্ট ডেটা দেখতে বা নিতে পারে না।</li>
             </ul>
             <ul class="policy-list lang-hi">
                 <li><strong>भंडारण:</strong> आपकी गैलरी से मीडिया आयात करने के लिए। फ़ाइलें सुरक्षित रूप से निजी संग्रहण में ले जाई जाती हैं।</li>
@@ -1091,6 +1103,118 @@
         <div class="section-header">
             <div class="section-num">08</div>
             <div>
+                <div class="section-title lang-en">Data Backup & Recovery</div>
+                <div class="section-title lang-bn">ডেটা ব্যাকআপ এবং পুনরুদ্ধার</div>
+                <div class="section-title lang-hi">डेटा बैकअप और पुनरुद्धार</div>
+                <div class="section-title lang-es">Copia de Seguridad y Recuperación</div>
+                <div class="section-title lang-ar">النسخ الاحتياطي واسترجاع البيانات</div>
+                <div class="section-title lang-fr">Sauvegarde et Récupération de Données</div>
+                <div class="section-title lang-ru">Резервная копия и восстановление данных</div>
+                <div class="section-title lang-ur">ڈیٹا بیک اپ اور بحالی</div>
+                <div class="section-title lang-fa">پشتیبان گیری و بازیابی اطلاعات</div>
+                
+                <div class="section-subtitle lang-en">Cloud Backup via Google Drive</div>
+                <div class="section-subtitle lang-bn">Google Drive এর মাধ্যমে ক্লাউড ব্যাকআপ</div>
+                <div class="section-subtitle lang-hi">Google Drive के माध्यम से क्लाउड बैकअप</div>
+                <div class="section-subtitle lang-es">Copia de Seguridad en la Nube vía Google Drive</div>
+                <div class="section-subtitle lang-ar">النسخ الاحتياطي السحابي عبر Google Drive</div>
+                <div class="section-subtitle lang-fr">Sauvegarde Cloud via Google Drive</div>
+                <div class="section-subtitle lang-ru">Облачное резервное копирование через Google Drive</div>
+                <div class="section-subtitle lang-ur">Google Drive کے ذریعے کلاؤڈ بیک اپ</div>
+                <div class="section-subtitle lang-fa">پشتیبان گیری ابری از طریق Google Drive</div>
+            </div>
+        </div>
+        <div class="section-body">
+            <p class="lang-en">Hidely provides users the option to backup their data to their own Google Drive account. This feature is <strong>completely optional</strong> and designed to protect your data in case you change devices or reinstall the app.</p>
+            <p class="lang-bn">Hidely ব্যবহারকারীদের তাদের নিজস্ব Google Drive অ্যাকাউন্টে ডেটা ব্যাকআপ নেওয়ার সুবিধা প্রদান করে। এই ফিচারটি <strong>সম্পূর্ণ ঐচ্ছিক</strong> এবং আপনি ডিভাইস পরিবর্তন বা অ্যাপ পুনরায় ইনস্টল করলে আপনার ডেটা রক্ষা করার জন্য ডিজাইন করা হয়েছে।</p>
+            <p class="lang-hi">Hidely उपयोगकारीओं को अपने स्वयं के Google Drive खाते में डेटा का बैकअप लेने का विकल्प प्रदान करता है। यह सुविधा <strong>पूरी तरह वैकल्पिक है</strong> और आपके डिवाइस को बदलने या ऐप को फिर से इंस्टॉल करने की स्थिति में आपके डेटा की सुरक्षा के लिए डिज़ाइन की गई है।</p>
+            <p class="lang-es">Hidely proporciona a los usuarios la opción de hacer una copia de seguridad de sus datos en su propia cuenta de Google Drive. Esta función es <strong>completamente opcional</strong> y está diseñada para proteger sus datos en caso de que cambie de dispositivo o reinstale la aplicación.</p>
+            <p class="lang-ar">يوفر Hidely للمستخدمين خيار عمل نسخة احتياطية من بياناتهم إلى حسابهم في Google Drive الخاص بهم. هذه الميزة <strong>اختيارية تماماً</strong> وتم تصميمها لحماية بياناتك إذا قمت بتغيير الأجهزة أو إعادة تثبيت التطبيق.</p>
+            <p class="lang-fr">Hidely offre aux utilisateurs la possibilité de sauvegarder leurs données dans leur propre compte Google Drive. Cette fonctionnalité est <strong>complètement optionnelle</strong> et est conçue pour protéger vos données en cas de changement d'appareil ou de réinstallation de l'application.</p>
+            <p class="lang-ru">Hidely предоставляет пользователям возможность создания резервной копии своих данных на собственной учетной записи Google Drive. Эта функция <strong>полностью опциональна</strong> и предназначена для защиты ваших данных в случае смены устройства или переустановки приложения.</p>
+            <p class="lang-ur">Hidely صارفین کو اپنے Google Drive اکاؤنٹ میں ڈیٹا کا بیک اپ لینے کا آپشن فراہم کرتا ہے۔ یہ خصوصیت <strong>مکمل طور پر اختیاری</strong> ہے اور اگر آپ ڈیوائس تبدیل کریں یا ایپ دوبارہ انسٹال کریں تو آپ کے ڈیٹا کی حفاظت کے لیے ڈیزائن کیا گیا ہے۔</p>
+            <p class="lang-fa">Hidely به کاربران امکان می‌دهد که داده‌های خود را در حساب Google Drive خود پشتیبان گیری کنند. این ویژگی <strong>کاملاً اختیاری است</strong> و برای محافظت از داده‌های شما در صورت تغییر دستگاه یا بازنصب برنامه طراحی شده است.</p>
+
+            <h3 class="lang-en">Key Points About Cloud Backup</h3>
+            <h3 class="lang-bn">ক্লাউড ব্যাকআপ সম্পর্কে গুরুত্বপূর্ণ পয়েন্ট</h3>
+            <h3 class="lang-hi">क्लाउड बैकअप के बारे में मुख्य बिंदु</h3>
+            <h3 class="lang-es">Puntos Clave Sobre la Copia de Seguridad en la Nube</h3>
+            <h3 class="lang-ar">النقاط الرئيسية حول النسخ الاحتياطي السحابي</h3>
+            <h3 class="lang-fr">Points Clés sur la Sauvegarde Cloud</h3>
+            <h3 class="lang-ru">Ключевые Моменты Облачного Резервного Копирования</h3>
+            <h3 class="lang-ur">کلاؤڈ بیک اپ کے بارے میں اہم نکات</h3>
+            <h3 class="lang-fa">نکات کلیدی در مورد پشتیبان گیری ابری</h3>
+
+            <ul class="policy-list lang-en">
+                <li><strong>User Control:</strong> You have complete control over when to backup and restore. The app will never backup data without your explicit action.</li>
+                <li><strong>Google Drive Responsibility:</strong> Your backed-up files are stored securely in <strong>your own Google Drive account</strong>. The security of files uploaded to Google Drive is governed by Google's Privacy Policy and Terms of Service.</li>
+                <li><strong>No Data Collection:</strong> We do not collect, monitor, or analyze your backup data. Your Google Drive account is solely between you and Google.</li>
+                <li><strong>Device Change Protection:</strong> If you uninstall the app or change devices, your backup allows you to restore your hidden files on the new device.</li>
+                <li><strong>Backup Deletion:</strong> You can delete your backed-up data directly from your Google Drive at any time using the "Delete Backup" button located at the bottom of the app's Backup section after logging in.</li>
+            </ul>
+            <ul class="policy-list lang-bn">
+                <li><strong>সম্পূর্ণ নিয়ন্ত্রণ:</strong> কখন ব্যাকআপ নেবেন বা রিস্টোর করবেন তার সম্পূর্ণ নিয়ন্ত্রণ আপনার হাতে। আপনার সুস্পষ্ট নির্দেশনা ছাড়া অ্যাপ কখনো ডেটা ব্যাকআপ করবে না।</li>
+                <li><strong>Google Drive দায়িত্ব:</strong> আপনার ব্যাকআপ করা ফাইলগুলো <strong>আপনার নিজস্ব Google Drive অ্যাকাউন্টে</strong> সুরক্ষিতভাবে সংরক্ষিত থাকে। Google Drive-এ আপলোড করা ফাইলের সুরক্ষা Google এর Privacy Policy এবং Terms of Service দ্বারা পরিচালিত হয়।</li>
+                <li><strong>কোনো ডেটা সংগ্রহ নেই:</strong> আমরা আপনার ব্যাকআপ ডেটা সংগ্রহ, পর্যবেক্ষণ বা বিশ্লেষণ করি না। আপনার Google Drive অ্যাকাউন্ট শুধুমাত্র আপনার এবং Google এর মধ্যে।</li>
+                <li><strong>ডিভাইস পরিবর্তন সুরক্ষা:</strong> যদি আপনি অ্যাপ আনইনস্টল করেন বা ডিভাইস পরিবর্তন করেন, তাহলে আপনার ব্যাকআপ আপনাকে নতুন ডিভাইসে লুকানো ফাইল পুনরুদ্ধার করতে দেয়।</li>
+                <li><strong>ব্যাকআপ ডিলিট:</strong> অ্যাপের ব্যাকআপ সেকশনে গুগল দিয়ে লগইন করার পর, নিচে থাকা "Delete Backup" বাটনের মাধ্যমে আপনি চাইলে যেকোনো সময় আপনার ড্রাইভের ব্যাকআপ করা ডেটা ডিলিট করতে পারবেন।</li>
+            </ul>
+            <ul class="policy-list lang-hi">
+                <li><strong>उपयोगकर्ता नियंत्रण:</strong> आपको यह तय करने का पूर्ण नियंत्रण है कि कब बैकअप लें और पुनर्स्थापित करें। ऐप आपकी स्पष्ट कार्रवाई के बिना कभी डेटा बैकअप नहीं करेगा।</li>
+                <li><strong>Google Drive जिम्मेदारी:</strong> आपकी बैकअप की गई फ़ाइलें <strong>आपके अपने Google Drive खाते में</strong> सुरक्षित रूप से संग्रहीत हैं। Google Drive पर अपलोड की गई फ़ाइलों की सुरक्षा Google की गोपनीयता नीति और सेवा की शर्तों द्वारा शासित है।</li>
+                <li><strong>कोई डेटा संग्रह नहीं:</strong> हम आपके बैकअप डेटा को एकत्र, मॉनिटर या विश्लेषण नहीं करते हैं। आपका Google Drive खाता केवल आपके और Google के बीच है।</li>
+                <li><strong>डिवाइस परिवर्तन सुरक्षा:</strong> यदि आप ऐप को अनइंस्टॉल करते हैं या डिवाइस बदलते हैं, तो आपका बैकअप आपको नई डिवाइस पर अपनी छिपी हुई फ़ाइलें पुनः प्राप्त करने की अनुमति देता है।</li>
+                <li><strong>बैकअप हटाना:</strong> ऐप के बैकअप अनुभाग में Google के साथ लॉग इन करने के बाद, आप नीचे स्थित "Delete Backup" बटन का उपयोग करके किसी भी समय अपने Google Drive से अपना बैकअप डेटा हटा सकते हैं।</li>
+            </ul>
+            <ul class="policy-list lang-es">
+                <li><strong>Control del Usuario:</strong> Tiene control total sobre cuándo hacer una copia de seguridad y restaurar. La aplicación nunca hará una copia de seguridad sin su acción explícita.</li>
+                <li><strong>Responsabilidad de Google Drive:</strong> Sus archivos de respaldo se almacenan de forma segura en <strong>su propia cuenta de Google Drive</strong>. La seguridad de los archivos subidos a Google Drive se rige por la Política de Privacidad y los Términos de Servicio de Google.</li>
+                <li><strong>Sin Recopilación de Datos:</strong> No recopilamos, monitoreamos ni analizamos sus datos de copia de seguridad. Su cuenta de Google Drive es solo entre usted y Google.</li>
+                <li><strong>Protección de Cambio de Dispositivo:</strong> Si desinstala la aplicación o cambia de dispositivo, su copia de seguridad le permite restaurar sus archivos ocultos en el nuevo dispositivo.</li>
+                <li><strong>Eliminación de Copia de Seguridad:</strong> Puede eliminar sus datos de respaldo directamente desde su Google Drive en cualquier momento utilizando el botón "Delete Backup" en la parte inferior de la sección de Respaldo de la aplicación después de iniciar sesión.</li>
+            </ul>
+            <ul class="policy-list lang-ar">
+                <li><strong>تحكم المستخدم:</strong> لديك السيطرة الكاملة على الوقت الذي تريد النسخ الاحتياطي والاستعادة. لن يقوم التطبيق بعمل نسخة احتياطية من البيانات بدون إجراء صريح منك.</li>
+                <li><strong>مسؤولية Google Drive:</strong> يتم تخزين ملفات النسخ الاحتياطي بشكل آمن في <strong>حسابك الخاص في Google Drive</strong>. يتم التحكم في أمان الملفات المرفوعة إلى Google Drive بموجب سياسة الخصوصية وشروط الخدمة من Google.</li>
+                <li><strong>عدم جمع البيانات:</strong> لا نجمع أو نراقب أو نحلل بيانات النسخ الاحتياطي. حسابك في Google Drive بيني وبين Google فقط.</li>
+                <li><strong>حماية تغيير الجهاز:</strong> إذا قمت بإلغاء تثبيت التطبيق أو تغيير الأجهزة، فإن النسخة الاحتياطية الخاصة بك تسمح لك باستعادة ملفاتك المخفية على الجهاز الجديد.</li>
+                <li><strong>حذف النسخة الاحتياطية:</strong> يمكنك حذف بيانات النسخ الاحتياطي الخاصة بك من Google Drive في أي وقت باستخدام زر "Delete Backup" الموجود أسفل قسم النسخ الاحتياطي في التطبيق بعد تسجيل الدخول.</li>
+            </ul>
+            <ul class="policy-list lang-fr">
+                <li><strong>Contrôle Utilisateur:</strong> Vous avez un contrôle total sur le moment de sauvegarder et de restaurer. L'application ne fera jamais de sauvegarde sans votre action explicite.</li>
+                <li><strong>Responsabilité Google Drive:</strong> Vos fichiers de sauvegarde sont stockés de manière sécurisée dans <strong>votre propre compte Google Drive</strong>. La sécurité des fichiers téléchargés sur Google Drive est régie par la Politique de Confidentialité et les Conditions de Service de Google.</li>
+                <li><strong>Pas de Collecte de Données:</strong> Nous ne collectons, ne surveillons ni n'analysons vos données de sauvegarde. Votre compte Google Drive est uniquement entre vous et Google.</li>
+                <li><strong>Protection du Changement d'Appareil:</strong> Si vous désinstallez l'application ou changez d'appareil, votre sauvegarde vous permet de restaurer vos fichiers cachés sur le nouvel appareil.</li>
+                <li><strong>Suppression de Sauvegarde :</strong> Vous pouvez supprimer vos données de sauvegarde de votre Google Drive à tout moment en utilisant le bouton "Delete Backup" situé en bas de la section Sauvegarde de l'application après vous être connecté.</li>
+            </ul>
+            <ul class="policy-list lang-ru">
+                <li><strong>Контроль Пользователя:</strong> Вы имеете полный контроль над тем, когда создавать резервную копию и восстанавливать. Приложение никогда не будет создавать резервную копию без вашего явного действия.</li>
+                <li><strong>Ответственность Google Drive:</strong> Ваши файлы резервной копии хранятся безопасно в <strong>вашей собственной учетной записи Google Drive</strong>. Безопасность файлов, загруженных в Google Drive, регулируется Политикой конфиденциальности и Условиями обслуживания Google.</li>
+                <li><strong>Без Сбора Данных:</strong> Мы не собираем, не отслеживаем и не анализируем ваши данные резервной копии. Ваша учетная запись Google Drive находится только между вами и Google.</li>
+                <li><strong>Защита Изменения Устройства:</strong> Если вы удалите приложение или смените устройство, ваша резервная копия позволит вам восстановить скрытые файлы на новом устройстве.</li>
+                <li><strong>Удаление резервной копии:</strong> Вы можете удалить свои резервные данные со своего Google Drive в любое время с помощью кнопки «Delete Backup» в нижней части раздела резервного копирования приложения после входа в систему.</li>
+            </ul>
+            <ul class="policy-list lang-ur">
+                <li><strong>صارف کا کنٹرول:</strong> آپ کے پاس مکمل کنٹرول ہے کہ کب بیک اپ لیں اور بحال کریں۔ ایپ آپ کی واضح کارروائی کے بغیر کبھی ڈیٹا بیک اپ نہیں کرے گی۔</li>
+                <li><strong>Google Drive کی ذمہ داری:</strong> آپ کی بیک اپ کی گئی فائلیں <strong>آپ کے اپنے Google Drive اکاؤنٹ میں</strong> محفوظ طریقے سے ذخیرہ کی جاتی ہیں۔ Google Drive پر اپ لوڈ کی گئی فائلوں کی سیکیورٹی Google کی رازداری کی پالیسی اور سروس کی شرائط سے منظم ہے۔</li>
+                <li><strong>کوئی ڈیٹا جمع نہیں:</strong> ہم آپ کے بیک اپ ڈیٹا کو جمع، نگرانی یا تجزیہ نہیں کرتے ہیں۔ آپ کا Google Drive اکاؤنٹ صرف آپ اور Google کے درمیان ہے۔</li>
+                <li><strong>ڈیوائس تبدیلی کی حفاظت:</strong> اگر آپ ایپ کو ان انسٹال کریں یا ڈیوائس تبدیل کریں، تو آپ کا بیک اپ آپ کو نئی ڈیوائس پر اپنی چھپی ہوئی فائلوں کو بحال کرنے کی اجازت دیتا ہے۔</li>
+                <li><strong>بیک اپ حذف کرنا:</strong> ایپ کے بیک اپ سیکشن میں گوگل کے ساتھ لاگ ان کرنے کے بعد، آپ نیچے دیے گئے "Delete Backup" بٹن کا استعمال کر کے کسی بھی وقت اپنے گوگل ڈرائیو سے اپنا بیک اپ ڈیٹا حذف کر سکتے ہیں۔</li>
+            </ul>
+            <ul class="policy-list lang-fa">
+                <li><strong>کنترل کاربر:</strong> شما کنترل کامل بر این داریدکه چه زمان نسخه پشتیبان بگیرید و بازیابی کنید. برنامه بدون عمل صریح شما هرگز از داده‌ها نسخه پشتیبان نمی‌گیرد.</li>
+                <li><strong>مسئولیت Google Drive:</strong> فایل‌های پشتیبان شما به طور ایمن در <strong>حساب Google Drive خود شما</strong> ذخیره می‌شوند. امنیت فایل‌های آپلود شده به Google Drive توسط سیاست حفاظت اطلاعات و شرایط سرویس Google کنترل می‌شود.</li>
+                <li><strong>بدون جمع اطلاعات:</strong> ما داده‌های پشتیبان شما را جمع‌آوری، نظارت یا تجزیه نمی‌کنیم. حساب Google Drive شما فقط بین شما و Google است.</li>
+                <li><strong>حفاظت تغییر دستگاه:</strong> اگر برنامه را حذف نصب کنید یا دستگاه را تغییر دهید، نسخه پشتیبان شما به شما اجازه می‌دهد فایل‌های پنهان خود را در دستگاه جدید بازیابی کنید.</li>
+                <li><strong>حذف نسخه پشتیبان:</strong> پس از ورود به سیستم در بخش پشتیبان گیری برنامه، می توانید با استفاده از دکمه "Delete Backup" در پایین، داده های پشتیبان خود را در هر زمان از Google Drive خود حذف کنید.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section-card" id="s9">
+        <div class="section-header">
+            <div class="section-num">09</div>
+            <div>
                 <div class="section-title lang-en">Children's Privacy</div>
                 <div class="section-title lang-bn">শিশুদের গোপনীয়তা</div>
                 <div class="section-title lang-hi">बच्चों की गोपनीयता</div>
@@ -1115,9 +1239,9 @@
         </div>
     </div>
 
-    <div class="section-card" id="s9">
+    <div class="section-card" id="s10">
         <div class="section-header">
-            <div class="section-num">09</div>
+            <div class="section-num">10</div>
             <div>
                 <div class="section-title lang-en">Changes to This Privacy Policy</div>
                 <div class="section-title lang-bn">নীতিমালায় পরিবর্তন</div>
@@ -1132,7 +1256,7 @@
         </div>
         <div class="section-body">
             <p class="lang-en">We may update this Privacy Policy from time to time. We will notify users of significant changes by updating the "Last Updated" date and providing an in-app notification for material changes.</p>
-            <p class="lang-bn">আমরা সময়ে সময়ে এই গোপনীয়তা নীতি আপডেট করতে পারি। কোনো বড় পরিবর্তন হলে অ্যাপের ভেতর নোটিফিকেশন দিয়ে এবং 'সর্বশেষ আপডেট' তারিখ পরিবর্তন করে জানানো হবে。</p>
+            <p class="lang-bn">আমরা সময়ে সময়ে এই গোপনীয়তা নীতি আপডেট করতে পারি। কোনো বড় পরিবর্তন হলে অ্যাপের ভেতর নোটিফিকেশন দিয়ে এবং 'সর্বশেষ আপডেট' তারিখ পরিবর্তন করে জানানো হবে।</p>
             <p class="lang-hi">हम समय-समय पर इस गोपनीयता नीति को अपडेट कर सकते हैं। हम "अंतिम अद्यतन" तिथि को अद्यतन करके और भौतिक परिवर्तनों के लिए इन-ऐप अधिसूचना प्रदान करके उपयोगकर्ताओं को महत्वपूर्ण परिवर्तनों के बारे में सूचित करेंगे।</p>
             <p class="lang-es">Podemos actualizar esta Política de Privacidad de vez en cuando. Notificaremos a los usuarios de cambios significativos actualizando la fecha de "Última actualización" y proporcionando una notificación en la aplicación por cambios materiales.</p>
             <p class="lang-ar">قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. سنبلغ المستخدمين بالتغييرات المهمة عن طريق تحديث تاريخ "آخر تحديث" وتقديم إشعار داخل التطبيق بالتغييرات الجوهرية.</p>
@@ -1143,9 +1267,9 @@
         </div>
     </div>
 
-    <div class="section-card" id="s10">
+    <div class="section-card" id="s11">
         <div class="section-header">
-            <div class="section-num">10</div>
+            <div class="section-num">11</div>
             <div>
                 <div class="section-title lang-en">Your Rights</div>
                 <div class="section-title lang-bn">আপনার অধিকার</div>
@@ -1217,9 +1341,9 @@
         </div>
     </div>
 
-    <div class="contact-card" id="s11">
+    <div class="contact-card" id="s12">
         <div class="section-header">
-            <div class="section-num">11</div>
+            <div class="section-num">12</div>
             <div>
                 <div class="section-title lang-en">Contact Us</div>
                 <div class="section-title lang-bn">যোগাযোগ করুন</div>
@@ -1286,9 +1410,9 @@
         </div>
     </div>
 
-    <div class="section-card" id="s12">
+    <div class="section-card" id="s13">
         <div class="section-header">
-            <div class="section-num">12</div>
+            <div class="section-num">13</div>
             <div>
                 <div class="section-title lang-en">Legal Compliance</div>
                 <div class="section-title lang-bn">আইনি সম্মতি</div>
@@ -1317,15 +1441,15 @@
 </div>
 
 <div class="footer">
-    <p class="lang-en">This Privacy Policy was last updated on <strong>May 14, 2026</strong>.</p>
-    <p class="lang-bn">এই গোপনীয়তা নীতি সর্বশেষ <strong>১৪ মে, ২০২৬</strong> তারিখে আপডেট করা হয়েছে।</p>
-    <p class="lang-hi">यह गोपनीयता नीति अंतिम बार <strong>14 मई, 2026</strong> को अपडेट की गई थी।</p>
-    <p class="lang-es">Esta Política de Privacidad se actualizó por última vez el <strong>14 de mayo de 2026</strong>.</p>
-    <p class="lang-ar">تم آخر تحديث لسياسة الخصوصية هذه في <strong>١٤ مايو ٢٠٢٦</strong>.</p>
-    <p class="lang-fr">Cette politique de confidentialité a été mise à jour pour la dernière fois le <strong>14 mai 2026</strong>.</p>
-    <p class="lang-ru">Эта Политика Конфиденциальности была в последний раз обновлена <strong>14 мая 2026 г.</strong></p>
-    <p class="lang-ur">اس رازداری کی پالیسی کو آخری بار <strong>14 مئی 2026</strong> کو اپ ڈیٹ کیا گیا تھا۔</p>
-    <p class="lang-fa">این سیاست حفظ حریم خصوصی آخرین بار در <strong>۱۴ مه ۲۰۲۶</strong> به روز شده است.</p>
+    <p class="lang-en">This Privacy Policy was last updated on <strong>June 2, 2026</strong>.</p>
+    <p class="lang-bn">এই গোপনীয়তা নীতি সর্বশেষ <strong>২ জুন, ২০২৬</strong> তারিখে আপডেট করা হয়েছে।</p>
+    <p class="lang-hi">यह गोपनीयता नीति अंतिम बार <strong>2 जून, 2026</strong> को अपडेट की गई थी।</p>
+    <p class="lang-es">Esta Política de Privacidad se actualizó por última vez el <strong>2 de junio de 2026</strong>.</p>
+    <p class="lang-ar">تم آخر تحديث لسياسة الخصوصية هذه في <strong>٢ يونيو ٢٠٢٦</strong>.</p>
+    <p class="lang-fr">Cette politique de confidentialité a été mise à jour pour la dernière fois le <strong>2 Juin 2026</strong>.</p>
+    <p class="lang-ru">Эта Политика Конфиденциальности была в последний раз обновлена <strong>2 июня 2026 г.</strong></p>
+    <p class="lang-ur">اس رازداری کی پالیسی کو آخری بار <strong>2 جون 2026</strong> کو اپ ڈیٹ کیا گیا تھا۔</p>
+    <p class="lang-fa">این سیاست حفظ حریم خصوصی آخرین بار در <strong>۲ ژوئن ۲۰۲۶</strong> به روز شده است.</p>
 
     <p style="margin-top:6px;">&copy; 2026 <strong>JS Organization</strong>. All rights reserved.</p>
 </div>
