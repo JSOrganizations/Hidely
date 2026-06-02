@@ -1,81 +1,72 @@
 {
-  "latest_version_code": 4,
-  "latest_version_name": "3.0",
-  "min_supported_version_code": 4,
+  "latest_version_code": 6,
+  "latest_version_name": "4.0",
+  "min_supported_version_code": 6,
   "is_force_update": true,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "New Language screen with native country flags for 9 languages.",
-      "UI Redesign: Improved Lock Screen/Dashboard; moved Settings to bottom nav.",
-      "Added '.hidely' encrypted extension for secure local backups.",
-      "New Update Logic to deprecate older app versions.",
-      "Calendar Disguise icon now dynamically changes based on the date (1-31).",
-      "System performance optimizations and bug fixes."
+      "Added: Secure Google Drive Cloud Backup.",
+      "Enhanced Encryption: Backups stored securely in hidden 'AppData'.",
+      "Redesign: Modernized Dashboard & Settings layout.",
+      "Secure local storage using '.hidely' extension.",
+      "Performance improvements & bug fixes."
     ],
     "bn": [
-      "৯টি ভাষার জন্য জাতীয় পতাকাসহ নতুন ল্যাঙ্গুয়েজ স্ক্রিন।",
-      "UI পরিবর্তন: উন্নত লক স্ক্রিন/ড্যাশবোর্ড; সেটিংস নিচে আনা হয়েছে।",
-      "নিরাপদ অফলাইন ব্যাকআপের জন্য কাস্টম '.hidely' এক্সটেনশন।",
-      "পুরোনো অ্যাপ ভার্সন নিষ্ক্রিয় করার জন্য নতুন আপডেট লজিক।",
-      "ক্যালেন্ডার আইকন এখন চলতি তারিখ (১-৩১) অনুযায়ী পরিবর্তিত হবে।",
-      "সিস্টেম পারফরম্যান্স অপ্টিমাইজেশন এবং বাগ ফিক্স।"
+      "নতুন: গুগল ড্রাইভ (Google Drive) ক্লাউড ব্যাকআপ যুক্ত।",
+      "উন্নত এনক্রিপশন: ব্যাকআপ ডেটা এখন লুকানো 'AppData' ফোল্ডারে এনক্রিপ্টেড।",
+      "নতুন ডিজাইন: ড্যাশবোর্ড ও সেটিংস আরও আধুনিক করা হয়েছে।",
+      "লোকাল ব্যাকআপের জন্য '.hidely' এনক্রিপ্টেড ফরম্যাট।",
+      "পারফরম্যান্স আপডেট ও বাগ ফিক্স।"
     ],
     "hi": [
-      "सभी 9 भाषाओं के लिए देश के झंडे के साथ नया भाषा सेटिंग पेज जोड़ा गया।",
-      "यूआई बदलाव: लॉक स्क्रीन और डैशबोर्ड को अपग्रेड किया गया; सेटिंग्स बटन को नीचे नेविगेशन बार में बदला गया।",
-      "सुरक्षित ऑफलाइन डेटा रिकवरी के लिए कस्टम '.hidely' एन्क्रिप्टेड बैकअप एक्सटेंशन जोड़ा गया।",
-      "पुराने ऐप वर्शन्स को अक्षम करने के लिए अपडेट लॉजिक में नया फीचर जोड़ा गया।",
-      "कैलेंडर डिस्गाइस: कैलेंडर आइकन अब चालू तारीख के अनुसार (1-31 दिन) अपने आप बदलेगा।",
-      "सिस्टम प्रदर्शन in सुधार और छोटे बग फिक्स।"
+      "नया: Google Drive क्लाउड बैकअप जोड़ा गया।",
+      "उन्नत एन्क्रिप्शन: बैकअप अब छिपे हुए 'AppData' फोल्डर में एन्क्रिप्टेड है।",
+      "रीडिजाइन: आधुनिक डैशबोर्ड और सेटिंग्स लेआउट।",
+      "सुरक्षित बैकअप के लिए '.hidely' एन्क्रिप्टेड एक्सटेंशन।",
+      "प्रदर्शन में सुधार और बग फिक्स।"
     ],
     "es": [
-      "Nueva pantalla de idioma con banderas nacionales para los 9 idiomas.",
-      "Rediseño de interfaz: bloqueo y panel mejorados; botón de ajustes movido abajo.",
-      "Copia de seguridad local cifrada con la nueva extensión '.hidely'.",
-      "Nueva lógica de actualización para deshabilitar versiones obsoletas.",
-      "Camuflaje mejorado: el icono de calendario cambia según el día actual (1-31).",
-      "Rendimiento optimizado y correcciones de errores menores."
+      "Nuevo: Copia de seguridad en la nube vía Google Drive.",
+      "Cifrado avanzado: Copias seguras en una carpeta 'AppData' oculta.",
+      "Rediseño: Panel y ajustes más modernos.",
+      "Extensión cifrada '.hidely' para mayor seguridad local.",
+      "Mejoras de rendimiento y corrección de errores."
     ],
     "ar": [
-      "شاشة لغة جديدة تتميز بأعلام الدول لجميع اللغات الـ 9 المدعومة.",
-      "إعادة تصميم الواجهة: ترقية شاشة القفل ولوحة التحكم، ونقل الإعدادات إلى شريط التنقل السفلي.",
-      "إضافة امتداد '.hidely' المشفر المخصص للنسخ الاحتياطي المحلي الآمن.",
-      "ترقية منطق التحديث لإيقاف إصدارات التطبيق القديمة وغير المدعومة.",
-      "تمويه المحسن: أيقونة التقويم تتحدث الآن ديناميكياً لتعرض اليوم الحالي (1-31).",
-      "تحسين أداء النظام وإصلاح الأخطاء الطفيفة."
+      "جديد: النسخ الاحتياطي السحابي عبر Google Drive.",
+      "تشفير متقدم: نسخ احتياطية مشفرة في مجلد 'AppData' مخفي.",
+      "إعادة تصميم: لوحة تحكم وإعدادات حديثة.",
+      "إضافة امتداد '.hidely' المشفر للنسخ المحلي.",
+      "تحسين الأداء وإصلاح أخطاء."
     ],
     "fr": [
-      "Écran de paramètres de langue avec drapeaux nationaux pour les 9 langues.",
-      "Refonte de l'interface : écran de verrouillage/tableau de bord améliorés ; paramètres déplacés en bas.",
-      "Extension '.hidely' cryptée ajoutée pour des sauvegardes locales sécurisées.",
-      "Nouvelle logique de mise à jour permettant de désactiver les anciennes versions.",
-      "Camouflage amélioré : l'icône du calendrier change dynamiquement selon le jour (1-31).",
-      "Performances optimisées et corrections de bugs mineurs."
+      "Nouveau : Sauvegarde Cloud via Google Drive.",
+      "Chiffrement avancé : Sauvegardes chiffrées dans un dossier 'AppData' caché.",
+      "Refonte : Tableau de bord et paramètres modernisés.",
+      "Extension '.hidely' pour des sauvegardes locales sécurisées.",
+      "Amélioration des performances et corrections."
     ],
     "ru": [
-      "Новый экран выбора языка с национальными флагами для всех 9 языков.",
-      "Редизайн интерфейса: обновлены экран блокировки/панель; настройки перенесены вниз.",
-      "Внедрено зашифрованное расширение '.hidely' для безопасного локального бэкапа.",
-      "Логика обновления улучшена для отключения устаревших версий приложения.",
-      "Маскировка приложения: иконка календаря теперь меняется динамически по датам (1–31).",
-      "Оптимизирована производительность системы и исправлены мелкие ошибки."
+      "Новое: Облачное резервное копирование Google Drive.",
+      "Шифрование: Бэкапы хранятся в скрытой папке 'AppData'.",
+      "Редизайн: Обновленный дизайн панели и настроек.",
+      "Зашифрованное расширение '.hidely' для локальных бэкапов.",
+      "Улучшение производительности и исправление ошибок."
     ],
     "ur": [
-      "تمام 9 زبانوں کے لیے ملکی جھنڈوں کے ساتھ نیا لینگویج سیٹنگز پیج شامل کیا گیا ہے۔",
-      "واجهة ریڈیزائن: لاک اسکرین اور ڈیش بورڈ کو اپ گریڈ کیا گیا؛ سیٹنگز بٹن نیچے منتقل ہوا۔",
-      "محفوظ آف لائن ڈیٹا بیک اپ کے لیے کسٹڈ '.hidely' انکرپٹڈ ایکسٹینشن شامل کی گئی۔",
-      "پرانے ایپ ورژنز کو غیر فعال کرنے کے لیے اپ ڈیٹ لاجک کو بہتر بنایا گیا ہے۔",
-      "بہتر ایپ ڈسگائز: کیلڈر کا آئیکن اب تاریخ کے مطابق (1-31 دن) تبدیل ہوگا۔",
-      "مجموعی کارکردگی کو بہتر بنایا گیا ہے اور معمولی بگز کو فکس کیا گیا ہے۔"
+      "نیا: گوگل ڈرائیو کلاؤڈ بیک اپ شامل کیا گیا۔",
+      "ایڈوانسڈ انکرپشن: بیک اپ پوشیدہ 'AppData' فولڈر میں انکرپٹڈ ہیں۔",
+      "ری ڈیزائن: جدید ڈیش بورڈ اور سیٹنگز۔",
+      "محفوظ بیک اپ کے لیے '.hidely' انکرپٹڈ ایکسٹینشن۔",
+      "کارکردگی میں بہتری اور معمولی بگز فکس۔"
     ],
     "fa": [
-      "صفحه جدید تنظیمات زبان با پرچم کشورها برای هر 9 زبان پشتیبانی شده.",
-      "بازطراحی رابط کاربری: ارتقای صفحه قفل/داشبورد؛ انتقال دکمه تنظیمات به نوار پایین.",
-      "معرفی پسوند رمزگذاری شده '.hidely' برای پشتیبان‌گیری محلی و امن داده‌ها.",
-      "ارتقای منطق به‌روزرسانی برای غیرقابل‌استفاده کردن نسخه‌های قدیمی برنامه.",
-      "استتار پیشرفته: آیکون تقویم به صورت پویا روز فعلی ماه (1-31) را نشان می‌دهد.",
-      "بهینه‌سازی عملکرد سیستم و رفع اشکالات جزئی."
+      "جدید: پشتیبان‌گیری ابری Google Drive اضافه شد.",
+      "رمزگذاری پیشرفته: پشتیبان‌ها در پوشه مخفی 'AppData' رمزگذاری می‌شوند.",
+      "بازطراحی: داشبورد و تنظیمات مدرن‌تر.",
+      "پسوند '.hidely' برای امنیت بیشتر پشتیبان‌های محلی.",
+      "بهبود عملکرد و رفع باگ‌ها."
     ]
   }
 }
