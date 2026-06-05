@@ -1,72 +1,54 @@
 {
-  "latest_version_code": 6,
-  "latest_version_name": "4.0",
+  "latest_version_code": 7,
+  "latest_version_name": "4.1",
   "min_supported_version_code": 6,
-  "is_force_update": true,
+  "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Added: Secure Google Drive Cloud Backup.",
-      "Enhanced Encryption: Backups stored securely in hidden 'AppData'.",
-      "Redesign: Modernized Dashboard & Settings layout.",
-      "Secure local storage using '.hidely' extension.",
-      "Performance improvements & bug fixes."
+      "Fixed a security glitch that incorrectly resumed the previous session's space.",
+      "Removed dynamic date-changing icons; replaced with a static 20th calendar icon.",
+      "System performance optimizations and general bug fixes."
     ],
     "bn": [
-      "নতুন: গুগল ড্রাইভ (Google Drive) ক্লাউড ব্যাকআপ যুক্ত।",
-      "উন্নত এনক্রিপশন: ব্যাকআপ ডেটা এখন লুকানো 'AppData' ফোল্ডারে এনক্রিপ্টেড।",
-      "নতুন ডিজাইন: ড্যাশবোর্ড ও সেটিংস আরও আধুনিক করা হয়েছে।",
-      "লোকাল ব্যাকআপের জন্য '.hidely' এনক্রিপ্টেড ফরম্যাট।",
-      "পারফরম্যান্স আপডেট ও বাগ ফিক্স।"
+      "সিকিউরিটি গ্লিচ ঠিক করা হয়েছে যা আগের সেশনে ভুলভাবে রিজিউম করত।",
+      "ডায়নামিক ক্যালেন্ডার আইকন সরিয়ে একটি স্ট্যাটিক ক্যালেন্ডার আইকন (২০ তারিখ) রাখা হয়েছে।",
+      "সিস্টেম পারফরম্যান্স অপ্টিমাইজেশন এবং বাগ ফিক্স।"
     ],
     "hi": [
-      "नया: Google Drive क्लाउड बैकअप जोड़ा गया।",
-      "उन्नत एन्क्रिप्शन: बैकअप अब छिपे हुए 'AppData' फोल्डर में एन्क्रिप्टेड है।",
-      "रीडिजाइन: आधुनिक डैशबोर्ड और सेटिंग्स लेआउट।",
-      "सुरक्षित बैकअप के लिए '.hidely' एन्क्रिप्टेड एक्सटेंशन।",
-      "प्रदर्शन में सुधार और बग फिक्स।"
+      "सुरक्षा गड़बड़ी को ठीक किया गया जहाँ ऐप गलत सत्र में फिर से शुरू हो जाता था।",
+      "डायनामिक कैलेंडर आइकन हटाए गए; अब एक स्थिर 20 तारीख वाला कैलेंडर आइकन उपलब्ध है।",
+      "सिस्टम प्रदर्शन में सुधार और छोटे बग फिक्स।"
     ],
     "es": [
-      "Nuevo: Copia de seguridad en la nube vía Google Drive.",
-      "Cifrado avanzado: Copias seguras en una carpeta 'AppData' oculta.",
-      "Rediseño: Panel y ajustes más modernos.",
-      "Extensión cifrada '.hidely' para mayor seguridad local.",
-      "Mejoras de rendimiento y corrección de errores."
+      "Corregido un error de seguridad donde la app reanudaba la sesión incorrecta.",
+      "Eliminados los iconos dinámicos; reemplazados por un icono de calendario estático (día 20).",
+      "Optimizaciones de rendimiento del sistema y corrección de errores."
     ],
     "ar": [
-      "جديد: النسخ الاحتياطي السحابي عبر Google Drive.",
-      "تشفير متقدم: نسخ احتياطية مشفرة في مجلد 'AppData' مخفي.",
-      "إعادة تصميم: لوحة تحكم وإعدادات حديثة.",
-      "إضافة امتداد '.hidely' المشفر للنسخ المحلي.",
-      "تحسين الأداء وإصلاح أخطاء."
+      "إصلاح ثغرة أمنية حيث كان التطبيق يستأنف الجلسة بشكل خاطئ.",
+      "إزالة أيقونات التقويم الديناميكية واستبدالها بأيقونة تقويم ثابتة (يوم 20).",
+      "تحسين أداء النظام وإصلاح الأخطاء العامة."
     ],
     "fr": [
-      "Nouveau : Sauvegarde Cloud via Google Drive.",
-      "Chiffrement avancé : Sauvegardes chiffrées dans un dossier 'AppData' caché.",
-      "Refonte : Tableau de bord et paramètres modernisés.",
-      "Extension '.hidely' pour des sauvegardes locales sécurisées.",
-      "Amélioration des performances et corrections."
+      "Correction d'un bug de sécurité où l'application reprenait la mauvaise session.",
+      "Suppression des icônes dynamiques ; remplacement par une icône de calendrier statique (le 20).",
+      "Optimisation des performances système et corrections de bugs."
     ],
     "ru": [
-      "Новое: Облачное резервное копирование Google Drive.",
-      "Шифрование: Бэкапы хранятся в скрытой папке 'AppData'.",
-      "Редизайн: Обновленный дизайн панели и настроек.",
-      "Зашифрованное расширение '.hidely' для локальных бэкапов.",
-      "Улучшение производительности и исправление ошибок."
+      "Исправлена уязвимость, из-за которой приложение некорректно возобновляло сессию.",
+      "Динамические иконки удалены и заменены на статичную иконку (20-е число).",
+      "Оптимизация производительности системы и исправление ошибок."
     ],
     "ur": [
-      "نیا: گوگل ڈرائیو کلاؤڈ بیک اپ شامل کیا گیا۔",
-      "ایڈوانسڈ انکرپشن: بیک اپ پوشیدہ 'AppData' فولڈر میں انکرپٹڈ ہیں۔",
-      "ری ڈیزائن: جدید ڈیش بورڈ اور سیٹنگز۔",
-      "محفوظ بیک اپ کے لیے '.hidely' انکرپٹڈ ایکسٹینشن۔",
-      "کارکردگی میں بہتری اور معمولی بگز فکس۔"
+      "سیکیورٹی بگ کو ٹھیک کیا گیا جس میں ایپ غلط سیشن کو ریزیوم کر دیتی تھی۔",
+      "ڈائنامک کیلنڈر آئیکنز کو ہٹا کر ایک سٹیٹک 20 تاریخ والا آئیکن شامل کیا گیا۔",
+      "سسٹم کی کارکردگی میں بہتری اور عمومی بگز فکس کیے گئے۔"
     ],
     "fa": [
-      "جدید: پشتیبان‌گیری ابری Google Drive اضافه شد.",
-      "رمزگذاری پیشرفته: پشتیبان‌ها در پوشه مخفی 'AppData' رمزگذاری می‌شوند.",
-      "بازطراحی: داشبورد و تنظیمات مدرن‌تر.",
-      "پسوند '.hidely' برای امنیت بیشتر پشتیبان‌های محلی.",
-      "بهبود عملکرد و رفع باگ‌ها."
+      "رفع باگ امنیتی که باعث باز شدن نادرست سشن قبلی می‌شد.",
+      "حذف آیکون‌های تقویم پویا و جایگزینی با آیکون ثابت روز ۲۰.",
+      "بهینه‌سازی عملکرد سیستم و رفع اشکالات عمومی."
     ]
   }
 }
