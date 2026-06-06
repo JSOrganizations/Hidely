@@ -1,54 +1,54 @@
 {
-  "latest_version_code": 7,
-  "latest_version_name": "4.1",
-  "min_supported_version_code": 6,
+  "latest_version_code": 8,
+  "latest_version_name": "4.2",
+  "min_supported_version_code": 8,
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Fixed a security glitch that incorrectly resumed the previous session's space.",
-      "Removed dynamic date-changing icons; replaced with a static 20th calendar icon.",
-      "System performance optimizations and general bug fixes."
+      "Fixed a critical bug where media files appeared black due to database migration path mismatches after updates.",
+      "Fixed UI layout overlap where bottom navigation elements, FABs, and selection bars conflicted with system window insets.",
+      "System performance optimizations and codebase stability improvements."
     ],
     "bn": [
-      "সিকিউরিটি গ্লিচ ঠিক করা হয়েছে যা আগের সেশনে ভুলভাবে রিজিউম করত।",
-      "ডায়নামিক ক্যালেন্ডার আইকন সরিয়ে একটি স্ট্যাটিক ক্যালেন্ডার আইকন (২০ তারিখ) রাখা হয়েছে।",
-      "সিস্টেম পারফরম্যান্স অপ্টিমাইজেশন এবং বাগ ফিক্স।"
+      "অ্যাপ আপডেটের পর ডাটাবেস পাথ মিস্টেকের কারণে ফাইল কালো দেখানোর জটিল বাগটি সম্পূর্ণ ফিক্স করা হয়েছে।",
+      "এজ-টু-এজ লেআউটের জন্য নিচে থাকা নেভিগেশন বার, FAB এবং সিলেকশন বার সিস্টেম বাটনের সাথে ওভারল্যাপ হওয়ার সমস্যা সমাধান করা হয়েছে।",
+      "অ্যাপের পারফরম্যান্স আরও অপ্টিমাইজ এবং কোডবেস স্ট্যাবিলিটি উন্নত করা হয়েছে।"
     ],
     "hi": [
-      "सुरक्षा गड़बड़ी को ठीक किया गया जहाँ ऐप गलत सत्र में फिर से शुरू हो जाता था।",
-      "डायनामिक कैलेंडर आइकन हटाए गए; अब एक स्थिर 20 तारीख वाला कैलेंडर आइकन उपलब्ध है।",
-      "सिस्टम प्रदर्शन में सुधार और छोटे बग फिक्स।"
+      "ऐप अपडेट के बाद डेटाबेस पाथ मिसमैच के कारण मीडिया फाइलें काली दिखने वाले क्रिटिकल बग को ठीक किया गया।",
+      "बॉटम नेविगेशन एलिमेंट्स, FAB और सिलेक्शन बार के सिस्टम बटनों के साथ ओवरलैप होने की समस्या को ठीक किया गया।",
+      "सिस्टम प्रदर्शन में सुधार और कोडबेस स्थिरता को बढ़ाया गया।"
     ],
     "es": [
-      "Corregido un error de seguridad donde la app reanudaba la sesión incorrecta.",
-      "Eliminados los iconos dinámicos; reemplazados por un icono de calendario estático (día 20).",
-      "Optimizaciones de rendimiento del sistema y corrección de errores."
+      "Se corrigió un error crítico donde los archivos se veían negros debido a desajustes de ruta en la migración de la base de datos.",
+      "Se solucionó la superposición de la barra de navegación inferior, los botones FAB y las barras de selección con los botones del sistema.",
+      "Optimización del rendimiento general y mejoras de estabilidad."
     ],
     "ar": [
-      "إصلاح ثغرة أمنية حيث كان التطبيق يستأنف الجلسة بشكل خاطئ.",
-      "إزالة أيقونات التقويم الديناميكية واستبدالها بأيقونة تقويم ثابتة (يوم 20).",
-      "تحسين أداء النظام وإصلاح الأخطاء العامة."
+      "إصلاح خطأ خطير حيث ظهرت ملفات الوسائط باللون الأسود بسبب عدم تطابق مسارات قاعدة البيانات بعد التحديث.",
+      "تداخل واجهة المستخدم الثابت حيث تعارضت عناصر التنقل السفلية وأزرار FAB مع أزرار النظام.",
+      "تحسين أداء النظام وتحسين استقرار التعليمات البرمجية."
     ],
     "fr": [
-      "Correction d'un bug de sécurité où l'application reprenait la mauvaise session.",
-      "Suppression des icônes dynamiques ; remplacement par une icône de calendrier statique (le 20).",
-      "Optimisation des performances système et corrections de bugs."
+      "Correction du bug d'affichage noir des médias lié aux erreurs de chemin lors de la migration de la base de datos.",
+      "Correction de la superposition des éléments de navigation inférieurs, des boutons FAB et des barres de sélection avec les boutons système.",
+      "Performances optimisées et améliorations de la stabilité du code."
     ],
     "ru": [
-      "Исправлена уязвимость, из-за которой приложение некорректно возобновляло сессию.",
-      "Динамические иконки удалены и заменены на статичную иконку (20-е число).",
-      "Оптимизация производительности системы и исправление ошибок."
+      "Исправлен критический баг с черным экраном медиафайлов из-за несовпадения путей миграции базы данных.",
+      "Исправлено наложение нижних элементов навигации, кнопок FAB и панелей выбора на системные кнопки.",
+      "Оптимизация производительности системы и повышение стабильности кода."
     ],
     "ur": [
-      "سیکیورٹی بگ کو ٹھیک کیا گیا جس میں ایپ غلط سیشن کو ریزیوم کر دیتی تھی۔",
-      "ڈائنامک کیلنڈر آئیکنز کو ہٹا کر ایک سٹیٹک 20 تاریخ والا آئیکن شامل کیا گیا۔",
-      "سسٹم کی کارکردگی میں بہتری اور عمومی بگز فکس کیے گئے۔"
+      "ایپ اپ ڈیٹ کے بعد ڈیٹا بیس پاتھ مس میچ کی وجہ سے میڈیا فائلیں کالی نظر آنے کا اہم بگ فکس کر دیا گیا ہے۔",
+      "باٹم نیویگیشن، FAB اور سلیکشن بار کے سسٹم بٹنوں کے ساتھ اوورلیپ ہونے کے مسئلے کو حل کیا گیا ہے۔",
+      "ایپ کی کارکردگی کو بہتر بنایا گیا ہے اور کوڈ بیس کے استحکام میں اضافہ کیا گیا ہے۔"
     ],
     "fa": [
-      "رفع باگ امنیتی که باعث باز شدن نادرست سشن قبلی می‌شد.",
-      "حذف آیکون‌های تقویم پویا و جایگزینی با آیکون ثابت روز ۲۰.",
-      "بهینه‌سازی عملکرد سیستم و رفع اشکالات عمومی."
+      "رفع یک باگ بحرانی که در آن فایل‌های رسانه‌ای به دلیل عدم تطابق مسیر مهاجرت پایگاه داده، سیاه نشان داده می‌شدند.",
+      "رفع مشکل تداخل نوار ناوبری پایین، دکمه‌های FAB و نوار انتخاب با دکمه‌های ناوبری系统.",
+      "بهینه‌سازی عملکرد کلی سیستم و بهبود پایداری کدهای برنامه."
     ]
   }
 }
