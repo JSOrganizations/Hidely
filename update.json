@@ -1,54 +1,72 @@
 {
-  "latest_version_code": 8,
-  "latest_version_name": "4.2",
-  "min_supported_version_code": 8,
+  "latest_version_code": 10,
+  "latest_version_name": "4.4",
+  "min_supported_version_code": 10,
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Fixed a critical bug where media files appeared black due to database migration path mismatches after updates.",
-      "Fixed UI layout overlap where bottom navigation elements, FABs, and selection bars conflicted with system window insets.",
-      "System performance optimizations and codebase stability improvements."
+      "Added swipe navigation between Dashboard, Settings, and Cloud Backup pages.",
+      "New App Disguise confirmation bottom sheet with an enhanced circular UI.",
+      "Full 9-language translation support for Cloud Backup and Trash screens.",
+      "Fixed dark mode color conflicts.",
+      "Fixed XML syntax issues causing translation crashes."
     ],
     "bn": [
-      "অ্যাপ আপডেটের পর ডাটাবেস পাথ মিস্টেকের কারণে ফাইল কালো দেখানোর জটিল বাগটি সম্পূর্ণ ফিক্স করা হয়েছে।",
-      "এজ-টু-এজ লেআউটের জন্য নিচে থাকা নেভিগেশন বার, FAB এবং সিলেকশন বার সিস্টেম বাটনের সাথে ওভারল্যাপ হওয়ার সমস্যা সমাধান করা হয়েছে।",
-      "অ্যাপের পারফরম্যান্স আরও অপ্টিমাইজ এবং কোডবেস স্ট্যাবিলিটি উন্নত করা হয়েছে।"
+      "ড্যাশবোর্ড, সেটিংস এবং ক্লাউড ব্যাকআপের মাঝে সোয়াইপ নেভিগেশন সুবিধা।",
+      "অ্যাপ আইকন পরিবর্তনের সময় নতুন কনফার্মেশন মেনু এবং উন্নত UI ডিজাইন।",
+      "ক্লাউড ব্যাকআপ ও ট্র্যাশ স্ক্রিনে ৯টি ভাষার পূর্ণাঙ্গ অনুবাদ সাপোর্ট।",
+      "ডার্ক মোডের কালার কনফ্লিক্ট সমস্যা সমাধান করা হয়েছে।",
+      "ট্রান্সলেশন ক্র্যাশ ফিক্স করতে XML সিনট্যাক্স এরর সমাধান করা হয়েছে।"
     ],
     "hi": [
-      "ऐप अपडेट के बाद डेटाबेस पाथ मिसमैच के कारण मीडिया फाइलें काली दिखने वाले क्रिटिकल बग को ठीक किया गया।",
-      "बॉटम नेविगेशन एलिमेंट्स, FAB और सिलेक्शन बार के सिस्टम बटनों के साथ ओवरलैप होने की समस्या को ठीक किया गया।",
-      "सिस्टम प्रदर्शन में सुधार और कोडबेस स्थिरता को बढ़ाया गया।"
+      "डैशबोर्ड, सेटिंग्स और क्लाउड बैकअप के बीच स्वाइप नेविगेशन जोड़ा गया।",
+      "ऐप आइकन बदलते समय नया कन्फर्मेशन मेनू और बेहतर यूआई।",
+      "क्लाउड बैकअप और ट्रैश स्क्रीन के लिए सभी 9 भाषाओं का पूर्ण अनुवाद।",
+      "डार्क मोड में रंग संबंधी समस्याओं को ठीक किया गया।",
+      "ट्रांसलेशन क्रैश को रोकने के लिए XML सिंटैक्स फिक्स किए गए।"
     ],
     "es": [
-      "Se corrigió un error crítico donde los archivos se veían negros debido a desajustes de ruta en la migración de la base de datos.",
-      "Se solucionó la superposición de la barra de navegación inferior, los botones FAB y las barras de selección con los botones del sistema.",
-      "Optimización del rendimiento general y mejoras de estabilidad."
+      "Navegación por deslizamiento (swipe) entre Panel, Ajustes y Copia de seguridad.",
+      "Nuevo menú de confirmación para ocultar la app con UI mejorada.",
+      "Traducción completa a 9 idiomas para las pantallas de Copia de seguridad y Papelera.",
+      "Errores de color en el modo oscuro solucionados.",
+      "Correcciones de sintaxis XML para evitar bloqueos."
     ],
     "ar": [
-      "إصلاح خطأ خطير حيث ظهرت ملفات الوسائط باللون الأسود بسبب عدم تطابق مسارات قاعدة البيانات بعد التحديث.",
-      "تداخل واجهة المستخدم الثابت حيث تعارضت عناصر التنقل السفلية وأزرار FAB مع أزرار النظام.",
-      "تحسين أداء النظام وتحسين استقرار التعليمات البرمجية."
+      "إضافة التمرير (Swipe) للتنقل بين لوحة التحكم والإعدادات والنسخ الاحتياطي.",
+      "قائمة تأكيد جديدة عند تغيير أيقونة التطبيق مع واجهة مستخدم محسنة.",
+      "دعم كامل لـ 9 لغات لشاشات النسخ الاحتياطي وسلة المهملات.",
+      "إصلاح تعارضات الألوان في الوضع الداكن.",
+      "إصلاح أخطاء XML لتجنب تعطل التطبيق."
     ],
     "fr": [
-      "Correction du bug d'affichage noir des médias lié aux erreurs de chemin lors de la migration de la base de datos.",
-      "Correction de la superposition des éléments de navigation inférieurs, des boutons FAB et des barres de sélection avec les boutons système.",
-      "Performances optimisées et améliorations de la stabilité du code."
+      "Navigation par balayage (swipe) entre le Tableau de bord, les Paramètres et la Sauvegarde.",
+      "Nouveau menu de confirmation pour masquer l'application avec une UI améliorée.",
+      "Traduction complète en 9 langues pour la Sauvegarde et la Corbeille.",
+      "Correction des couleurs du mode sombre.",
+      "Correction de la syntaxe XML pour éviter les plantages."
     ],
     "ru": [
-      "Исправлен критический баг с черным экраном медиафайлов из-за несовпадения путей миграции базы данных.",
-      "Исправлено наложение нижних элементов навигации, кнопок FAB и панелей выбора на системные кнопки.",
-      "Оптимизация производительности системы и повышение стабильности кода."
+      "Свайп-навигация между панелью управления, настройками и облачным бэкапом.",
+      "Новое меню подтверждения маскировки приложения с улучшенным UI.",
+      "Полный перевод на 9 языков для экранов бэкапа и корзины.",
+      "Исправлены конфликты цветов в темном режиме.",
+      "Исправлен синтаксис XML для предотвращения сбоев локализации."
     ],
     "ur": [
-      "ایپ اپ ڈیٹ کے بعد ڈیٹا بیس پاتھ مس میچ کی وجہ سے میڈیا فائلیں کالی نظر آنے کا اہم بگ فکس کر دیا گیا ہے۔",
-      "باٹم نیویگیشن، FAB اور سلیکشن بار کے سسٹم بٹنوں کے ساتھ اوورلیپ ہونے کے مسئلے کو حل کیا گیا ہے۔",
-      "ایپ کی کارکردگی کو بہتر بنایا گیا ہے اور کوڈ بیس کے استحکام میں اضافہ کیا گیا ہے۔"
+      "ڈیش بورڈ، سیٹنگز اور کلاؤڈ بیک اپ کے درمیان سوائپ نیویگیشن شامل کی گئی۔",
+      "ایپ آئیکن تبدیل کرتے وقت نیا کنفرمیشن مینو اور بہتر UI ڈیزائن۔",
+      "کلاؤڈ بیک اپ اور ٹریش اسکرینز کے لیے تمام 9 زبانوں کا مکمل سپورٹ۔",
+      "ڈارک موڈ کلر کنفلکٹ کا مسئلہ حل کر دیا گیا۔",
+      "ٹرانسلیشن کریش سے بچنے کے لیے XML سنٹیکس کی خرابیاں دور کی گئیں۔"
     ],
     "fa": [
-      "رفع یک باگ بحرانی که در آن فایل‌های رسانه‌ای به دلیل عدم تطابق مسیر مهاجرت پایگاه داده، سیاه نشان داده می‌شدند.",
-      "رفع مشکل تداخل نوار ناوبری پایین، دکمه‌های FAB و نوار انتخاب با دکمه‌های ناوبری系统.",
-      "بهینه‌سازی عملکرد کلی سیستم و بهبود پایداری کدهای برنامه."
+      "افزودن قابلیت کشیدن (Swipe) بین داشبورد، تنظیمات و پشتیبان‌گیری ابری.",
+      "منوی تأیید جدید برای تغییر آیکون برنامه با طراحی کاربری بهتر.",
+      "پشتیبانی کامل از 9 زبان برای صفحات پشتیبان‌گیری و سطل زباله.",
+      "رفع مشکلات رنگ در حالت تاریک.",
+      "رفع خطاهای XML برای جلوگیری از توقف برنامه در زمان ترجمه."
     ]
   }
 }
