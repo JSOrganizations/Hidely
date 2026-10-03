@@ -68,5 +68,43 @@
       "رفع مشکلات رنگ در حالت تاریک.",
       "رفع خطاهای XML برای جلوگیری از توقف برنامه در زمان ترجمه."
     ]
+  },
+  "theme_data": {
+    "header_themes_version": 1,
+    "lock_screen_themes_version": 1,
+    "themes": [
+      {
+        "id": "header.landscape_lake_01",
+        "target": "dashboard_header",
+        "name": {
+          "en": "Landscape Lake",
+          "bn": "প্রাকৃতিক লেক",
+          "hi": "प्राकृतिक झील",
+          "ur": "قدرتی جھیل",
+          "es": "Lago Natural",
+          "ar": "بحيرة طبيعية",
+          "fr": "Lac Naturel",
+          "ru": "Пейзажное Озеро",
+          "fa": "دریاچه طبیعی"
+        },
+        "image_url": "https://jsorganizations.github.io/Hidely/assets/header/landscape_lake_01.webp"
+      },
+      {
+        "id": "lock.night_aurora_01",
+        "target": "lock_screen",
+        "name": {
+          "en": "Night Aurora",
+          "bn": "রাতের অরোরা",
+          "hi": "रात का औरोरा",
+          "ur": "رات کا ارورا",
+          "es": "Aurora Nocturna",
+          "ar": "شفق الليل",
+          "fr": "Aurore Nocturne",
+          "ru": "Ночное сияние",
+          "fa": "شفق قطبی شبانه"
+        },
+        "image_url": "https://jsorganizations.github.io/Hidely/assets/lock/night_aurora_01.webp"
+      }
+    ]
   }
 }
