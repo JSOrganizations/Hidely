@@ -1,72 +1,72 @@
 {
-  "latest_version_code": 10,
-  "latest_version_name": "4.4",
+  "latest_version_code": 12,
+  "latest_version_name": "5.1",
   "min_supported_version_code": 10,
   "is_force_update": false,
   "play_store_url": "https://play.google.com/store/apps/details?id=com.jsorg.hidely",
   "whats_new": {
     "en": [
-      "Added swipe navigation between Dashboard, Settings, and Cloud Backup pages.",
-      "New App Disguise confirmation bottom sheet with an enhanced circular UI.",
-      "Full 9-language translation support for Cloud Backup and Trash screens.",
-      "Fixed dark mode color conflicts.",
-      "Fixed XML syntax issues causing translation crashes."
+      "New In-App Media Picker for faster and easier image selection.",
+      "Customizable dashboard header and lock screen themes with cloud download.",
+      "Localized push notifications for app updates and new themes.",
+      "Smooth zoom transitions and Thanos snap effect when deleting items.",
+      "New Glassmorphism UI, improved settings, and App Navigation."
     ],
     "bn": [
-      "ড্যাশবোর্ড, সেটিংস এবং ক্লাউড ব্যাকআপের মাঝে সোয়াইপ নেভিগেশন সুবিধা।",
-      "অ্যাপ আইকন পরিবর্তনের সময় নতুন কনফার্মেশন মেনু এবং উন্নত UI ডিজাইন।",
-      "ক্লাউড ব্যাকআপ ও ট্র্যাশ স্ক্রিনে ৯টি ভাষার পূর্ণাঙ্গ অনুবাদ সাপোর্ট।",
-      "ডার্ক মোডের কালার কনফ্লিক্ট সমস্যা সমাধান করা হয়েছে।",
-      "ট্রান্সলেশন ক্র্যাশ ফিক্স করতে XML সিনট্যাক্স এরর সমাধান করা হয়েছে।"
+      "দ্রুত ছবি সিলেক্ট করার জন্য সম্পূর্ণ নতুন ইন-অ্যাপ মিডিয়া পিকার।",
+      "কাস্টমাইজেবল ড্যাশবোর্ড হেডার এবং লক স্ক্রিন থিম ডাউনলোড সাপোর্ট।",
+      "অ্যাপ আপডেট এবং নতুন থিমের জন্য লোকালাইজড পুশ নোটিফিকেশন।",
+      "স্মুথ জুম ট্রানজিশন এবং ছবি ডিলিট করার সময় থানোস স্ন্যাপ অ্যানিমেশন।",
+      "গ্লাসমরফিজম UI, উন্নত সেটিংস পেজ এবং নতুন অ্যাপ নেভিগেশন।"
     ],
     "hi": [
-      "डैशबोर्ड, सेटिंग्स और क्लाउड बैकअप के बीच स्वाइप नेविगेशन जोड़ा गया।",
-      "ऐप आइकन बदलते समय नया कन्फर्मेशन मेनू और बेहतर यूआई।",
-      "क्लाउड बैकअप और ट्रैश स्क्रीन के लिए सभी 9 भाषाओं का पूर्ण अनुवाद।",
-      "डार्क मोड में रंग संबंधी समस्याओं को ठीक किया गया।",
-      "ट्रांसलेशन क्रैश को रोकने के लिए XML सिंटैक्स फिक्स किए गए।"
+      "तेजी से इमेज सेलेक्ट करने के लिए नया इन-ऐप मीडिया पिकर।",
+      "कस्टमाइज़ेबल डैशबोर्ड हेडर और लॉक स्क्रीन थीम डाउनलोड सपोर्ट।",
+      "ऐप अपडेट और नई थीम के लिए लोकलाइज्ड पुश नोटिफिकेशन।",
+      "स्मूथ ज़ूम ट्रांज़िशन और आइटम डिलीट करते समय थानोस स्नैप इफ़ेक्ट।",
+      "ग्लासमॉर्फिज्म यूआई, बेहतर सेटिंग्स और नया ऐप नेविगेशन।"
     ],
     "es": [
-      "Navegación por deslizamiento (swipe) entre Panel, Ajustes y Copia de seguridad.",
-      "Nuevo menú de confirmación para ocultar la app con UI mejorada.",
-      "Traducción completa a 9 idiomas para las pantallas de Copia de seguridad y Papelera.",
-      "Errores de color en el modo oscuro solucionados.",
-      "Correcciones de sintaxis XML para evitar bloqueos."
+      "Nuevo selector de medios en la aplicación para elegir imágenes más rápido.",
+      "Encabezado del panel y temas de pantalla de bloqueo personalizables.",
+      "Notificaciones push localizadas para actualizaciones y temas.",
+      "Transiciones de zoom suaves y efecto Thanos al eliminar elementos.",
+      "Nueva interfaz Glassmorphism, ajustes mejorados y navegación de la app."
     ],
     "ar": [
-      "إضافة التمرير (Swipe) للتنقل بين لوحة التحكم والإعدادات والنسخ الاحتياطي.",
-      "قائمة تأكيد جديدة عند تغيير أيقونة التطبيق مع واجهة مستخدم محسنة.",
-      "دعم كامل لـ 9 لغات لشاشات النسخ الاحتياطي وسلة المهملات.",
-      "إصلاح تعارضات الألوان في الوضع الداكن.",
-      "إصلاح أخطاء XML لتجنب تعطل التطبيق."
+      "منتقي وسائط جديد داخل التطبيق لاختيار الصور بشكل أسرع.",
+      "رأس لوحة تحكم وسمات شاشة قفل قابلة للتخصيص مع دعم التنزيل.",
+      "إشعارات فورية مترجمة لتحديثات التطبيق والسمات الجديدة.",
+      "انتقالات تكبير سلسة وتأثير ثانوس عند حذف العناصر.",
+      "واجهة مستخدم زجاجية جديدة ، وإعدادات محسنة ، وتنقل في التطبيق."
     ],
     "fr": [
-      "Navigation par balayage (swipe) entre le Tableau de bord, les Paramètres et la Sauvegarde.",
-      "Nouveau menu de confirmation pour masquer l'application avec une UI améliorée.",
-      "Traduction complète en 9 langues pour la Sauvegarde et la Corbeille.",
-      "Correction des couleurs du mode sombre.",
-      "Correction de la syntaxe XML pour éviter les plantages."
+      "Nouveau sélecteur de médias intégré pour un choix d'images plus rapide.",
+      "En-tête de tableau de bord et thèmes d'écran de verrouillage personnalisables.",
+      "Notifications push localisées pour les mises à jour et les thèmes.",
+      "Transitions de zoom fluides et effet Thanos lors de la suppression.",
+      "Nouvelle interface Glassmorphism, paramètres améliorés et navigation."
     ],
     "ru": [
-      "Свайп-навигация между панелью управления, настройками и облачным бэкапом.",
-      "Новое меню подтверждения маскировки приложения с улучшенным UI.",
-      "Полный перевод на 9 языков для экранов бэкапа и корзины.",
-      "Исправлены конфликты цветов в темном режиме.",
-      "Исправлен синтаксис XML для предотвращения сбоев локализации."
+      "Новый встроенный выбор медиа для более быстрого выбора изображений.",
+      "Настраиваемый заголовок панели и темы экрана блокировки с поддержкой загрузки.",
+      "Локализованные push-уведомления для обновлений и новых тем.",
+      "Плавные переходы масштабирования и эффект Таноса при удалении элементов.",
+      "Новый стеклянный интерфейс (Glassmorphism), улучшенные настройки и навигация."
     ],
     "ur": [
-      "ڈیش بورڈ، سیٹنگز اور کلاؤڈ بیک اپ کے درمیان سوائپ نیویگیشن شامل کی گئی۔",
-      "ایپ آئیکن تبدیل کرتے وقت نیا کنفرمیشن مینو اور بہتر UI ڈیزائن۔",
-      "کلاؤڈ بیک اپ اور ٹریش اسکرینز کے لیے تمام 9 زبانوں کا مکمل سپورٹ۔",
-      "ڈارک موڈ کلر کنفلکٹ کا مسئلہ حل کر دیا گیا۔",
-      "ٹرانسلیشن کریش سے بچنے کے لیے XML سنٹیکس کی خرابیاں دور کی گئیں۔"
+      "تصاویر کو تیزی سے منتخب کرنے کے لیے نیا ان-ایپ میڈیا پکر۔",
+      "حسب ضرورت ڈیش بورڈ ہیڈر اور کلاؤڈ ڈاؤن لوڈ کے ساتھ لاک اسکرین تھیمز۔",
+      "ایپ اپ ڈیٹس اور نئے تھیمز کے لیے مقامی پش اطلاعات۔",
+      "آئٹمز کو حذف کرتے وقت ہموار زوم ٹرانزیشن اور تھانوس اسنیپ اثر۔",
+      "نیا گلاسمورفزم UI، بہتر سیٹنگز اور ایپ نیویگیشن۔"
     ],
     "fa": [
-      "افزودن قابلیت کشیدن (Swipe) بین داشبورد، تنظیمات و پشتیبان‌گیری ابری.",
-      "منوی تأیید جدید برای تغییر آیکون برنامه با طراحی کاربری بهتر.",
-      "پشتیبانی کامل از 9 زبان برای صفحات پشتیبان‌گیری و سطل زباله.",
-      "رفع مشکلات رنگ در حالت تاریک.",
-      "رفع خطاهای XML برای جلوگیری از توقف برنامه در زمان ترجمه."
+      "انتخابگر رسانه جدید درون‌برنامه‌ای برای انتخاب سریع‌تر تصاویر.",
+      "تم‌های هدر داشبورد و صفحه قفل قابل شخصی‌سازی با پشتیبانی از دانلود.",
+      "اعلان‌های پوش بومی‌سازی شده برای به‌روزرسانی برنامه‌ها و تم‌های جدید.",
+      "انتقال زوم روان و جلوه اسنپ تانوس هنگام حذف موارد.",
+      "رابط کاربری Glassmorphism جدید، تنظیمات بهبود یافته و ناوبری برنامه."
     ]
   },
   "theme_data": {
